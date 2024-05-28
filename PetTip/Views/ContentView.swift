@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var isLogin = false
+    @State private var isLogin = false
+
     var body: some View {
         if isLogin {
             NavigationView()
         } else {
             SNSLoginView()
         }
+        // SNSLoginView()
     }
 }
 

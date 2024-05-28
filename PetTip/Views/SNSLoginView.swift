@@ -20,26 +20,31 @@ private var divider: some View {
 }
 
 struct SNSLoginView: View {
+    @StateObject var naverAuth = NaverAuth()
+
     var body: some View {
         HStack {
             Spacer()
 
             VStack(alignment: .center, spacing: 15) {
 
-                Button("카카오로 시작하기") { }
+                Button("카카오로 시작하기") {
+                }
                     .buttonStyle(.signButton(type: .kakao))
 
-                Button("네이버로 시작하기") { }
+                Button("네이버로 시작하기") {
+                    naverAuth.handleNaverLogin()
+                }
                     .buttonStyle(.signButton(type: .naver))
-                
+
                 Button("Google로 시작하기") { }
                     .buttonStyle(.signButton(type: .google))
-                
+
                 Button("Apple로 시작하기") { }
                     .buttonStyle(.signButton(type: .apple))
-                
+
                 divider
-                
+
                 Button("이메일로 가입하기") { }
                     .buttonStyle(.signButton(type: .email))
             }
@@ -47,7 +52,8 @@ struct SNSLoginView: View {
             Spacer()
         }
             .padding(20)
-    } }
+    }
+}
 
 #Preview {
     SNSLoginView()
