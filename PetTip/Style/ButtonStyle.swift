@@ -19,7 +19,7 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .modifier(RectButtonModifier(textColor: .white))
-            .frame(height: 45)
+            .frame(height: 48)
             .background(
             isEnabled ? Color.primary : Color.gray
         )
@@ -27,7 +27,7 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
             Color.black
                 .opacity(configuration.isPressed ? 0.1 : 0)
         )
-            .cornerRadius(10)
+            .cornerRadius(5)
     }
 }
 
@@ -41,9 +41,9 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .modifier(RectButtonModifier(textColor: .gray))
-            .frame(height: 45)
+            .frame(height: 48)
             .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 5)
                 .strokeBorder(Color.gray, lineWidth: 1.5)
         )
             .overlay(
@@ -112,7 +112,7 @@ public struct SignButtonStyle: ButtonStyle {
         ZStack(alignment: .leading) {
             configuration.label
                 .modifier(RectButtonModifier(textColor: signType.textColor))
-                .frame(height: 45)
+                .frame(height: 48)
                 .background(
                 Group {
                     switch signType {

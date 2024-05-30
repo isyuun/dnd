@@ -87,6 +87,8 @@ PODS:
     - AppAuth (< 2.0, >= 1.7.3)
     - GTMAppAuth (< 5.0, >= 4.1.1)
     - GTMSessionFetcher/Core (~> 3.3)
+  - GoogleSignInSwiftSupport (7.1.0):
+    - GoogleSignIn (~> 7.1)
   - GoogleUtilities/AppDelegateSwizzler (7.13.3):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -164,6 +166,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - FSPagerView
   - GoogleSignIn
+  - GoogleSignInSwiftSupport
   - KakaoSDKAuth
   - KakaoSDKUser
   - KeychainAccess (= 4.1.0)
@@ -192,6 +195,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleSignIn
+    - GoogleSignInSwiftSupport
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
@@ -228,6 +232,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 9abf64b682732fed36da827aa2a68f0221fd2356
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
   GoogleSignIn: d4281ab6cf21542b1cfaff85c191f230b399d2db
+  GoogleSignInSwiftSupport: bbbd5afe90c9e22e91d2fa5a55498e00e3227cef
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   GTMAppAuth: f69bd07d68cd3b766125f7e072c45d7340dea0de
   GTMSessionFetcher: 8000756fc1c19d2e5697b90311f7832d2e33f6cd
@@ -248,6 +253,6 @@ SPEC CHECKSUMS:
   Tabman: 49f9181a2bfe5c29d002864dac2de8e0b7ea9180
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: 5701d8fdb19c06c8d74e6895a4e7a8ad19a0bbad
+PODFILE CHECKSUM: 6f6f6ac5c80178c40fb66fdf6c71a2a92c8cf893
 
 COCOAPODS: 1.15.2

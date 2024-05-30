@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 private var divider: some View {
-    HStack {
+    var text: String = "또는"
+
+    return HStack {
         Color.gray
             .frame(height: 0.5, alignment: .center)
-        Text("또는")
-            .foregroundColor(Color.gray)
+        Text(text)
             .font(.system(size: 12, weight: .regular))
         Color.gray
             .frame(height: 0.5, alignment: .center)
@@ -20,7 +22,15 @@ private var divider: some View {
 }
 
 struct SNSLoginView: View {
-    @StateObject var naverAuth = NaverAuth()
+    var loginAuth: LoginAuth
+    @State private var showAlert = false // 얼럿을 표시하기 위한 상태 변수
+
+    @Binding var isLogin: Bool
+
+    init(isLogin: Binding<Bool>) {
+        _isLogin = isLogin
+        loginAuth = LoginAuth(isLogin: isLogin)
+    }
 
     var body: some View {
         HStack {
@@ -28,19 +38,35 @@ struct SNSLoginView: View {
 
             VStack(alignment: .center, spacing: 15) {
 
-                Button("카카오로 시작하기") {
+                divider
+
+                Button("카카오톡으로 로그인") {
+                    loginAuth.startKakaoLogin() { login, error in
+                        NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][isLogin:\(isLogin)][\(String(describing: login))][\(String(describing: error))]")
+                        self.showAlert = !self.isLogin
+                    }
                 }
                     .buttonStyle(.signButton(type: .kakao))
 
-                Button("네이버로 시작하기") {
-                    naverAuth.handleNaverLogin()
+                Button("네이버로 로그인") {
+                    loginAuth.startNaverLogin() { login, error in
+                        NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][isLogin:\(isLogin)][\(String(describing: login))][\(String(describing: error))]")
+                        self.showAlert = !self.isLogin
+                    }
                 }
                     .buttonStyle(.signButton(type: .naver))
 
-                Button("Google로 시작하기") { }
+                Button("구글로 로그인") {
+                    loginAuth.startGoogleLogin { login, error in
+                        NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][isLogin:\(isLogin)][\(String(describing: login))][\(String(describing: error))]")
+                        self.showAlert = !self.isLogin
+                    }
+                }
                     .buttonStyle(.signButton(type: .google))
 
-                Button("Apple로 시작하기") { }
+                Button("애플로 로그인") {
+                    loginAuth.startAppleLogin()
+                }
                     .buttonStyle(.signButton(type: .apple))
 
                 divider
@@ -51,10 +77,13 @@ struct SNSLoginView: View {
 
             Spacer()
         }
+            .alert(isPresented: $showAlert) {
+            Alert(title: Text("알림"), message: Text("로그인 오류입니다."), dismissButton: .default(Text("확인")))
+        }
             .padding(20)
     }
 }
 
 #Preview {
-    SNSLoginView()
+    SNSLoginView(isLogin: .constant(false))
 }

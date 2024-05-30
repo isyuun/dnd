@@ -6,17 +6,29 @@
 //
 
 import SwiftUI
+import NaverThirdPartyLogin
+import KakaoSDKCommon
+import KakaoSDKAuth
+import AuthenticationServices
 
 struct ContentView: View {
-    @State private var isLogin = false
+    @State var isLogin = false
 
     var body: some View {
-        if isLogin {
+        if self.isLogin {
             NavigationView()
         } else {
-            SNSLoginView()
+            SNSLoginView(isLogin: self.$isLogin)  // @Binding으로 연결
+                // .onOpenURL(perform: { url in
+                // NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][\(url)]")
+                // if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                //     isLogin = AuthController.handleOpenUrl(url: url)
+                // }
+                // NaverThirdPartyLoginConnection
+                //     .getSharedInstance()
+                //     .receiveAccessToken(url)
+            // })
         }
-        // SNSLoginView()
     }
 }
 

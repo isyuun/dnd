@@ -25,6 +25,7 @@ target 'PetTip' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'GoogleSignIn'
+  pod 'GoogleSignInSwiftSupport'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
