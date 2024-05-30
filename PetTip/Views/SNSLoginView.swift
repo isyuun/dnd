@@ -9,7 +9,7 @@ import SwiftUI
 import AuthenticationServices
 
 private var divider: some View {
-    var text: String = "또는"
+    var text = "또는"
 
     return HStack {
         Color.gray
@@ -37,24 +37,23 @@ struct SNSLoginView: View {
             Spacer()
 
             VStack(alignment: .center, spacing: 15) {
-
                 divider
 
                 Button("카카오톡으로 로그인") {
-                    loginAuth.startKakaoLogin() { login, error in
+                    loginAuth.startKakaoLogin { login, error in
                         NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][isLogin:\(isLogin)][\(String(describing: login))][\(String(describing: error))]")
                         self.showAlert = !self.isLogin
                     }
                 }
-                    .buttonStyle(.signButton(type: .kakao))
+                .buttonStyle(.signButton(type: .kakao))
 
                 Button("네이버로 로그인") {
-                    loginAuth.startNaverLogin() { login, error in
+                    loginAuth.startNaverLogin { login, error in
                         NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][isLogin:\(isLogin)][\(String(describing: login))][\(String(describing: error))]")
                         self.showAlert = !self.isLogin
                     }
                 }
-                    .buttonStyle(.signButton(type: .naver))
+                .buttonStyle(.signButton(type: .naver))
 
                 Button("구글로 로그인") {
                     loginAuth.startGoogleLogin { login, error in
@@ -62,25 +61,25 @@ struct SNSLoginView: View {
                         self.showAlert = !self.isLogin
                     }
                 }
-                    .buttonStyle(.signButton(type: .google))
+                .buttonStyle(.signButton(type: .google))
 
                 Button("애플로 로그인") {
                     loginAuth.startAppleLogin()
                 }
-                    .buttonStyle(.signButton(type: .apple))
+                .buttonStyle(.signButton(type: .apple))
 
                 divider
 
-                Button("이메일로 가입하기") { }
+                Button("이메일로 가입하기") {}
                     .buttonStyle(.signButton(type: .email))
             }
 
             Spacer()
         }
-            .alert(isPresented: $showAlert) {
+        .alert(isPresented: $showAlert) {
             Alert(title: Text("알림"), message: Text("로그인 오류입니다."), dismissButton: .default(Text("확인")))
         }
-            .padding(20)
+        .padding(20)
     }
 }
 

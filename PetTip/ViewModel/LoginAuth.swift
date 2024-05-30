@@ -21,7 +21,6 @@ class LoginAuth: NSObject, ObservableObject {
     }
 
     private func snsLogin(userId: String, userPw: String, userNick: String = "", loginMethod: String, completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
-
         let request = LoginRequest(appTypNm: Util.getModel(), userID: userId, userPW: userPw)
         MemberAPI.login(request: request) { login, error in
             NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][\(String(describing: login))][\(String(describing: error))]")
@@ -52,12 +51,11 @@ class LoginAuth: NSObject, ObservableObject {
     }
 }
 
-//카카오 로그인
+// 카카오 로그인
 extension LoginAuth {
-
     func startKakaoLogin(completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
+        if UserApi.isKakaoTalkLoginAvailable() {
+            UserApi.shared.loginWithKakaoTalk { oauthToken, error in
                 self.getKakaoUserInfo(oauthToken?.accessToken) { login, error in
                     completion(login, error)
                 }
@@ -73,7 +71,7 @@ extension LoginAuth {
     }
 
     func getKakaoUserInfo(_ accessToken: String?, completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
-        UserApi.shared.me() { user, error in
+        UserApi.shared.me { user, error in
             if let email = user?.kakaoAccount?.email, let id = user?.id {
                 let nick = user?.kakaoAccount?.profile?.nickname
                 self.snsLogin(userId: email, userPw: String(describing: id), loginMethod: "KAKAO") { login, error in
@@ -84,7 +82,7 @@ extension LoginAuth {
     }
 }
 
-//네이버 로그인
+// 네이버 로그인
 extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
     // 네이버 로그인 실패 시 호출되는 메서드
     func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
@@ -126,7 +124,7 @@ extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
             }
             return
         }
-        requestNaverLogin()
+        self.requestNaverLogin()
     }
 
     func getNaverUserInfo(_ tokenType: String?, _ accessToken: String?, completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
@@ -143,15 +141,13 @@ extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
         request.addValue(authorization, forHTTPHeaderField: "Authorization")
 
         session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
-            if let responseData = data
-            {
+            if let responseData = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: responseData, options: []) as? NSDictionary
                     let rescode = json?.value(forKey: "resultcode") as? String
                     let message = json?.value(forKey: "message") as? String
                     print("[NAVER][로그인][resultcode:\(String(describing: rescode))][message:\(String(describing: message))]")
-                    if let response = json?.value(forKey: "response") as? NSDictionary
-                    {
+                    if let response = json?.value(forKey: "response") as? NSDictionary {
                         let email = response.value(forKey: "email") as? String
                         let _id = response.value(forKey: "id") as? String
                         // let nick = response.value(forKey: "nickname") as? String
@@ -174,12 +170,12 @@ extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
     }
 }
 
-//애플 로그인
+// 애플 로그인
 extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
-
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-            let window = windowScene.windows.first else {
+              let window = windowScene.windows.first
+        else {
             return UIWindow()
         }
         return window
@@ -194,7 +190,7 @@ extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControlle
             _email = email
         }
         // 두번째부터는 credential.email은 nil이고, credential.identityToken에 들어있다.
-            else {
+        else {
             // credential.identityToken은 jwt로 되어있고, 해당 토큰을 decode 후 email에 접근해야한다.
             if let tokenString = String(data: credential.identityToken ?? Data(), encoding: .utf8) {
                 let email2 = Util.decode(jwtToken: tokenString)["email"] as? String ?? ""
@@ -232,11 +228,11 @@ extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControlle
     }
 }
 
-//구글 로그인
+// 구글 로그인
 extension LoginAuth {
     func startGoogleLogin(completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
         NSLog("[LOG][I][(\(#fileID):\(#line))::\(#function)]")
-        //출처: https://s-o-h-a.tistory.com/47 [Xcode/iOS] SwiftUI 구글(Google)로그인 구현하고 정보 가져오기
+        // 출처: https://s-o-h-a.tistory.com/47 [Xcode/iOS] SwiftUI 구글(Google)로그인 구현하고 정보 가져오기
         // rootViewController
         guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else { return }
         // 로그인 진행

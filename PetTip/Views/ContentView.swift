@@ -6,70 +6,72 @@
 //
 
 import SwiftUI
-import NaverThirdPartyLogin
-import KakaoSDKCommon
-import KakaoSDKAuth
-import AuthenticationServices
 
 struct ContentView: View {
-    @State var isLogin = false
+    @State var isLogin = true
+    @State var isNeedLogin = false
 
     var body: some View {
-        if self.isLogin {
-            NavigationView()
+        if !isNeedLogin {
+            NaviateTabView()
         } else {
-            SNSLoginView(isLogin: self.$isLogin)  // @Binding으로 연결
-                // .onOpenURL(perform: { url in
-                // NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][\(url)]")
-                // if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                //     isLogin = AuthController.handleOpenUrl(url: url)
-                // }
-                // NaverThirdPartyLoginConnection
-                //     .getSharedInstance()
-                //     .receiveAccessToken(url)
-            // })
+            SNSLoginView(isLogin: $isLogin)
         }
+        // NavigationView {
+        //     NaviateTabView()
+        //         .toolbar {
+        //         ToolbarItem(placement: .navigationBarLeading) {
+        //             Button {
+        //             } label: {
+        //                 Image(systemName: "square.and.pencil")
+        //             }
+        //
+        //         }
+        //     }
+        // }
     }
 }
 
-struct NavigationView: View {
+struct NaviateTabView: View {
     var body: some View {
         TabView {
-            HomeView()
+            NaverMapView()
                 .tabItem {
-                Image(systemName: "house.fill")
-                Text("Home")
-            }
-                .tag(0)
-
-            SearchView()
-                .tabItem {
-                Image(systemName: "magnifyingglass")
-                Text("Search")
-            }
+                    Image(systemName: "pawprint")
+                    Text("산책")
+                }
                 .tag(1)
 
-            FavoritesView()
+            TipTalkView()
                 .tabItem {
-                Image(systemName: "star.fill")
-                Text("Favorites")
-            }
+                    Image(systemName: "message")
+                    Text("팁톡")
+                }
                 .tag(2)
 
-            ProfileView()
+            HomeView()
                 .tabItem {
-                Image(systemName: "person.fill")
-                Text("Profile")
-            }
-                .tag(3)
+                    Image(systemName: "house")
+                    Text("홈")
+                }
+                .tag(0)
 
-            SettingsView()
+            MallView()
                 .tabItem {
-                Image(systemName: "gearshape.fill")
-                Text("Settings")
-            }
+                    Image(systemName: "carrot")
+                    Text("팁몰")
+                }
                 .tag(4)
+
+            MyPageView()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("My")
+                }
+                .tag(3)
         }
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        .tabViewStyle(PageTabViewStyle())
     }
 }
 
@@ -87,21 +89,21 @@ struct SearchView: View {
     }
 }
 
-struct FavoritesView: View {
+struct TipTalkView: View {
     var body: some View {
         Text("Favorites")
             .font(.largeTitle)
     }
 }
 
-struct ProfileView: View {
+struct MyPageView: View {
     var body: some View {
         Text("Profile")
             .font(.largeTitle)
     }
 }
 
-struct SettingsView: View {
+struct MallView: View {
     var body: some View {
         Text("Settings")
             .font(.largeTitle)
