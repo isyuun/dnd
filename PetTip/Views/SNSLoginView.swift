@@ -72,6 +72,7 @@ struct SNSLoginView: View {
 
                 Button("이메일로 가입하기") {}
                     .buttonStyle(.signButton(type: .email))
+
             }
 
             Spacer()

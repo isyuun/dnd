@@ -12,30 +12,22 @@ struct ContentView: View {
     @State var isNeedLogin = false
 
     var body: some View {
-        if !isNeedLogin {
-            NaviateTabView()
-        } else {
-            SNSLoginView(isLogin: $isLogin)
-        }
-        // NavigationView {
+        // if !isNeedLogin {
         //     NaviateTabView()
-        //         .toolbar {
-        //         ToolbarItem(placement: .navigationBarLeading) {
-        //             Button {
-        //             } label: {
-        //                 Image(systemName: "square.and.pencil")
-        //             }
-        //
-        //         }
-        //     }
+        // } else {
+        //     SNSLoginView(isLogin: $isLogin)
         // }
+        NavigationView {
+            NaviateTabView()
+                .navigationBarTitle(Text("PetTip"))
+        }
     }
 }
 
 struct NaviateTabView: View {
     var body: some View {
         TabView {
-            NaverMapView()
+            WalkMapView()
                 .tabItem {
                     Image(systemName: "pawprint")
                     Text("산책")
@@ -70,8 +62,8 @@ struct NaviateTabView: View {
                 }
                 .tag(3)
         }
-        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-        .tabViewStyle(PageTabViewStyle())
+        // .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        // .tabViewStyle(PageTabViewStyle())
     }
 }
 

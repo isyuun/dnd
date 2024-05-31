@@ -54,5 +54,13 @@
 		<string>location</string>
 		<string>remote-notification</string>
 	</array>
+	<key>NSLocationDefaultAccuracyReduced</key>
+	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>true</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>true</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>true</string>
 </dict>
 </plist>
