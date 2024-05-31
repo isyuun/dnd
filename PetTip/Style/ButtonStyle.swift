@@ -152,6 +152,11 @@ public struct SignButtonStyle: ButtonStyle {
                     case .google:
                         RoundedRectangle(cornerRadius: 10)
                             .strokeBorder(Color.gray, lineWidth: 1.5)
+                            .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
+                    case .apple:
+                        RoundedRectangle(cornerRadius: 10)
+                            .strokeBorder(Color.white, lineWidth: 1.5)
+                            .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
                     default:
                         signType.backGroundColor
                     }

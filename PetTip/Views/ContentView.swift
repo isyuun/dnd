@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isLogin = false
+    @State var isLogin = true
 
     var body: some View {
         let isNeedLogin = !isLogin
@@ -32,6 +32,7 @@ struct NaviateTabView: View {
                     Text("산책")
                 }
                 .tag(1)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0))
 
             TipTalkView()
                 .tabItem {

@@ -10,7 +10,6 @@ import SwiftUI
 struct WalkMapView: View {
     var body: some View {
         WalkMap()
-            .padding(EdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0))
     }
 }
 
