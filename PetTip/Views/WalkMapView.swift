@@ -9,8 +9,17 @@ import SwiftUI
 
 struct WalkMapView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WalkMap()
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0))
     }
+}
+
+struct WalkMap: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> NMapViewController4 {
+        return UIStoryboard(name: "Map", bundle: nil).instantiateViewController(identifier: "NMapViewController") as! NMapViewController4
+    }
+
+    func updateUIViewController(_ uiViewController: NMapViewController4, context: Context) {}
 }
 
 #Preview {

@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isLogin = true
-    @State var isNeedLogin = false
+    @State var isLogin = false
 
     var body: some View {
-        // if !isNeedLogin {
-        //     NaviateTabView()
-        // } else {
-        //     SNSLoginView(isLogin: $isLogin)
-        // }
+        let isNeedLogin = !isLogin
+        let v = if !isNeedLogin {
+            AnyView(NaviateTabView())
+        } else {
+            AnyView(SNSLoginView(isLogin: $isLogin))
+        }
         NavigationView {
-            NaviateTabView()
-                .navigationBarTitle(Text("PetTip"))
+            v.navigationTitle(Text("PetTip"))
         }
     }
 }

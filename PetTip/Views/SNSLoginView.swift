@@ -8,19 +8,6 @@
 import SwiftUI
 import AuthenticationServices
 
-private var divider: some View {
-    var text = "또는"
-
-    return HStack {
-        Color.gray
-            .frame(height: 0.5, alignment: .center)
-        Text(text)
-            .font(.system(size: 12, weight: .regular))
-        Color.gray
-            .frame(height: 0.5, alignment: .center)
-    }
-}
-
 struct SNSLoginView: View {
     var loginAuth: LoginAuth
     @State private var showAlert = false // 얼럿을 표시하기 위한 상태 변수
@@ -37,7 +24,7 @@ struct SNSLoginView: View {
             Spacer()
 
             VStack(alignment: .center, spacing: 15) {
-                divider
+                divider     //Text("로그인")
 
                 Button("카카오톡으로 로그인") {
                     loginAuth.startKakaoLogin { login, error in
@@ -68,11 +55,10 @@ struct SNSLoginView: View {
                 }
                 .buttonStyle(.signButton(type: .apple))
 
-                divider
+                divider     //Text("또는")
 
                 Button("이메일로 가입하기") {}
                     .buttonStyle(.signButton(type: .email))
-
             }
 
             Spacer()

@@ -57,6 +57,33 @@ public extension ButtonStyle where Self == RectSecondaryButtonStyle {
     static var rectSecondary: Self { return .init() }
 }
 
+extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt64()
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0) // Invalid hex string, default to white color
+        }
+
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue: Double(b) / 255,
+            opacity: Double(a) / 255
+        )
+    }
+}
+
 public enum SignType {
     case kakao
     case naver
@@ -76,9 +103,11 @@ public enum SignType {
     var backGroundColor: Color {
         switch self {
         case .kakao:
-            return .yellow
+            // return .yellow
+            return Color(hex: "#F2E367")
         case .naver:
-            return .green
+            // return .green
+            return Color(hex: "#59C164")
         case .google:
             return .white
         case .apple:
@@ -91,15 +120,19 @@ public enum SignType {
     var logoImage: Image {
         switch self {
         case .kakao:
-            return Image(systemName: "message.fill")
+            // return Image(systemName: "message.fill")
+            return Image("icon_kakao")
         case .naver:
-            return Image(systemName: "n.square.fill")
+            // return Image(systemName: "n.square.fill")
+            return Image("icon_naver")
         case .google:
-            return Image(systemName: "g.circle")
+            // return Image(systemName: "g.circle")
+            return Image("icon_google")
         case .apple:
-            return Image(systemName: "applelogo")
+            // return Image(systemName: "applelogo")
+            return Image("icon_apple")
         case .email:
-            return Image(systemName: "")
+            return Image("")
         }
     }
 }
@@ -132,7 +165,7 @@ public struct SignButtonStyle: ButtonStyle {
 
             signType.logoImage
                 .foregroundColor(signType.textColor)
-                .offset(x: 10)
+                .offset(x: 30)
         }
     }
 }
