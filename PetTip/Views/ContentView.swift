@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isLogin = true
+    @State var isLogin = false
 
     var body: some View {
         let isNeedLogin = !isLogin
@@ -26,22 +26,21 @@ struct ContentView: View {
 struct NaviateTabView: View {
     var body: some View {
         TabView {
-            WalkMapView()
+            WalkListView()
                 .tabItem {
                     Image(systemName: "pawprint")
                     Text("산책")
                 }
                 .tag(1)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0))
 
-            TipTalkView()
+            StoryListView()
                 .tabItem {
                     Image(systemName: "message")
                     Text("팁톡")
                 }
                 .tag(2)
 
-            HomeView()
+            MainView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("홈")
@@ -69,45 +68,39 @@ struct NaviateTabView: View {
 
 struct HomeView: View {
     var body: some View {
-        Text("Home")
+        Text("홈")
             .font(.largeTitle)
     }
 }
 
 struct SearchView: View {
     var body: some View {
-        Text("Search")
+        Text("검색")
             .font(.largeTitle)
     }
 }
 
 struct TipTalkView: View {
     var body: some View {
-        Text("Favorites")
+        Text("팁톡")
             .font(.largeTitle)
     }
 }
 
-struct MyPageView: View {
+struct Profile: View {
     var body: some View {
-        Text("Profile")
+        Text("마이")
             .font(.largeTitle)
     }
 }
 
 struct MallView: View {
     var body: some View {
-        Text("Settings")
+        Text("팁몰")
             .font(.largeTitle)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
 #Preview {
-    ContentView()
+    ContentView(isLogin: true)
 }

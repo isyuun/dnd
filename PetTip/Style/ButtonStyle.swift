@@ -1,5 +1,9 @@
 import SwiftUI
 
+#Preview {
+    SNSLoginView(isLogin: .constant(false))
+}
+
 struct RectButtonModifier: ViewModifier {
     var textColor: Color
     func body(content: Content) -> some View {
@@ -18,19 +22,20 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
 
     public func makeBody(configuration: Configuration) -> some View {
         let colorScheme = Environment(\.colorScheme).wrappedValue
-        let textColor = colorScheme == .dark ? Color.white : Color.primary
+        let textColor = colorScheme == .dark ? Color.secondary : Color.primary
+        let backColor = colorScheme == .dark ? Color.primary : Color.secondary
 
         configuration.label
             .modifier(RectButtonModifier(textColor: textColor))
             .frame(height: 48)
-            .background(
-                isEnabled ? Color.primary : Color.gray
+            .overlay(
+                RoundedRectangle(cornerRadius: 5)
+                    .strokeBorder(Color.gray, lineWidth: 1.5)
             )
             .overlay(
-                Color.black
-                    .opacity(configuration.isPressed ? 0.1 : 0)
+                backColor
+                    .opacity(configuration.isPressed ? 0.5 : 0)
             )
-            .cornerRadius(5)
     }
 }
 
@@ -43,7 +48,8 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
 
     public func makeBody(configuration: Configuration) -> some View {
         let colorScheme = Environment(\.colorScheme).wrappedValue
-        let textColor = colorScheme == .dark ? Color.white : Color.primary
+        let textColor = colorScheme == .dark ? Color.secondary : Color.primary
+        let backColor = colorScheme == .dark ? Color.primary : Color.secondary
 
         configuration.label
             .modifier(RectButtonModifier(textColor: textColor))
@@ -53,7 +59,7 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
                     .strokeBorder(Color.gray, lineWidth: 1.5)
             )
             .overlay(
-                Color.white
+                backColor
                     .opacity(configuration.isPressed ? 0.5 : 0)
             )
     }
@@ -176,7 +182,7 @@ public struct SignButtonStyle: ButtonStyle {
 
             signType.logoImage
                 .foregroundColor(signType.textColor)
-                .offset(x: 30)
+                .offset(x: 24)
         }
     }
 }
