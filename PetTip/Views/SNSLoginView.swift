@@ -24,6 +24,12 @@ struct SNSLoginView: View {
             Spacer()
 
             VStack(alignment: .center, spacing: 15) {
+                Button("Primary Button") {}
+                    .buttonStyle(.rectPrimary)
+
+                Button("Secondary Button") {}
+                    .buttonStyle(.rectSecondary)
+
                 divider     //Text("로그인")
 
                 Button("카카오톡으로 로그인") {

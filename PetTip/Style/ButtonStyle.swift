@@ -17,16 +17,19 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
 
     public func makeBody(configuration: Configuration) -> some View {
+        let colorScheme = Environment(\.colorScheme).wrappedValue
+        let textColor = colorScheme == .dark ? Color.white : Color.primary
+
         configuration.label
-            .modifier(RectButtonModifier(textColor: .white))
+            .modifier(RectButtonModifier(textColor: textColor))
             .frame(height: 48)
             .background(
-            isEnabled ? Color.primary : Color.gray
-        )
+                isEnabled ? Color.primary : Color.gray
+            )
             .overlay(
-            Color.black
-                .opacity(configuration.isPressed ? 0.1 : 0)
-        )
+                Color.black
+                    .opacity(configuration.isPressed ? 0.1 : 0)
+            )
             .cornerRadius(5)
     }
 }
@@ -39,17 +42,20 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
 
     public func makeBody(configuration: Configuration) -> some View {
+        let colorScheme = Environment(\.colorScheme).wrappedValue
+        let textColor = colorScheme == .dark ? Color.white : Color.primary
+
         configuration.label
-            .modifier(RectButtonModifier(textColor: .gray))
+            .modifier(RectButtonModifier(textColor: textColor))
             .frame(height: 48)
             .overlay(
-            RoundedRectangle(cornerRadius: 5)
-                .strokeBorder(Color.gray, lineWidth: 1.5)
-        )
+                RoundedRectangle(cornerRadius: 5)
+                    .strokeBorder(Color.gray, lineWidth: 1.5)
+            )
             .overlay(
-            Color.white
-                .opacity(configuration.isPressed ? 0.5 : 0)
-        )
+                Color.white
+                    .opacity(configuration.isPressed ? 0.5 : 0)
+            )
     }
 }
 
@@ -104,10 +110,10 @@ public enum SignType {
         switch self {
         case .kakao:
             // return .yellow
-            return Color(hex: "#F2E367")
+            return Color(hex: "#FEE500")
         case .naver:
             // return .green
-            return Color(hex: "#59C164")
+            return Color(hex: "#03C75A")
         case .google:
             return .white
         case .apple:
@@ -147,25 +153,25 @@ public struct SignButtonStyle: ButtonStyle {
                 .modifier(RectButtonModifier(textColor: signType.textColor))
                 .frame(height: 48)
                 .background(
-                Group {
-                    switch signType {
-                    case .google:
-                        RoundedRectangle(cornerRadius: 10)
-                            .strokeBorder(Color.gray, lineWidth: 1.5)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
-                    case .apple:
-                        RoundedRectangle(cornerRadius: 10)
-                            .strokeBorder(Color.white, lineWidth: 1.5)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
-                    default:
-                        signType.backGroundColor
+                    Group {
+                        switch signType {
+                        case .google:
+                            RoundedRectangle(cornerRadius: 10)
+                                .strokeBorder(Color.gray, lineWidth: 1.5)
+                                .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
+                        case .apple:
+                            RoundedRectangle(cornerRadius: 10)
+                                .strokeBorder(Color.white, lineWidth: 1.5)
+                                .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
+                        default:
+                            signType.backGroundColor
+                        }
                     }
-                }
-            )
+                )
                 .overlay(
-                Color.black
-                    .opacity(configuration.isPressed ? 0.5 : 0)
-            )
+                    Color.black
+                        .opacity(configuration.isPressed ? 0.5 : 0)
+                )
                 .cornerRadius(10)
 
             signType.logoImage
@@ -180,4 +186,3 @@ public extension ButtonStyle where Self == SignButtonStyle {
         return .init(signType: type)
     }
 }
-
