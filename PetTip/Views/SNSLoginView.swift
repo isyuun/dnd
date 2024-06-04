@@ -8,6 +8,10 @@
 import SwiftUI
 import AuthenticationServices
 
+#Preview {
+    SNSLoginView(isLogin: .constant(false))
+}
+
 struct SNSLoginView: View {
     var loginAuth: LoginAuth
     @State private var showAlert = false // 얼럿을 표시하기 위한 상태 변수
@@ -74,8 +78,4 @@ struct SNSLoginView: View {
         }
         .padding(20)
     }
-}
-
-#Preview {
-    SNSLoginView(isLogin: .constant(false))
 }

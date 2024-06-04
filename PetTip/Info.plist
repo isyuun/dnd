@@ -55,12 +55,18 @@
 		<string>remote-notification</string>
 	</array>
 	<key>NSLocationDefaultAccuracyReduced</key>
-	<true/>
+	<false/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>true</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>true</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>true</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

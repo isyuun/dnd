@@ -48,8 +48,8 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
 
     public func makeBody(configuration: Configuration) -> some View {
         let colorScheme = Environment(\.colorScheme).wrappedValue
-        let textColor = colorScheme == .dark ? Color.secondary : Color.primary
-        let backColor = colorScheme == .dark ? Color.primary : Color.secondary
+        let textColor = colorScheme == .dark ? Color.primary : Color.secondary
+        let backColor = colorScheme == .dark ? Color.secondary : Color.primary
 
         configuration.label
             .modifier(RectButtonModifier(textColor: textColor))

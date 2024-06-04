@@ -26,11 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UNUserNotificationCenter.current().delegate = self
 
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(
-            options: authOptions,
-            completionHandler: { _, _ in })
-        application.registerForRemoteNotifications()
+        // let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        // UNUserNotificationCenter.current().requestAuthorization(
+        //     options: authOptions,
+        //     completionHandler: { _, _ in })
+        // application.registerForRemoteNotifications()
 
         KakaoSDK.initSDK(appKey: "226344419c2ba87b4309b7d42ac22ae0")
 
