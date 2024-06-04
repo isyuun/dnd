@@ -1,19 +1,19 @@
 //
-//  MainView.swift
+//  WalkView.swift
 //  PetTip
 //
-//  Created by isyuun on 2024/5/31.
+//  Created by isyuun on 2024/6/4.
 //
 
 import SwiftUI
 
-struct MainView: View {
+struct WalkView: View {
     var body: some View {
-        MainViewCtrl()
+        WalkViewCtrl()
     }
 }
 
-struct MainViewCtrl: UIViewControllerRepresentable {
+struct WalkViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> MainViewController4 {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainViewController") as! MainViewController4
     }
@@ -29,5 +29,5 @@ struct MainViewCtrl: UIViewControllerRepresentable {
 }
 
 #Preview {
-    MainView()
+    WalkView()
 }

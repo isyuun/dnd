@@ -13,33 +13,57 @@ import UserNotifications
 import HealthKit
 
 #Preview {
-    ContentView(isLogin: true)
+    ContentView(isLogin: false)
 }
 
 struct ContentView: View {
     @State var isLogin = false
-    @State private var showPermissionView = false
+    @State var showPermissionView = false
 
     @State var showAlert = true
     @State var alertMessage = ""
 
     var body: some View {
-        let isNeedLogin = !isLogin
-        let v = if showPermissionView == true {
-            AnyView(PermissionView(showPermissionView: $showPermissionView))
+        let isNeedLogin = !self.isLogin
+        let v = if self.showPermissionView == true {
+            AnyView(
+                PermissionView(showPermissionView: self.$showPermissionView)
+            )
         } else {
-            if !isNeedLogin {
-                AnyView(NaviateTabView(showPermissionView: $showPermissionView))
+            if isNeedLogin {
+                AnyView(
+                    SNSLoginView(isLogin: self.$isLogin)
+                )
             } else {
-                AnyView(SNSLoginView(isLogin: $isLogin))
+                AnyView(
+                    NaviateTabView()
+                        .navigationBarItems(
+                            trailing:
+                            HStack {
+                                Button(action: {
+                                    // 알림 버튼 눌렀을 때의 액션
+                                }) {
+                                    Image(systemName: "bell")
+                                }
+                                Button(action: {
+                                    // 메뉴 버튼 눌렀을 때의 액션
+                                }) {
+                                    Image(systemName: "line.horizontal.3")
+                                }
+                            }
+                        )
+                )
             }
         }
         NavigationView {
             v
-            // .navigationTitle(Text("PetTip"))
+            // .navigationTitle("PetTip")
+            .navigationBarItems(
+                leading: Image("logo")
+            )
         }
         .onAppear {
-            checkPermissions()
+            self.checkPermissions()
         }
     }
 
@@ -60,7 +84,7 @@ struct ContentView: View {
             }
         }
     }
-
+    
     func checkLocationPermission() {
         let locationManager = CLLocationManager()
         let status = locationManager.authorizationStatus
@@ -77,9 +101,8 @@ struct ContentView: View {
             print("Unexpected case")
             showPermissionView = true
         }
-        // showPermissionView = false   //test
     }
-
+    
     func checkPhotoLibraryPermission() {
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
@@ -98,88 +121,5 @@ struct ContentView: View {
             print("Unexpected case")
             showPermissionView = true
         }
-        // showPermissionView = false   //test
-    }
-}
-
-struct NaviateTabView: View {
-    @State private var selection = 0
-    @Binding var showPermissionView: Bool
-
-    var body: some View {
-        TabView(selection: $selection) {
-            WalkListView()
-                .tabItem {
-                    Image(systemName: "pawprint")
-                    Text("산책")
-                }
-                .navigationTitle(Text("PetTip"))
-                .tag(1)
-
-            StoryListView()
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("팁톡")
-                }
-                .tag(2)
-
-            MainView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("홈")
-                }
-                .tag(0)
-
-            MallView()
-                .tabItem {
-                    Image(systemName: "carrot")
-                    Text("팁몰")
-                }
-                .tag(4)
-
-            MyPageView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("My")
-                }
-                .tag(3)
-        }
-        // .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-        // .tabViewStyle(PageTabViewStyle())
-    }
-}
-
-struct HomeView: View {
-    var body: some View {
-        Text("홈")
-            .font(.largeTitle)
-    }
-}
-
-struct SearchView: View {
-    var body: some View {
-        Text("검색")
-            .font(.largeTitle)
-    }
-}
-
-struct TipTalkView: View {
-    var body: some View {
-        Text("팁톡")
-            .font(.largeTitle)
-    }
-}
-
-struct Profile: View {
-    var body: some View {
-        Text("마이")
-            .font(.largeTitle)
-    }
-}
-
-struct MallView: View {
-    var body: some View {
-        Text("팁몰")
-            .font(.largeTitle)
     }
 }

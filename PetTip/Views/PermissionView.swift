@@ -35,8 +35,9 @@ struct PermissionView: View {
     var body: some View {
         VStack {
             Text("펫팁을 이용하려면\n권한 허용이 필요해요")
-                .font(.largeTitle)
+                .font(.title2)
                 .fontWeight(.bold)
+                .padding(.top, 24)
                 .padding(.leading, 24)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
@@ -121,6 +122,7 @@ struct PermissionView: View {
     @State var isLocationPermission = false
     private func requestLocationPermission(complete: @escaping (_ granted: Bool) -> Void) {
         let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
         let delegateWrapper = CLLocationManagerDelegateWrapper { status in
             switch status {
             case .authorizedAlways, .authorizedWhenInUse:
@@ -138,7 +140,6 @@ struct PermissionView: View {
             complete(self.isLocationPermission)
         }
         locationManager.delegate = delegateWrapper
-        locationManager.requestWhenInUseAuthorization()
 
         // 메모리에서 해제되지 않도록 delegateWrapper를 유지
         objc_setAssociatedObject(locationManager, &AssociatedKeys.delegateWrapper, delegateWrapper, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -222,7 +223,7 @@ struct PermissionView: View {
         requestNotificationPermission { granted in
             requestLocationPermission { granted in
                 requestPhotoLibraryPermission { granted in
-                    showPermissionView = !(isLocationPermission && isPhotoLibraryPermission)
+                    showPermissionView = !(isNotificationPermission && isLocationPermission && isPhotoLibraryPermission)
                 }
             }
         }

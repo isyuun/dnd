@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-var divider: some View {
-    // var text = Text("또는").font(.system(size: 12, weight: .regular))
+func divider(text: Text) -> some View {
+    // let _text = Text("또는").font(.system(size: 12, weight: .regular))
+    let _text = text
 
     return HStack {
         Color.gray
             .frame(height: 0.5, alignment: .center)
-        Text("또는")
-            .font(.system(size: 12, weight: .regular))
+        // Text("또는")
+        //     .font(.system(size: 12, weight: .regular))
+        _text
         Color.gray
             .frame(height: 0.5, alignment: .center)
     }
