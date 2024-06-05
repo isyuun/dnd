@@ -63,8 +63,8 @@ struct ContentView: View {
                         //     .font(.title) // 텍스트 크기 조정
                         //     .bold() // 필요에 따라 스타일
                         Image("logo")
-                            .renderingMode(.template) // 이미지의 렌더링 모드를 템플릿으로 설정
-                            .foregroundColor(.red) // 틴트 색상 설정
+                            .renderingMode(.template)
+                            .foregroundColor(.red)
                     }
                 }
         }

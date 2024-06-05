@@ -18,7 +18,11 @@ struct MyPageViewCtrl: UIViewControllerRepresentable {
         return UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(identifier: "MyPageViewController") as! MyPageViewController2
     }
 
-    func updateUIViewController(_ uiViewController: MyPageViewController2, context: Context) {}
+    func updateUIViewController(_ uiViewController: MyPageViewController2, context: Context) {
+        guard let titleBarView = uiViewController.titleBarView else { return }
+        titleBarView.Hide()
+
+    }
 }
 
 #Preview {
