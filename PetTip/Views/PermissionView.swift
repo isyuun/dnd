@@ -37,7 +37,6 @@ struct PermissionView: View {
             Text("펫팁을 이용하려면\n권한 허용이 필요해요")
                 .font(.title2)
                 .fontWeight(.bold)
-                .padding(.top, 24)
                 .padding(.leading, 24)
                 .frame(maxWidth: .infinity, alignment: .leading)
 

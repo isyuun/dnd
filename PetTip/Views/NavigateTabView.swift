@@ -1,5 +1,5 @@
 //
-//  NaviateTabView.swift
+//  NavigateTabView.swift
 //  PetTip
 //
 //  Created by isyuun on 2024/6/4.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 #Preview {
-    NaviateTabView()
+    NavigateTabView()
 }
 
-struct NaviateTabView: View {
+struct NavigateTabView: View {
     @State private var selection = 0
 
     var body: some View {
@@ -40,7 +40,7 @@ struct NaviateTabView: View {
 
             MallView()
                 .tabItem {
-                    Image(systemName: "carrot")
+                    Image(systemName: "cart")
                     Text("팁몰")
                 }
                 .tag(4)

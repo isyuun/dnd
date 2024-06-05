@@ -13,7 +13,8 @@ import UserNotifications
 import HealthKit
 
 #Preview {
-    ContentView(isLogin: false)
+    ContentView(isLogin: true, showPermissionView: false)
+    // ContentView()
 }
 
 struct ContentView: View {
@@ -24,43 +25,49 @@ struct ContentView: View {
     @State var alertMessage = ""
 
     var body: some View {
-        let isNeedLogin = !self.isLogin
-        let v = if self.showPermissionView == true {
-            AnyView(
-                PermissionView(showPermissionView: self.$showPermissionView)
-            )
+        let isNeedLogin = !isLogin
+        let v = if showPermissionView == true {
+            AnyView(PermissionView(showPermissionView: $showPermissionView))
         } else {
             if isNeedLogin {
-                AnyView(
-                    SNSLoginView(isLogin: self.$isLogin)
-                )
+                AnyView(SNSLoginView(isLogin: $isLogin))
             } else {
                 AnyView(
-                    NaviateTabView()
-                        .navigationBarItems(
-                            trailing:
-                            HStack {
-                                Button(action: {
-                                    // 알림 버튼 눌렀을 때의 액션
-                                }) {
-                                    Image(systemName: "bell")
-                                }
-                                Button(action: {
-                                    // 메뉴 버튼 눌렀을 때의 액션
-                                }) {
-                                    Image(systemName: "line.horizontal.3")
+                    NavigateTabView()
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                HStack {
+                                    Button(action: {
+                                        // 알림 버튼 눌렀을 때의 액션
+                                    }) {
+                                        Image(systemName: "bell")
+                                    }
+                                    Button(action: {
+                                        // 메뉴 버튼 눌렀을 때의 액션
+                                    }) {
+                                        Image(systemName: "line.horizontal.3")
+                                    }
                                 }
                             }
-                        )
+                        }
                 )
             }
         }
         NavigationView {
             v
-            // .navigationTitle("PetTip")
-            .navigationBarItems(
-                leading: Image("logo")
-            )
+                // .navigationBarTitle("", displayMode: .inline) // Display title inline
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        // Text("PetTip")
+                        //     .foregroundColor(.red)
+                        //     .font(.title) // 텍스트 크기 조정
+                        //     .bold() // 필요에 따라 스타일
+                        Image("logo")
+                            .renderingMode(.template) // 이미지의 렌더링 모드를 템플릿으로 설정
+                            .foregroundColor(.red) // 틴트 색상 설정
+                    }
+                }
         }
         .onAppear {
             self.checkPermissions()
@@ -84,7 +91,7 @@ struct ContentView: View {
             }
         }
     }
-    
+
     func checkLocationPermission() {
         let locationManager = CLLocationManager()
         let status = locationManager.authorizationStatus
@@ -102,7 +109,7 @@ struct ContentView: View {
             showPermissionView = true
         }
     }
-    
+
     func checkPhotoLibraryPermission() {
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {

@@ -18,6 +18,9 @@ import DropDown
 struct PetTipApp: App {
     @UIApplicationDelegateAdaptor var delegate: AppDelegate2
 
+    init() {
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
