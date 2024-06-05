@@ -40,7 +40,7 @@ struct ContentView: View {
                                     Button(action: {
                                         // 알림 버튼 눌렀을 때의 액션
                                     }) {
-                                        Image(systemName: "bell")
+                                        Image(systemName: "bell.fill")
                                     }
                                     Button(action: {
                                         // 메뉴 버튼 눌렀을 때의 액션
@@ -55,7 +55,6 @@ struct ContentView: View {
         }
         NavigationView {
             v
-                // .navigationBarTitle("", displayMode: .inline) // Display title inline
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
