@@ -126,6 +126,7 @@ struct PermissionView: View {
             switch status {
             case .authorizedAlways, .authorizedWhenInUse:
                 self.isLocationPermission = true
+                complete(self.isLocationPermission)
             case .restricted, .notDetermined:
                 // 아직 결정되지 않은 상태: 요청을 다시 호출하거나 사용자가 결정할 때까지 대기
                 locationManager.requestWhenInUseAuthorization()
@@ -136,7 +137,7 @@ struct PermissionView: View {
             @unknown default:
                 break
             }
-            complete(self.isLocationPermission)
+            // complete(self.isLocationPermission)
         }
         locationManager.delegate = delegateWrapper
 

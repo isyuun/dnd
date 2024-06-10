@@ -22,10 +22,8 @@ extension UINavigationController: UINavigationControllerDelegate {
 
     override open func viewWillLayoutSubviews() {
         NSLog("[LOG][I][(\(#fileID):\(#line))::\(#function)][\(viewControllers.first == topViewController)][\(viewControllers.count)]")
-        if viewControllers.first == topViewController {
-            navigationBar.topItem?.title = ""
-            navigationBar.topItem?.titleView?.isHidden = true
-        }
+        // 네비게이션 백버튼
+        navigationBar.topItem?.backButtonDisplayMode = .minimal
         guard let vc = topViewController else { return }
         guard let v = vc.view else { return }
         if let p = v.parent(viewType: BackTitleBarView.self) {

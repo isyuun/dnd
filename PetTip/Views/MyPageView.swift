@@ -19,8 +19,8 @@ struct MyPageViewCtrl: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: MyPageViewController2, context: Context) {
-        guard let titleBarView = uiViewController.titleBarView else { return }
-        titleBarView.Hide()
+        // guard let titleBarView = uiViewController.titleBarView else { return }
+        // titleBarView.Hide()
 
     }
 }
