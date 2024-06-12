@@ -15,7 +15,7 @@ extension UINavigationController: UINavigationControllerDelegate {
         // 네비게이션 백버튼
         navigationBar.topItem?.backButtonDisplayMode = .minimal
         // 네비게이션 타이틀
-        // navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title2)]
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title2)]
     }
 
     override open func viewWillLayoutSubviews() {
