@@ -15,6 +15,9 @@
 		7B0F212A2C086A180056EDC9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F21292C086A180056EDC9 /* MapView.swift */; };
 		7B0F212C2C0876170056EDC9 /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F212B2C0876170056EDC9 /* NaverMapView.swift */; };
 		7B0F212E2C08763F0056EDC9 /* PinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F212D2C08763F0056EDC9 /* PinItem.swift */; };
+		7B16B9F72C193B660080828F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9F62C193B660080828F /* SignupView.swift */; };
+		7B16B9F92C195F3E0080828F /* TextFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9F82C195F3E0080828F /* TextFieldWithButton.swift */; };
+		7B16B9FB2C1972B50080828F /* TextFieldWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9FA2C1972B50080828F /* TextFieldWithImage.swift */; };
 		7B1F5B232C0D4ED000336F9A /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B222C0D4ED000336F9A /* PermissionView.swift */; };
 		7B1F5B252C0E9C1D00336F9A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B242C0E9C1D00336F9A /* LoginView.swift */; };
 		7B1F5B272C0EC4ED00336F9A /* WalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B262C0EC4ED00336F9A /* WalkView.swift */; };
@@ -215,7 +218,7 @@
 		7B7C2B492C09852600301AE1 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C42C09852500301AE1 /* UITableViewCell.swift */; };
 		7B7C2B4A2C09852600301AE1 /* UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C52C09852500301AE1 /* UITableViewDataSource.swift */; };
 		7B7C2B4B2C09852600301AE1 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C62C09852500301AE1 /* UITextField.swift */; };
-		7B7C2B4C2C09852600301AE1 /* UITextField2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C72C09852500301AE1 /* UITextField2.swift */; };
+		7B7C2B4C2C09852600301AE1 /* UITextField3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C72C09852500301AE1 /* UITextField3.swift */; };
 		7B7C2B4D2C09852600301AE1 /* UITextView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C82C09852500301AE1 /* UITextView2.swift */; };
 		7B7C2B4E2C09852600301AE1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C92C09852500301AE1 /* UIView.swift */; };
 		7B7C2B4F2C09852600301AE1 /* UIView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29CA2C09852500301AE1 /* UIView2.swift */; };
@@ -399,7 +402,7 @@
 		7B7C2C142C09D09900301AE1 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C132C09D09900301AE1 /* MyPageView.swift */; };
 		7BD0CFD52C05833F002D2531 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */; };
 		7BD0CFD62C05833F002D2531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD42C05833F002D2531 /* AppDelegate.swift */; };
-		7BD0CFD82C05A774002D2531 /* SNSLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD72C05A774002D2531 /* SNSLoginView.swift */; };
+		7BD0CFD82C05A774002D2531 /* LonginView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD72C05A774002D2531 /* LonginView2.swift */; };
 		7BD0CFDE2C05B08D002D2531 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */; };
 		7BD7FB5E2C0418E5001D24CE /* PetTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7FB5D2C0418E5001D24CE /* PetTipApp.swift */; };
 		7BD7FB602C0418E5001D24CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7FB5F2C0418E5001D24CE /* ContentView.swift */; };
@@ -437,6 +440,9 @@
 		7B0F21292C086A180056EDC9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		7B0F212B2C0876170056EDC9 /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
 		7B0F212D2C08763F0056EDC9 /* PinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinItem.swift; sourceTree = "<group>"; };
+		7B16B9F62C193B660080828F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		7B16B9F82C195F3E0080828F /* TextFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithButton.swift; sourceTree = "<group>"; };
+		7B16B9FA2C1972B50080828F /* TextFieldWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithImage.swift; sourceTree = "<group>"; };
 		7B1F5B222C0D4ED000336F9A /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		7B1F5B242C0E9C1D00336F9A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7B1F5B262C0EC4ED00336F9A /* WalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkView.swift; sourceTree = "<group>"; };
@@ -637,7 +643,7 @@
 		7B7C29C42C09852500301AE1 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		7B7C29C52C09852500301AE1 /* UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewDataSource.swift; sourceTree = "<group>"; };
 		7B7C29C62C09852500301AE1 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		7B7C29C72C09852500301AE1 /* UITextField2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField2.swift; sourceTree = "<group>"; };
+		7B7C29C72C09852500301AE1 /* UITextField3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField3.swift; sourceTree = "<group>"; };
 		7B7C29C82C09852500301AE1 /* UITextView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView2.swift; sourceTree = "<group>"; };
 		7B7C29C92C09852500301AE1 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		7B7C29CA2C09852500301AE1 /* UIView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView2.swift; sourceTree = "<group>"; };
@@ -822,7 +828,7 @@
 		7B7C2C132C09D09900301AE1 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7BD0CFD42C05833F002D2531 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BD0CFD72C05A774002D2531 /* SNSLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSLoginView.swift; sourceTree = "<group>"; };
+		7BD0CFD72C05A774002D2531 /* LonginView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonginView2.swift; sourceTree = "<group>"; };
 		7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		7BD0CFDF2C05B710002D2531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7BD7FB5A2C0418E5001D24CE /* PetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1299,7 +1305,7 @@
 				7B7C29C42C09852500301AE1 /* UITableViewCell.swift */,
 				7B7C29C52C09852500301AE1 /* UITableViewDataSource.swift */,
 				7B7C29C62C09852500301AE1 /* UITextField.swift */,
-				7B7C29C72C09852500301AE1 /* UITextField2.swift */,
+				7B7C29C72C09852500301AE1 /* UITextField3.swift */,
 				7B7C29C82C09852500301AE1 /* UITextView2.swift */,
 				7B7C29C92C09852500301AE1 /* UIView.swift */,
 				7B7C29CA2C09852500301AE1 /* UIView2.swift */,
@@ -1563,8 +1569,9 @@
 				7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */,
 				7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */,
 				7BD7FB5F2C0418E5001D24CE /* ContentView.swift */,
-				7BD0CFD72C05A774002D2531 /* SNSLoginView.swift */,
 				7B1F5B242C0E9C1D00336F9A /* LoginView.swift */,
+				7BD0CFD72C05A774002D2531 /* LonginView2.swift */,
+				7B16B9F62C193B660080828F /* SignupView.swift */,
 				7B0F21292C086A180056EDC9 /* MapView.swift */,
 				7B7C25782C095E1B00301AE1 /* Coordinator.swift */,
 				7B0F212B2C0876170056EDC9 /* NaverMapView.swift */,
@@ -1584,6 +1591,8 @@
 			children = (
 				7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */,
 				7B7C2C0B2C09A47300301AE1 /* Style.swift */,
+				7B16B9F82C195F3E0080828F /* TextFieldWithButton.swift */,
+				7B16B9FA2C1972B50080828F /* TextFieldWithImage.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -1890,7 +1899,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B7C2B4C2C09852600301AE1 /* UITextField2.swift in Sources */,
+				7B7C2B4C2C09852600301AE1 /* UITextField3.swift in Sources */,
 				7B7C2B2C2C09852600301AE1 /* LifeUpdate.swift in Sources */,
 				7B7C2BFD2C09852600301AE1 /* SelectWalkPetItemView.swift in Sources */,
 				7B7C2BB52C09852600301AE1 /* PetTypeSelectViewController.swift in Sources */,
@@ -1989,7 +1998,7 @@
 				7B7C2B642C09852600301AE1 /* CommunityCommentView.swift in Sources */,
 				7B7C2AF42C09852600301AE1 /* ResetNcknmRequest.swift in Sources */,
 				7B7C2B982C09852600301AE1 /* CustomerCenterViewController.swift in Sources */,
-				7BD0CFD82C05A774002D2531 /* SNSLoginView.swift in Sources */,
+				7BD0CFD82C05A774002D2531 /* LonginView2.swift in Sources */,
 				7B7C2ABC2C09852500301AE1 /* WinnerListRequest.swift in Sources */,
 				7B7C2AE02C09852600301AE1 /* MonthRecordResponse.swift in Sources */,
 				7B7C2B3E2C09852600301AE1 /* CustomTabBar.swift in Sources */,
@@ -2028,6 +2037,7 @@
 				7B7C2BE82C09852600301AE1 /* CommonConfirmView.swift in Sources */,
 				7B7C2B212C09852600301AE1 /* HTTPHeaderField.swift in Sources */,
 				7B7C2AB82C09852500301AE1 /* QnAUpdateRequest.swift in Sources */,
+				7B16B9F92C195F3E0080828F /* TextFieldWithButton.swift in Sources */,
 				7B7C2AFB2C09852600301AE1 /* MyPetCreateRequest.swift in Sources */,
 				7B7C2B952C09852600301AE1 /* AddressSelectViewController.swift in Sources */,
 				7B7C2BEB2C09852600301AE1 /* CommonPopupView2.swift in Sources */,
@@ -2126,6 +2136,7 @@
 				7B7C2AEE2C09852600301AE1 /* LoginRequest.swift in Sources */,
 				7B7C2BAB2C09852600301AE1 /* NoticeViewController.swift in Sources */,
 				7B7C2AE62C09852600301AE1 /* RlsUpdateResponse.swift in Sources */,
+				7B16B9F72C193B660080828F /* SignupView.swift in Sources */,
 				7B7C2ACA2C09852600301AE1 /* CmntCreateRequest.swift in Sources */,
 				7B7C2AD92C09852600301AE1 /* LifeUploadRequest.swift in Sources */,
 				7B7C2B182C09852600301AE1 /* StoryListResponse.swift in Sources */,
@@ -2151,6 +2162,7 @@
 				7B7C2B2B2C09852600301AE1 /* EventList.swift in Sources */,
 				7B7C2BD52C09852600301AE1 /* Crypto.swift in Sources */,
 				7BD0CFD62C05833F002D2531 /* AppDelegate.swift in Sources */,
+				7B16B9FB2C1972B50080828F /* TextFieldWithImage.swift in Sources */,
 				7B7C2BF92C09852600301AE1 /* SelectWalkMarkPetItemView.swift in Sources */,
 				7B7C2BF12C09852600301AE1 /* PetWeightView2.swift in Sources */,
 				7B7C2BEA2C09852600301AE1 /* CommonPopupView.swift in Sources */,

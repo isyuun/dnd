@@ -13,6 +13,8 @@ import NaverThirdPartyLogin
 import AuthenticationServices
 import GoogleSignIn
 
+private var completionHandlerKey: UInt8 = 0
+
 class LoginAuth: NSObject, ObservableObject {
     @Binding var isLogin: Bool
 
@@ -73,11 +75,22 @@ extension LoginAuth {
     func getKakaoUserInfo(_ accessToken: String?, completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
         UserApi.shared.me { user, error in
             if let email = user?.kakaoAccount?.email, let id = user?.id {
-                let nick = user?.kakaoAccount?.profile?.nickname
+                // let nick = user?.kakaoAccount?.profile?.nickname
                 self.snsLogin(userId: email, userPw: String(describing: id), loginMethod: "KAKAO") { login, error in
                     completion(login, error)
                 }
             }
+        }
+    }
+}
+
+extension NaverThirdPartyLoginConnection {
+    var completion: ((_ succeed: Login?, _ failed: MyError?) -> Void)? {
+        get {
+            return objc_getAssociatedObject(self, &completionHandlerKey) as? ((_ succeed: Login?, _ failed: MyError?) -> Void)
+        }
+        set {
+            objc_setAssociatedObject(self, &completionHandlerKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }
@@ -104,6 +117,7 @@ extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
         if let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance(), loginInstance.accessToken != nil {
             NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][\(String(describing: loginInstance))]")
             self.getNaverUserInfo(loginInstance.tokenType, loginInstance.accessToken) { login, error in
+                loginInstance.completion!(login, error)
             }
         }
     }
@@ -118,6 +132,7 @@ extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
     func startNaverLogin(completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
         NSLog("[LOG][I][(\(#fileID):\(#line))::\(#function)]")
         guard let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance() else { return }
+        loginInstance.completion = completion
         if loginInstance.isValidAccessTokenExpireTimeNow() {
             self.getNaverUserInfo(loginInstance.tokenType, loginInstance.accessToken) { login, error in
                 completion(login, error)
@@ -170,6 +185,17 @@ extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
     }
 }
 
+extension ASAuthorizationController {
+    var completion: ((_ succeed: Login?, _ failed: MyError?) -> Void)? {
+        get {
+            return objc_getAssociatedObject(self, &completionHandlerKey) as? ((_ succeed: Login?, _ failed: MyError?) -> Void)
+        }
+        set {
+            objc_setAssociatedObject(self, &completionHandlerKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
+
 // 애플 로그인
 extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
@@ -209,6 +235,7 @@ extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControlle
         // let nick = credential.fullName
 
         self.snsLogin(userId: _email, userPw: user, loginMethod: "APPLE") { login, error in
+            controller.completion?(login, error)
         }
     }
 
@@ -216,7 +243,7 @@ extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControlle
         // self.showToast(msg: "APPLE 로그인에 문제가 발생했어요")
     }
 
-    func startAppleLogin() {
+    func startAppleLogin(completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
@@ -225,6 +252,7 @@ extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControlle
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
+        authorizationController.completion = completion // 클로저 할당
     }
 }
 

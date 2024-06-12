@@ -30,10 +30,11 @@ struct ContentView: View {
             AnyView(PermissionView(showPermissionView: $showPermissionView))
         } else {
             if isNeedLogin {
-                AnyView(SNSLoginView(isLogin: $isLogin))
+                AnyView(LonginView2(isLogin: $isLogin))
             } else {
                 AnyView(
                     NavigateTabView()
+                        .navigationTitle("")
                         .toolbar {
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 HStack {

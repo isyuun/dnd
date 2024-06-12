@@ -66,8 +66,6 @@ struct PermissionView: View {
                 requestRequiredPermissions()
             }) {
                 Text("시작하기")
-                    // .font(.title2)
-                    // .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity)

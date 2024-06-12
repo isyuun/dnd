@@ -1,7 +1,7 @@
 import SwiftUI
 
 #Preview {
-    SNSLoginView(isLogin: .constant(false))
+    LonginView2(isLogin: .constant(false))
 }
 
 struct RectButtonModifier: ViewModifier {

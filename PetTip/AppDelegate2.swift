@@ -18,7 +18,7 @@ class AppDelegate2: AppDelegate {
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         let ret = super.application(application, didFinishLaunchingWithOptions: launchOptions)
         // 원하는 시간만큼 sleep 시키기( 초 단위 )
-        Thread.sleep(forTimeInterval: 1)
+        Thread.sleep(forTimeInterval: 0.5)
         return ret
     }
 }

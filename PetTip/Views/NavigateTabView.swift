@@ -21,7 +21,6 @@ struct NavigateTabView: View {
                     Image(systemName: "pawprint")
                     Text("산책")
                 }
-                .navigationTitle(Text("PetTip"))
                 .tag(1)
 
             StoryListView()
