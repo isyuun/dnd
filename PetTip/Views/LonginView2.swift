@@ -13,10 +13,10 @@ import AuthenticationServices
 }
 
 struct LonginView2: View {
-    var loginAuth: LoginAuth
-    @State private var showAlert = false // 얼럿을 표시하기 위한 상태 변수
-    @State private var isSigninViewActive = false
+    @State var showAlert = false
+    @State var isSigninViewActive = false
 
+    var loginAuth: LoginAuth
     @Binding var isLogin: Bool
     @State var login: Login? = nil
     @State var error: MyError? = nil
@@ -37,8 +37,6 @@ struct LonginView2: View {
             Text("간편인증을 해 주세요")
                 .font(.title2)
                 .padding(.bottom, 24)
-
-            // divider(text: Text("로그인"))     //Text("로그인")
 
             Button("카카오톡으로 로그인") {
                 self.loginAuth.startKakaoLogin { login, error in

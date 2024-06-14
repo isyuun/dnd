@@ -13,21 +13,21 @@ import UserNotifications
 import HealthKit
 
 #Preview {
-    ContentView(isLogin: true, showPermissionView: false)
-    // ContentView()
+    // ContentView(isLogin: true, isPermissionViewShow: false, isWelcomeViewActive: true)
+    ContentView()
 }
 
 struct ContentView: View {
     @State var isLogin = false
-    @State var showPermissionView = false
+    @State var isPermissionViewShow = false
 
     @State var showAlert = true
     @State var alertMessage = ""
 
     var body: some View {
         let isNeedLogin = !isLogin
-        let v = if showPermissionView == true {
-            AnyView(PermissionView(showPermissionView: $showPermissionView))
+        let v = if isPermissionViewShow == true {
+            AnyView(PermissionView(showPermissionView: $isPermissionViewShow))
         } else {
             if isNeedLogin {
                 AnyView(LonginView2(isLogin: $isLogin))
@@ -56,7 +56,6 @@ struct ContentView: View {
         }
         NavigationView {
             v
-                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         // Text("PetTip")
@@ -85,9 +84,9 @@ struct ContentView: View {
             DispatchQueue.main.async {
                 if settings.authorizationStatus != .authorized {
                     print("Notification permission not authorized")
-                    showPermissionView = true
+                    isPermissionViewShow = true
                 }
-                // showPermissionView = false  //test
+                // isPermissionViewShow = false  //test
             }
         }
     }
@@ -100,13 +99,13 @@ struct ContentView: View {
             print("Location permission authorized")
         case .denied, .restricted:
             print("Location permission not authorized")
-            showPermissionView = true
+            isPermissionViewShow = true
         case .notDetermined:
             print("Location permission not determined")
-            showPermissionView = true
+            isPermissionViewShow = true
         @unknown default:
             print("Unexpected case")
-            showPermissionView = true
+            isPermissionViewShow = true
         }
     }
 
@@ -117,16 +116,16 @@ struct ContentView: View {
             print("Photo Library permission authorized")
         case .denied, .restricted:
             print("Photo Library permission not authorized")
-            showPermissionView = true
+            isPermissionViewShow = true
         case .notDetermined:
             print("Photo Library permission not determined")
-            showPermissionView = true
+            isPermissionViewShow = true
         case .limited:
             print("Photo Library permission limited")
-            showPermissionView = true
+            isPermissionViewShow = true
         @unknown default:
             print("Unexpected case")
-            showPermissionView = true
+            isPermissionViewShow = true
         }
     }
 }

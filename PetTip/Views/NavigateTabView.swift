@@ -51,8 +51,6 @@ struct NavigateTabView: View {
                 }
                 .tag(3)
         }
-        // .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-        // .tabViewStyle(PageTabViewStyle())
     }
 }
 

@@ -16,8 +16,9 @@
 		7B0F212C2C0876170056EDC9 /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F212B2C0876170056EDC9 /* NaverMapView.swift */; };
 		7B0F212E2C08763F0056EDC9 /* PinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F212D2C08763F0056EDC9 /* PinItem.swift */; };
 		7B16B9F72C193B660080828F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9F62C193B660080828F /* SignupView.swift */; };
-		7B16B9F92C195F3E0080828F /* TextFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9F82C195F3E0080828F /* TextFieldWithButton.swift */; };
-		7B16B9FB2C1972B50080828F /* TextFieldWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9FA2C1972B50080828F /* TextFieldWithImage.swift */; };
+		7B16B9F92C195F3E0080828F /* TextFieldWithTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9F82C195F3E0080828F /* TextFieldWithTextButton.swift */; };
+		7B16B9FB2C1972B50080828F /* TextFieldWithIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9FA2C1972B50080828F /* TextFieldWithIconButton.swift */; };
+		7B16BA012C1A6DD60080828F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16BA002C1A6DD60080828F /* WelcomeView.swift */; };
 		7B1F5B232C0D4ED000336F9A /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B222C0D4ED000336F9A /* PermissionView.swift */; };
 		7B1F5B252C0E9C1D00336F9A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B242C0E9C1D00336F9A /* LoginView.swift */; };
 		7B1F5B272C0EC4ED00336F9A /* WalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B262C0EC4ED00336F9A /* WalkView.swift */; };
@@ -25,6 +26,8 @@
 		7B1F5B2B2C0ED2F800336F9A /* NavigateTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */; };
 		7B1F5B2F2C0F09BC00336F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */; };
 		7B1F5B332C0FF8F200336F9A /* NavigateBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */; };
+		7B357CA22C1C01D4001B8798 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */; };
+		7B357CA42C1C1B5C001B8798 /* CheckBoxTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */; };
 		7B7C25792C095E1B00301AE1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C25782C095E1B00301AE1 /* Coordinator.swift */; };
 		7B7C2A882C09852500301AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C28E92C09852500301AE1 /* Assets.xcassets */; };
 		7B7C2A8B2C09852500301AE1 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C28EC2C09852500301AE1 /* LocationViewController.swift */; };
@@ -441,8 +444,9 @@
 		7B0F212B2C0876170056EDC9 /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
 		7B0F212D2C08763F0056EDC9 /* PinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinItem.swift; sourceTree = "<group>"; };
 		7B16B9F62C193B660080828F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
-		7B16B9F82C195F3E0080828F /* TextFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithButton.swift; sourceTree = "<group>"; };
-		7B16B9FA2C1972B50080828F /* TextFieldWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithImage.swift; sourceTree = "<group>"; };
+		7B16B9F82C195F3E0080828F /* TextFieldWithTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTextButton.swift; sourceTree = "<group>"; };
+		7B16B9FA2C1972B50080828F /* TextFieldWithIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithIconButton.swift; sourceTree = "<group>"; };
+		7B16BA002C1A6DD60080828F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7B1F5B222C0D4ED000336F9A /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		7B1F5B242C0E9C1D00336F9A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7B1F5B262C0EC4ED00336F9A /* WalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkView.swift; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 		7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateTabView.swift; sourceTree = "<group>"; };
 		7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateBarView.swift; sourceTree = "<group>"; };
+		7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTextButton.swift; sourceTree = "<group>"; };
 		7B7C25782C095E1B00301AE1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7B7C28E92C09852500301AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../bnd/PetTip/Assets.xcassets; sourceTree = "<group>"; };
 		7B7C28EC2C09852500301AE1 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -1569,6 +1575,7 @@
 				7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */,
 				7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */,
 				7BD7FB5F2C0418E5001D24CE /* ContentView.swift */,
+				7B16BA002C1A6DD60080828F /* WelcomeView.swift */,
 				7B1F5B242C0E9C1D00336F9A /* LoginView.swift */,
 				7BD0CFD72C05A774002D2531 /* LonginView2.swift */,
 				7B16B9F62C193B660080828F /* SignupView.swift */,
@@ -1589,10 +1596,12 @@
 		7BD0CFD92C05AFCD002D2531 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */,
 				7B7C2C0B2C09A47300301AE1 /* Style.swift */,
-				7B16B9F82C195F3E0080828F /* TextFieldWithButton.swift */,
-				7B16B9FA2C1972B50080828F /* TextFieldWithImage.swift */,
+				7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */,
+				7B16B9F82C195F3E0080828F /* TextFieldWithTextButton.swift */,
+				7B16B9FA2C1972B50080828F /* TextFieldWithIconButton.swift */,
+				7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */,
+				7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -1630,11 +1639,11 @@
 				7B0F21282C07FAC00056EDC9 /* ViewModel */,
 				7B0F211E2C06C3970056EDC9 /* Model */,
 				7BD0CFD12C057F94002D2531 /* Views */,
+				7BD7FB5D2C0418E5001D24CE /* PetTipApp.swift */,
 				7BD0CFD42C05833F002D2531 /* AppDelegate.swift */,
 				7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */,
 				7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */,
 				7B0F21262C07F39C0056EDC9 /* SceneDelegate2.swift */,
-				7BD7FB5D2C0418E5001D24CE /* PetTipApp.swift */,
 				7BD7FB612C0418E6001D24CE /* Assets.xcassets */,
 				7BD7FB632C0418E6001D24CE /* Preview Content */,
 			);
@@ -2017,6 +2026,7 @@
 				7B7C2AF52C09852600301AE1 /* ResetPasswordRequest.swift in Sources */,
 				7B7C2BC42C09852600301AE1 /* WalkHistoryMonthView.swift in Sources */,
 				7B7C2AD52C09852600301AE1 /* LifeCreateRequest.swift in Sources */,
+				7B16BA012C1A6DD60080828F /* WelcomeView.swift in Sources */,
 				7B7C2BBF2C09852600301AE1 /* UserInfoViewController.swift in Sources */,
 				7B7C2A992C09852500301AE1 /* WalkPostViewController.swift in Sources */,
 				7B7C2ABF2C09852500301AE1 /* BBSTarget.swift in Sources */,
@@ -2029,6 +2039,7 @@
 				7B7C2A8E2C09852500301AE1 /* MapBottomView.swift in Sources */,
 				7B7C2BE12C09852600301AE1 /* UTCTimeViewModel.swift in Sources */,
 				7B1F5B2B2C0ED2F800336F9A /* NavigateTabView.swift in Sources */,
+				7B357CA22C1C01D4001B8798 /* CheckboxToggleStyle.swift in Sources */,
 				7B7C2B4F2C09852600301AE1 /* UIView2.swift in Sources */,
 				7B7C2ACF2C09852600301AE1 /* CmntRcmdtnResponse.swift in Sources */,
 				7B7C2B332C09852600301AE1 /* RefreshToken.swift in Sources */,
@@ -2037,7 +2048,7 @@
 				7B7C2BE82C09852600301AE1 /* CommonConfirmView.swift in Sources */,
 				7B7C2B212C09852600301AE1 /* HTTPHeaderField.swift in Sources */,
 				7B7C2AB82C09852500301AE1 /* QnAUpdateRequest.swift in Sources */,
-				7B16B9F92C195F3E0080828F /* TextFieldWithButton.swift in Sources */,
+				7B16B9F92C195F3E0080828F /* TextFieldWithTextButton.swift in Sources */,
 				7B7C2AFB2C09852600301AE1 /* MyPetCreateRequest.swift in Sources */,
 				7B7C2B952C09852600301AE1 /* AddressSelectViewController.swift in Sources */,
 				7B7C2BEB2C09852600301AE1 /* CommonPopupView2.swift in Sources */,
@@ -2080,6 +2091,7 @@
 				7B7C2B602C09852600301AE1 /* ImageViewController.swift in Sources */,
 				7B7C2AF32C09852600301AE1 /* RefreshTokenResponse.swift in Sources */,
 				7B7C2BB72C09852600301AE1 /* QnAAddViewController.swift in Sources */,
+				7B357CA42C1C1B5C001B8798 /* CheckBoxTextButton.swift in Sources */,
 				7B7C2ADB2C09852600301AE1 /* LifeViewRequest.swift in Sources */,
 				7B7C2B702C09852600301AE1 /* StoryDetailViewController.swift in Sources */,
 				7B7C2B1B2C09852600301AE1 /* WeatherRequest.swift in Sources */,
@@ -2162,7 +2174,7 @@
 				7B7C2B2B2C09852600301AE1 /* EventList.swift in Sources */,
 				7B7C2BD52C09852600301AE1 /* Crypto.swift in Sources */,
 				7BD0CFD62C05833F002D2531 /* AppDelegate.swift in Sources */,
-				7B16B9FB2C1972B50080828F /* TextFieldWithImage.swift in Sources */,
+				7B16B9FB2C1972B50080828F /* TextFieldWithIconButton.swift in Sources */,
 				7B7C2BF92C09852600301AE1 /* SelectWalkMarkPetItemView.swift in Sources */,
 				7B7C2BF12C09852600301AE1 /* PetWeightView2.swift in Sources */,
 				7B7C2BEA2C09852600301AE1 /* CommonPopupView.swift in Sources */,
