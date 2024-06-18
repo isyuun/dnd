@@ -18,14 +18,15 @@ import HealthKit
 }
 
 struct ContentView: View {
-    @State var isLogin = false
-    @State var isPermissionViewShow = false
+    @State private var isLogin = false
+    @State private var isPermissionViewShow = false
 
-    @State var showAlert = true
-    @State var alertMessage = ""
+    @State private var showAlert = true
+    @State private var alertMessage = ""
 
     var body: some View {
         let isNeedLogin = !isLogin
+        // let isNeedLogin = false
         let v = if isPermissionViewShow == true {
             AnyView(PermissionView(showPermissionView: $isPermissionViewShow))
         } else {
@@ -69,6 +70,7 @@ struct ContentView: View {
                 }
         }
         .onAppear {
+            isLogin = UserDefaults.standard.value(forKey: "accessToken") != nil
             self.checkPermissions()
         }
     }

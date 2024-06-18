@@ -10,8 +10,8 @@ import SwiftUI
 struct CheckBoxTextButton: View {
     @Binding var isChecked: Bool
     var text: String
-    var action: () -> Void
     var onToggle: ((Bool) -> Void)
+    var action: () -> Void
 
     var body: some View {
         HStack {

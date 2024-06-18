@@ -28,6 +28,10 @@
 		7B1F5B332C0FF8F200336F9A /* NavigateBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */; };
 		7B357CA22C1C01D4001B8798 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */; };
 		7B357CA42C1C1B5C001B8798 /* CheckBoxTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */; };
+		7B357CA62C1FC9A3001B8798 /* AgreementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */; };
+		7B357CA82C1FCA5F001B8798 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA72C1FCA5F001B8798 /* WebView.swift */; };
+		7B357CAA2C1FFB7F001B8798 /* HometownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA92C1FFB7F001B8798 /* HometownView.swift */; };
+		7B357CAC2C1FFC9A001B8798 /* ButtonToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CAB2C1FFC9A001B8798 /* ButtonToggleStyle.swift */; };
 		7B7C25792C095E1B00301AE1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C25782C095E1B00301AE1 /* Coordinator.swift */; };
 		7B7C2A882C09852500301AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C28E92C09852500301AE1 /* Assets.xcassets */; };
 		7B7C2A8B2C09852500301AE1 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C28EC2C09852500301AE1 /* LocationViewController.swift */; };
@@ -456,6 +460,10 @@
 		7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateBarView.swift; sourceTree = "<group>"; };
 		7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTextButton.swift; sourceTree = "<group>"; };
+		7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementsView.swift; sourceTree = "<group>"; };
+		7B357CA72C1FCA5F001B8798 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		7B357CA92C1FFB7F001B8798 /* HometownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HometownView.swift; sourceTree = "<group>"; };
+		7B357CAB2C1FFC9A001B8798 /* ButtonToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonToggleStyle.swift; sourceTree = "<group>"; };
 		7B7C25782C095E1B00301AE1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7B7C28E92C09852500301AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../bnd/PetTip/Assets.xcassets; sourceTree = "<group>"; };
 		7B7C28EC2C09852500301AE1 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -1580,8 +1588,8 @@
 				7BD0CFD72C05A774002D2531 /* LonginView2.swift */,
 				7B16B9F62C193B660080828F /* SignupView.swift */,
 				7B0F21292C086A180056EDC9 /* MapView.swift */,
-				7B7C25782C095E1B00301AE1 /* Coordinator.swift */,
 				7B0F212B2C0876170056EDC9 /* NaverMapView.swift */,
+				7B7C25782C095E1B00301AE1 /* Coordinator.swift */,
 				7B7C2C092C0994D500301AE1 /* WalkMapView.swift */,
 				7B7C2C0F2C09CAED00301AE1 /* WalkListView.swift */,
 				7B1F5B262C0EC4ED00336F9A /* WalkView.swift */,
@@ -1589,6 +1597,9 @@
 				7B7C2C0D2C09C51B00301AE1 /* MainView.swift */,
 				7B7C2C132C09D09900301AE1 /* MyPageView.swift */,
 				7B1F5B222C0D4ED000336F9A /* PermissionView.swift */,
+				7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */,
+				7B357CA72C1FCA5F001B8798 /* WebView.swift */,
+				7B357CA92C1FFB7F001B8798 /* HometownView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1602,6 +1613,7 @@
 				7B16B9FA2C1972B50080828F /* TextFieldWithIconButton.swift */,
 				7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */,
 				7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */,
+				7B357CAB2C1FFC9A001B8798 /* ButtonToggleStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -1965,6 +1977,7 @@
 				7B7C2B402C09852600301AE1 /* LoadingIndicatorViewController.swift in Sources */,
 				7B7C2AF02C09852600301AE1 /* LogoutRequest.swift in Sources */,
 				7B7C2B042C09852600301AE1 /* MyPetInvttSetKeyResponse.swift in Sources */,
+				7B357CAA2C1FFB7F001B8798 /* HometownView.swift in Sources */,
 				7B7C2BD32C09852600301AE1 /* MainViewController4.swift in Sources */,
 				7B7C2B0C2C09852600301AE1 /* MyPetWeightCreateResponse.swift in Sources */,
 				7B7C2C102C09CAED00301AE1 /* WalkListView.swift in Sources */,
@@ -2000,11 +2013,13 @@
 				7B7C2B2A2C09852600301AE1 /* DclrCreateStory.swift in Sources */,
 				7B7C2AAF2C09852500301AE1 /* QnAAtchUploadResponse.swift in Sources */,
 				7B7C2B6B2C09852600301AE1 /* EventListViewController2.swift in Sources */,
+				7B357CA82C1FCA5F001B8798 /* WebView.swift in Sources */,
 				7B7C2B152C09852600301AE1 /* RealTimeListRequest.swift in Sources */,
 				7B7C2B422C09852600301AE1 /* String.swift in Sources */,
 				7B7C2AE22C09852600301AE1 /* PetListResponse.swift in Sources */,
 				7B7C2B0A2C09852600301AE1 /* MyPetUpdateResponse.swift in Sources */,
 				7B7C2B642C09852600301AE1 /* CommunityCommentView.swift in Sources */,
+				7B357CA62C1FC9A3001B8798 /* AgreementsView.swift in Sources */,
 				7B7C2AF42C09852600301AE1 /* ResetNcknmRequest.swift in Sources */,
 				7B7C2B982C09852600301AE1 /* CustomerCenterViewController.swift in Sources */,
 				7BD0CFD82C05A774002D2531 /* LonginView2.swift in Sources */,
@@ -2252,6 +2267,7 @@
 				7B7C2B362C09852600301AE1 /* StoryList.swift in Sources */,
 				7B7C2AE12C09852600301AE1 /* PetListRequest.swift in Sources */,
 				7B7C2BEC2C09852600301AE1 /* CommonPopupView3.swift in Sources */,
+				7B357CAC2C1FFC9A001B8798 /* ButtonToggleStyle.swift in Sources */,
 				7B7C2AF72C09852600301AE1 /* TrmnlMngResponse.swift in Sources */,
 				7B7C2B1D2C09852600301AE1 /* WeatherAPI.swift in Sources */,
 				7B1F5B232C0D4ED000336F9A /* PermissionView.swift in Sources */,

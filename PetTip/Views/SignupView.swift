@@ -12,13 +12,15 @@ struct SignupView: View {
     @State var nick: String = ""
     @State var dong: String = ""
 
-    @State private var isCheckedNick: Bool = false
+    @State private var isCheckedNick: Bool = true
+
+    @State private var showingHometownSheet: Bool = false
 
     @State private var isCheckedAll: Bool = false
     // 사용자가 전체 동의 토글을 클릭했을 때의 핸들러
     private func handleToggleAll(_ isChecked: Bool) {
         isCheckedService = isChecked
-        isCheckedInformation = isChecked
+        isCheckedPrivacy = isChecked
         isCheckedMarketting = isChecked
     }
 
@@ -26,7 +28,7 @@ struct SignupView: View {
         didSet { updateAllCheckedStatus() }
     }
 
-    @State private var isCheckedInformation: Bool = false {
+    @State private var isCheckedPrivacy: Bool = false {
         didSet { updateAllCheckedStatus() }
     }
 
@@ -36,8 +38,11 @@ struct SignupView: View {
 
     // 개별 체크박스가 변경될 때 호출되는 함수
     private func updateAllCheckedStatus() {
-        isCheckedAll = isCheckedService && isCheckedInformation && isCheckedMarketting
+        isCheckedAll = isCheckedService && isCheckedPrivacy && isCheckedMarketting
     }
+
+    @State private var showingAgreementsSheet: Bool = false
+    @State private var selectedTab = 0
 
     var body: some View {
         ScrollView {
@@ -65,6 +70,7 @@ struct SignupView: View {
                     image: UIImage(systemName: "chevron.forward"))
                 {
                     //
+                    showingHometownSheet = true
                 }
 
                 Text("펫팁 회원가입을 위해\n약관에 동의해 주세요")
@@ -85,43 +91,67 @@ struct SignupView: View {
                     CheckBoxTextButton(
                         isChecked: $isCheckedService,
                         text: "[필수]서비스이용약관 동의",
-                        action: {
-                            // 버튼 액션 정의
-                        },
                         onToggle: { isChecked in
                             // 토글 상태 변경 처리
                             self.isCheckedService = isChecked
+                        },
+                        action: {
+                            showingAgreementsSheet = true // 버튼 액션 정의
+                            selectedTab = 0
                         })
 
                     CheckBoxTextButton(
-                        isChecked: $isCheckedInformation,
+                        isChecked: $isCheckedPrivacy,
                         text: "[필수]개인정보 수집·이용 동의",
-                        action: {
-                            // 버튼 액션 정의
-                        },
                         onToggle: { isChecked in
                             // 토글 상태 변경 처리
-                            self.isCheckedInformation = isChecked
+                            self.isCheckedPrivacy = isChecked
+                        },
+                        action: {
+                            // 버튼 액션 정의
+                            showingAgreementsSheet = true // 버튼 액션 정의
+                            selectedTab = 1
                         })
 
                     CheckBoxTextButton(
                         isChecked: $isCheckedMarketting,
                         text: "[선택]마케팅 활용 동의",
-                        action: {
-                            // 버튼 액션 정의
-                        },
                         onToggle: { isChecked in
                             // 토글 상태 변경 처리
                             self.isCheckedMarketting = isChecked
+                        },
+                        action: {
+                            // 버튼 액션 정의
+                            showingAgreementsSheet = true // 버튼 액션 정의
+                            selectedTab = 2
                         })
-                }.disabled(isCheckedNick)
+                }
+                .disabled(!isCheckedNick)
             }
             .padding(20)
             .onAppear {
                 error = "한글,영문 20글자까지 가능해요"
                 // error = ""
+                updateAllCheckedStatus()
             }
-        }.padding(.top)
+        }
+        .padding(.top)
+        .navigationBarTitleDisplayMode(.large)
+        .navigationTitle("회원가입")
+        .sheet(isPresented: $showingAgreementsSheet, onDismiss: {
+            updateAllCheckedStatus()
+        }) {
+            AgreementsView(
+                selectedTab: $selectedTab,
+                isCheckedService: $isCheckedService,
+                isCheckedPrivacy: $isCheckedPrivacy,
+                isCheckedMarketting: $isCheckedMarketting)
+        }
+        .sheet(isPresented: $showingHometownSheet, onDismiss: {
+            // updateAllCheckedStatus()
+        }) {
+            HometownView()
+        }
 
         Spacer()
 
@@ -136,7 +166,7 @@ struct SignupView: View {
                 .cornerRadius(10)
         }
         .padding()
-        .navigationTitle("회원가입")
+        .disabled(!(isCheckedService && isCheckedPrivacy))
     }
 }
 

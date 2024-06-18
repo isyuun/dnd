@@ -18,7 +18,8 @@ struct PetTipApp: App {
         WindowGroup {
             RootView(isLogin: $isLogin, isWelcomeViewActive: $isWelcomeViewActive)
                 .onAppear {
-                    isWelcomeViewActive = false
+                    isLogin = UserDefaults.standard.value(forKey: "accessToken") != nil
+                    isWelcomeViewActive = !isLogin
                 }
         }
     }
