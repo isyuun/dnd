@@ -26,33 +26,13 @@ struct ContentView: View {
 
     var body: some View {
         let isNeedLogin = !isLogin
-        // let isNeedLogin = false
-        let v = if isPermissionViewShow == true {
+        let v = if isPermissionViewShow {
             AnyView(PermissionView(showPermissionView: $isPermissionViewShow))
         } else {
             if isNeedLogin {
                 AnyView(LonginView2(isLogin: $isLogin))
             } else {
-                AnyView(
-                    NavigateTabView()
-                        .navigationTitle("")
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                HStack {
-                                    Button(action: {
-                                        // 알림 버튼 눌렀을 때의 액션
-                                    }) {
-                                        Image(systemName: "bell.fill")
-                                    }
-                                    Button(action: {
-                                        // 메뉴 버튼 눌렀을 때의 액션
-                                    }) {
-                                        Image(systemName: "line.horizontal.3")
-                                    }
-                                }
-                            }
-                        }
-                )
+                AnyView(NavigateTabView(isLogin: $isLogin))
             }
         }
         NavigationView {
@@ -70,7 +50,7 @@ struct ContentView: View {
                 }
         }
         .onAppear {
-            isLogin = UserDefaults.standard.value(forKey: "accessToken") != nil
+            // isLogin = UserDefaults.standard.value(forKey: "accessToken") != nil
             self.checkPermissions()
         }
     }

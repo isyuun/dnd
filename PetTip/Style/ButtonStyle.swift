@@ -29,7 +29,7 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
             .modifier(RectButtonModifier(textColor: textColor))
             .frame(height: 48)
             .overlay(
-                RoundedRectangle(cornerRadius: 5)
+                RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.gray, lineWidth: 1.5)
             )
             .overlay(
@@ -55,7 +55,7 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
             .modifier(RectButtonModifier(textColor: textColor))
             .frame(height: 48)
             .overlay(
-                RoundedRectangle(cornerRadius: 5)
+                RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.gray, lineWidth: 1.5)
             )
             .overlay(

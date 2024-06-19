@@ -82,7 +82,7 @@ struct NaverMap: UIViewRepresentable {
         naverMapView.mapView.positionMode = .direction
         naverMapView.mapView.zoomLevel = 17
         naverMapView.mapView.minZoomLevel = 5.0
-        naverMapView.showLocationButton = true
+        // naverMapView.showLocationButton = true
     }
 
     func reverseGeocode(coordinate: CLLocationCoordinate2D) {

@@ -32,6 +32,9 @@
 		7B357CA82C1FCA5F001B8798 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA72C1FCA5F001B8798 /* WebView.swift */; };
 		7B357CAA2C1FFB7F001B8798 /* HometownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA92C1FFB7F001B8798 /* HometownView.swift */; };
 		7B357CAC2C1FFC9A001B8798 /* ButtonToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CAB2C1FFC9A001B8798 /* ButtonToggleStyle.swift */; };
+		7B357CAE2C211CEE001B8798 /* MyPageView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CAD2C211CEE001B8798 /* MyPageView2.swift */; };
+		7B357CB42C2136A8001B8798 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CB32C2136A8001B8798 /* SideMenuView.swift */; };
+		7B357CB62C225CDA001B8798 /* ButtonStyle2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CB52C225CDA001B8798 /* ButtonStyle2.swift */; };
 		7B7C25792C095E1B00301AE1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C25782C095E1B00301AE1 /* Coordinator.swift */; };
 		7B7C2A882C09852500301AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C28E92C09852500301AE1 /* Assets.xcassets */; };
 		7B7C2A8B2C09852500301AE1 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C28EC2C09852500301AE1 /* LocationViewController.swift */; };
@@ -464,6 +467,9 @@
 		7B357CA72C1FCA5F001B8798 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		7B357CA92C1FFB7F001B8798 /* HometownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HometownView.swift; sourceTree = "<group>"; };
 		7B357CAB2C1FFC9A001B8798 /* ButtonToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonToggleStyle.swift; sourceTree = "<group>"; };
+		7B357CAD2C211CEE001B8798 /* MyPageView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView2.swift; sourceTree = "<group>"; };
+		7B357CB32C2136A8001B8798 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		7B357CB52C225CDA001B8798 /* ButtonStyle2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle2.swift; sourceTree = "<group>"; };
 		7B7C25782C095E1B00301AE1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7B7C28E92C09852500301AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../bnd/PetTip/Assets.xcassets; sourceTree = "<group>"; };
 		7B7C28EC2C09852500301AE1 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -1582,6 +1588,7 @@
 				7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */,
 				7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */,
 				7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */,
+				7B357CB32C2136A8001B8798 /* SideMenuView.swift */,
 				7BD7FB5F2C0418E5001D24CE /* ContentView.swift */,
 				7B16BA002C1A6DD60080828F /* WelcomeView.swift */,
 				7B1F5B242C0E9C1D00336F9A /* LoginView.swift */,
@@ -1596,6 +1603,7 @@
 				7B7C2C112C09CED200301AE1 /* StoryListView.swift */,
 				7B7C2C0D2C09C51B00301AE1 /* MainView.swift */,
 				7B7C2C132C09D09900301AE1 /* MyPageView.swift */,
+				7B357CAD2C211CEE001B8798 /* MyPageView2.swift */,
 				7B1F5B222C0D4ED000336F9A /* PermissionView.swift */,
 				7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */,
 				7B357CA72C1FCA5F001B8798 /* WebView.swift */,
@@ -1609,6 +1617,7 @@
 			children = (
 				7B7C2C0B2C09A47300301AE1 /* Style.swift */,
 				7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */,
+				7B357CB52C225CDA001B8798 /* ButtonStyle2.swift */,
 				7B16B9F82C195F3E0080828F /* TextFieldWithTextButton.swift */,
 				7B16B9FA2C1972B50080828F /* TextFieldWithIconButton.swift */,
 				7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */,
@@ -2008,6 +2017,7 @@
 				7B7C2BBC2C09852600301AE1 /* QnAModifyAttachFileItemView.swift in Sources */,
 				7B7C2BCC2C09852600301AE1 /* LoginViewController.swift in Sources */,
 				7B7C2B102C09852600301AE1 /* MyPetWeightListResponse.swift in Sources */,
+				7B357CB42C2136A8001B8798 /* SideMenuView.swift in Sources */,
 				7B7C2AD22C09852600301AE1 /* DclrCreateCmntResponse.swift in Sources */,
 				7B7C2BD62C09852600301AE1 /* KeychainAccessible.swift in Sources */,
 				7B7C2B2A2C09852600301AE1 /* DclrCreateStory.swift in Sources */,
@@ -2137,6 +2147,7 @@
 				7BD0CFD52C05833F002D2531 /* SceneDelegate.swift in Sources */,
 				7B7C2B762C09852600301AE1 /* StoryModViewController.swift in Sources */,
 				7B7C2B732C09852600301AE1 /* StoryItemView2.swift in Sources */,
+				7B357CB62C225CDA001B8798 /* ButtonStyle2.swift in Sources */,
 				7B7C2B662C09852600301AE1 /* CommunityViewController.swift in Sources */,
 				7B7C2B1E2C09852600301AE1 /* WeatherTarget.swift in Sources */,
 				7B7C2B382C09852600301AE1 /* WeekRecord.swift in Sources */,
@@ -2144,6 +2155,7 @@
 				7B7C2B832C09852600301AE1 /* CompPetListView2.swift in Sources */,
 				7B7C2B062C09852600301AE1 /* MyPetListResponse.swift in Sources */,
 				7B7C2B112C09852600301AE1 /* MyPetWeightUpdateRequest.swift in Sources */,
+				7B357CAE2C211CEE001B8798 /* MyPageView2.swift in Sources */,
 				7BD7FB5E2C0418E5001D24CE /* PetTipApp.swift in Sources */,
 				7B7C2B072C09852600301AE1 /* MyPetRelCloseRequest.swift in Sources */,
 				7B7C2B5F2C09852600301AE1 /* CommonViewController2.swift in Sources */,

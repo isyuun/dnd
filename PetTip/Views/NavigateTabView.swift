@@ -8,49 +8,95 @@
 import SwiftUI
 
 #Preview {
-    NavigateTabView()
+    NavigateTabView(isLogin: .constant(true))
 }
 
 struct NavigateTabView: View {
+    @State var show: Bool = false
+    @Binding var isLogin: Bool
+
     @State private var selection = 1
 
     var body: some View {
-        TabView(selection: $selection) {
-            WalkView()
-                .tabItem {
-                    Image(systemName: "pawprint")
-                    Text("산책")
-                }
-                .tag(1)
+        let selectable = Binding(
+            get: { self.selection },
+            set: { self.selection = $0
+                show = false
+            })
+        ZStack {
+            TabView(selection: selectable) {
+                WalkView()
+                    .tabItem {
+                        Image(systemName: "pawprint")
+                        Text("산책")
+                    }
+                    .tag(1)
 
-            StoryListView()
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("팁톡")
-                }
-                .tag(2)
+                StoryListView()
+                    .tabItem {
+                        Image(systemName: "message")
+                        Text("팁톡")
+                    }
+                    .tag(2)
 
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("홈")
-                }
-                .tag(0)
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("홈")
+                    }
+                    .tag(0)
 
-            MallView()
-                .tabItem {
-                    Image(systemName: "cart")
-                    Text("팁몰")
-                }
-                .tag(4)
+                MallView()
+                    .tabItem {
+                        Image(systemName: "cart")
+                        Text("팁몰")
+                    }
+                    .tag(4)
 
-            MyPageView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("My")
+                MyPageView2()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("My")
+                    }
+                    .tag(3)
+            }
+            .onChange(of: selection) { newValue in
+                show = false
+            }
+            .navigationTitle("")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack {
+                        if !show {
+                            Button(action: {
+                                // 알림 버튼 눌렀을 때의 액션
+                            }) {
+                                Image(systemName: "bell.fill")
+                            }
+                            Button(action: {
+                                // 메뉴 버튼 눌렀을 때의 액션
+                                self.show.toggle()
+                            }) {
+                                Image(systemName: "line.horizontal.3")
+                            }
+                        } else {
+                            XMarkButton {
+                                self.show.toggle()
+                            }
+                        }
+                    }
                 }
-                .tag(3)
+            }
+
+            SideView()
         }
+    }
+
+    @ViewBuilder
+    private func SideView() -> some View {
+        SideMenuView(show: $show, isLogin: $isLogin)
+            // .navigationBarHidden(show)
+            .padding(.bottom, 49)
     }
 }
 
@@ -77,7 +123,7 @@ struct TipTalkView: View {
 
 struct ProfileView: View {
     var body: some View {
-        Text("마이")
+        Text("프로필")
             .font(.largeTitle)
     }
 }

@@ -278,3 +278,17 @@ extension LoginAuth {
         }
     }
 }
+
+extension LoginAuth {
+
+    func logout() {
+        let request = LogoutRequest()
+        MemberAPI.logout(request: request) { response, error in
+            let userDef = UserDefaults.standard
+            userDef.removeObject(forKey: "accessToken")
+            userDef.removeObject(forKey: "refreshToken")
+            userDef.synchronize()
+            self.isLogin = false
+        }
+    }
+}

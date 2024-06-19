@@ -82,7 +82,7 @@ struct AgreementsView: View {
                         .font(.title2)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    XMarkButton().onTapGesture { // on tap gesture calls dismissal
+                    XMarkButton {
                         dismiss()
                     }
                 }

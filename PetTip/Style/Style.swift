@@ -23,8 +23,17 @@ func divider(text: Text) -> some View {
 }
 
 struct XMarkButton: View {
+    var action: () -> Void
+
     var body: some View {
-        Image(systemName: "xmark") // changed to image, can change color here if needed
-        // .font(.headline)
+        Button(
+            action: {
+                action()
+            },
+            label: {
+                Image(systemName: "xmark")
+                    .font(.headline)
+            }
+        )
     }
 }
