@@ -132,7 +132,7 @@ struct SideMenuViewContents: View {
             .background(back)
             ScrollView {
                 VStack {
-                    NavigationLink(destination: ProfileView()) { MenuText(text: "펫등록관리") }.foregroundColor(.primary).background(Color.gray.opacity(0.1))
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "펫등록관리") }.foregroundColor(.primary)
                     NavigationLink(destination: ProfileView()) { MenuText(text: "초대관리") }.foregroundColor(.primary)
                     NavigationLink(destination: ProfileView()) { MenuText(text: "구매관리") }.foregroundColor(.primary)
                     NavigationLink(destination: ProfileView()) { MenuText(text: "판매관리") }.foregroundColor(.primary)
