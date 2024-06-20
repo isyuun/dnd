@@ -74,12 +74,12 @@ struct SideMenuViewContents: View {
                             }
                         )
                         .buttonStyle(.primarySmallButton)
-                        .font(.footnote)
+                        .font(.caption2)
                         Button("로그아웃") {
                             loginAuth.logout()
                         }
                         .buttonStyle(.primarySmallButton)
-                        .font(.footnote)
+                        .font(.caption2)
                     }.onAppear {
                         guard let nckNm = UserDefaults.standard.string(forKey: "nckNm") else { return }
                         self.nickName = "\(nckNm)"
@@ -132,20 +132,35 @@ struct SideMenuViewContents: View {
             .background(back)
             ScrollView {
                 VStack {
+                    // Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("펫등록관리") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("초대관리") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("구매관리") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("판매관리") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("우리동네맞춤지도") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("채팅") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("후기/댓글") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("알림내역") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("1:1문의") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("공지사항") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("FAQ") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("이벤트") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("설정") }.foregroundColor(.primary)
+                    Divider()
                     NavigationLink(destination: ProfileView()) { MenuTitle("제휴상담문의") }.foregroundColor(.primary)
+                    Divider()
                 }
             }
             // .padding()
