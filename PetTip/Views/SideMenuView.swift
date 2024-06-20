@@ -40,7 +40,6 @@ struct SideMenuViewContents: View {
     @Binding var isLogin: Bool
 
     @State var nickName: String = ""
-    @State private var navigateToProfile = false
 
     init(show: Binding<Bool>, isLogin: Binding<Bool>) {
         self._show = show
@@ -68,21 +67,14 @@ struct SideMenuViewContents: View {
                         Text(nickName)
                             .font(.title2)
                         Spacer()
-                        Button("정보관리") {
-                            self.navigateToProfile = true
-                            // self.show = false
-                        }
+                        NavigationLink(
+                            destination: ProfileView(),
+                            label: {
+                                Text("정보관리")
+                            }
+                        )
                         .buttonStyle(.primarySmallButton)
                         .font(.footnote)
-                        .background(
-                            NavigationLink(
-                                destination: ProfileView(),
-                                isActive: $navigateToProfile,
-                                label: {
-                                    Label("프로필", systemImage: "folder")
-                                }
-                            )
-                        )
                         Button("로그아웃") {
                             loginAuth.logout()
                         }
@@ -93,35 +85,29 @@ struct SideMenuViewContents: View {
                         self.nickName = "\(nckNm)"
                     }
                     HStack {
-                        Button(action: {
-                            //
-                        }) {
+                        NavigationLink(destination: ProfileView()) {
                             VStack(spacing: 10) {
                                 Image(systemName: "bell")
                                     .font(.title)
                                 Text("알림")
                             }
-                            .frame(maxWidth: .infinity)  // 버튼의 최대 너비를 확장
+                            .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
-                        Button(action: {
-                            //
-                        }) {
+                        NavigationLink(destination: ProfileView()) {
                             VStack(spacing: 10) {
                                 Image(systemName: "bookmark")
                                     .font(.title)
                                 Text("찜")
                             }
-                            .frame(maxWidth: .infinity)  // 버튼의 최대 너비를 확장
+                            .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
-                        Button(action: {
-                            //
-                        }) {
+                        NavigationLink(destination: ProfileView()) {
                             VStack(spacing: 10) {
                                 Image(systemName: "p.circle")
                                     .font(.title)
                                 Text("포인트")
                             }
-                            .frame(maxWidth: .infinity)  // 버튼의 최대 너비를 확장
+                            .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
                     }.padding(.top)
                 } else {
@@ -144,9 +130,24 @@ struct SideMenuViewContents: View {
             }
             .padding()
             .background(back)
-            // VString {
-            //     //
-            // }
+            ScrollView {
+                VStack {
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "펫등록관리") }.foregroundColor(.primary).background(Color.gray.opacity(0.1))
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "초대관리") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "구매관리") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "판매관리") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "우리동네맞춤지도") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "채팅") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "후기/댓글") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "알림내역") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "1:1문의") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "공지사항") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "FAQ") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "이벤트") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "설정") }.foregroundColor(.primary)
+                    NavigationLink(destination: ProfileView()) { MenuText(text: "제휴상담문의") }.foregroundColor(.primary)
+                }
+            }
             // .padding()
             // .background(back)
             Spacer()

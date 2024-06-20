@@ -50,7 +50,7 @@ struct ContentView: View {
                 }
         }
         .onAppear {
-            // isLogin = UserDefaults.standard.value(forKey: "accessToken") != nil
+            isLogin = UserDefaults.standard.value(forKey: "accessToken") != nil
             self.checkPermissions()
         }
     }
