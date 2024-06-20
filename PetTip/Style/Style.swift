@@ -8,15 +8,12 @@
 import SwiftUI
 
 func divider(text: Text) -> some View {
-    // let _text = Text("또는").font(.system(size: 12, weight: .regular))
-    let _text = text
-
     return HStack {
         Color.gray
             .frame(height: 0.5, alignment: .center)
         // Text("또는")
         //     .font(.system(size: 12, weight: .regular))
-        _text
+        text
         Color.gray
             .frame(height: 0.5, alignment: .center)
     }
@@ -36,4 +33,19 @@ struct XMarkButton: View {
             }
         )
     }
+}
+
+func Title(_ title: String) -> some View {
+    return Text(title)
+}
+
+func MenuTitle(_ title: String) -> some View {
+    return HStack {
+        Text(title)
+        Spacer()
+        Image(systemName: "chevron.forward")
+            .padding(.horizontal, 10)
+            .padding(.vertical, 14)
+    }
+    .padding(.leading, 10)
 }

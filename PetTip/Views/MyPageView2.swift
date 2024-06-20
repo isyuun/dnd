@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyPageView2: View {
     var body: some View {
-        Text("마이")
+        Title("마이")
             .font(.largeTitle)
     }
 }

@@ -15,7 +15,7 @@ struct NavigateTabView: View {
     @State var show: Bool = false
     @Binding var isLogin: Bool
 
-    @State private var selection = 1
+    @State private var selection = 0
 
     var body: some View {
         let selectable = Binding(
@@ -97,40 +97,5 @@ struct NavigateTabView: View {
         SideMenuView(show: $show, isLogin: $isLogin)
             // .navigationBarHidden(show)
             .padding(.bottom, 49)
-    }
-}
-
-struct HomeView: View {
-    var body: some View {
-        Text("홈")
-            .font(.largeTitle)
-    }
-}
-
-struct SearchView: View {
-    var body: some View {
-        Text("검색")
-            .font(.largeTitle)
-    }
-}
-
-struct TipTalkView: View {
-    var body: some View {
-        Text("팁톡")
-            .font(.largeTitle)
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        Text("프로필")
-            .font(.largeTitle)
-    }
-}
-
-struct MallView: View {
-    var body: some View {
-        Text("팁몰")
-            .font(.largeTitle)
     }
 }
