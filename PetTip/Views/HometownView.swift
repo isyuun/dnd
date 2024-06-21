@@ -33,22 +33,14 @@ struct HometownView: View {
                         locationManager.requestLocation()
                     }) {
                         Text("다시 시도")
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.secondary)
-                            .cornerRadius(10)
                     }
+                    .buttonStyle(.tertiary)
                     Button(action: {
                         //
                     }) {
                         Text("우리동네로 선택하기")
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.accentColor)
-                            .cornerRadius(10)
                     }
+                    .buttonStyle(.primary)
                 }
                 .padding()
             }

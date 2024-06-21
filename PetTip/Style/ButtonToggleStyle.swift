@@ -19,11 +19,11 @@ struct ButtonToggleStyle: ToggleStyle {
             Button("동의안함") {
                 configuration.isOn = false
                 onToggle?(configuration.isOn)
-            }.buttonStyle(.secondaryButton)
+            }.buttonStyle(.secondary)
             Button("동의함") {
                 configuration.isOn = true
                 onToggle?(configuration.isOn)
-            }.buttonStyle(.primaryButton)
+            }.buttonStyle(.primary)
         }
         .padding()
     }

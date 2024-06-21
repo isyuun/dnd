@@ -33,10 +33,39 @@ public struct PrimaryButtonStyle: ButtonStyle {
 }
 
 public extension ButtonStyle where Self == PrimaryButtonStyle {
-    static var primaryButton: Self { return .init() }
+    static var primary: Self { return .init() }
 }
 
 public struct SecondaryButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
+
+    public func makeBody(configuration: Configuration) -> some View {
+        // let colorScheme = Environment(\.colorScheme).wrappedValue
+        // let textColor = colorScheme == .dark ? Color.secondary : Color.primary
+        // let backColor = colorScheme == .dark ? Color.primary : Color.secondary
+
+        configuration.label
+            .foregroundColor(.white)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.red)
+            .cornerRadius(5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color.gray, lineWidth: 1.5)
+            )
+            .overlay(
+                Color.secondary
+                    .opacity(configuration.isPressed ? 0.5 : 0)
+            )
+    }
+}
+
+public extension ButtonStyle where Self == SecondaryButtonStyle {
+    static var secondary: Self { return .init() }
+}
+
+public struct TertiaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
 
     public func makeBody(configuration: Configuration) -> some View {
@@ -61,8 +90,8 @@ public struct SecondaryButtonStyle: ButtonStyle {
     }
 }
 
-public extension ButtonStyle where Self == SecondaryButtonStyle {
-    static var secondaryButton: Self { return .init() }
+public extension ButtonStyle where Self == TertiaryButtonStyle {
+    static var tertiary: Self { return .init() }
 }
 
 public struct PrimarySmallButtonStyle: ButtonStyle {
@@ -76,6 +105,7 @@ public struct PrimarySmallButtonStyle: ButtonStyle {
         configuration.label
             .foregroundColor(.white)
             .padding(5)
+            // .frame(maxWidth: .infinity)
             .background(Color.accentColor)
             .cornerRadius(5)
             .overlay(
@@ -90,7 +120,7 @@ public struct PrimarySmallButtonStyle: ButtonStyle {
 }
 
 public extension ButtonStyle where Self == PrimarySmallButtonStyle {
-    static var primarySmallButton: Self { return .init() }
+    static var primarySmall: Self { return .init() }
 }
 
 public struct SecondarySmallButtonStyle: ButtonStyle {
@@ -103,8 +133,9 @@ public struct SecondarySmallButtonStyle: ButtonStyle {
 
         configuration.label
             .foregroundColor(.white)
-            .padding()
-            .background(Color.secondary)
+            .padding(5)
+            // .frame(maxWidth: .infinity)
+            .background(Color.red)
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
@@ -118,5 +149,34 @@ public struct SecondarySmallButtonStyle: ButtonStyle {
 }
 
 public extension ButtonStyle where Self == SecondarySmallButtonStyle {
-    static var secondarySmallButton: Self { return .init() }
+    static var secondarySmall: Self { return .init() }
+}
+
+public struct TertiarySmallButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
+
+    public func makeBody(configuration: Configuration) -> some View {
+        // let colorScheme = Environment(\.colorScheme).wrappedValue
+        // let textColor = colorScheme == .dark ? Color.secondary : Color.primary
+        // let backColor = colorScheme == .dark ? Color.primary : Color.secondary
+
+        configuration.label
+            .foregroundColor(.white)
+            .padding(5)
+            // .frame(maxWidth: .infinity)
+            .background(Color.secondary)
+            .cornerRadius(5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color.gray, lineWidth: 1.5)
+            )
+            .overlay(
+                Color.secondary
+                    .opacity(configuration.isPressed ? 0.5 : 0)
+            )
+    }
+}
+
+public extension ButtonStyle where Self == TertiarySmallButtonStyle {
+    static var tertiarySmall: Self { return .init() }
 }

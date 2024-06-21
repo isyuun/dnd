@@ -1,8 +1,8 @@
 import SwiftUI
 
-#Preview {
-    LonginView2(isLogin: .constant(false))
-}
+// #Preview {
+//     LonginView2(isLogin: .constant(false))
+// }
 
 struct RectButtonModifier: ViewModifier {
     var textColor: Color

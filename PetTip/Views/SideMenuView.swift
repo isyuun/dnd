@@ -65,15 +65,21 @@ struct SideMenuViewContents: View {
                                 Text("정보관리")
                             }
                         )
-                        .buttonStyle(.primarySmallButton)
+                        .buttonStyle(.primarySmall)
                         .font(.caption2)
-                        // .font(.system(size: 12, weight: .regular))
                         Button("로그아웃") {
                             loginAuth.logout()
                         }
-                        .buttonStyle(.primarySmallButton)
-                        // .font(.caption2)
-                        .font(.system(size: 12, weight: .regular))
+                        .buttonStyle(.secondarySmall)
+                        .font(.caption2)
+                        NavigationLink(
+                            destination: ProfileView(),
+                            label: {
+                                Image(systemName: "gearshape")
+                            }
+                        )
+                        .buttonStyle(.tertiarySmall)
+                        .font(.caption2)
                     }.onAppear {
                         guard let nckNm = UserDefaults.standard.string(forKey: "nckNm") else { return }
                         self.nickName = "\(nckNm)"
@@ -84,6 +90,7 @@ struct SideMenuViewContents: View {
                                 Image(systemName: "bell")
                                     .font(.title)
                                 Text("알림")
+                                    .bold()
                             }
                             .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
@@ -92,6 +99,7 @@ struct SideMenuViewContents: View {
                                 Image(systemName: "bookmark")
                                     .font(.title)
                                 Text("찜")
+                                    .bold()
                             }
                             .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
@@ -100,6 +108,7 @@ struct SideMenuViewContents: View {
                                 Image(systemName: "p.circle")
                                     .font(.title)
                                 Text("포인트")
+                                    .bold()
                             }
                             .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
@@ -111,12 +120,12 @@ struct SideMenuViewContents: View {
                         Button("로그인") {
                             //
                         }
-                        .buttonStyle(.primarySmallButton)
+                        .buttonStyle(.primarySmall)
                         .font(.footnote)
                         Button("회원가입") {
                             //
                         }
-                        .buttonStyle(.primarySmallButton)
+                        .buttonStyle(.tertiarySmall)
                         .font(.footnote)
                         Spacer()
                     }.padding()
@@ -145,10 +154,12 @@ struct SideMenuViewContents: View {
             // .background(back)
             Spacer()
         }
+        .environment(\.font, .system(size: 15))
         .padding()
     }
 }
 
 #Preview {
     SideMenuView(show: .constant(true), isLogin: .constant(true))
+        .environment(\.font, .system(size: 14))
 }

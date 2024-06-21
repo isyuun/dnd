@@ -72,12 +72,14 @@ struct NavigateTabView: View {
                                 // 알림 버튼 눌렀을 때의 액션
                             }) {
                                 Image(systemName: "bell")
+                                    .font(.system(size: 17.0))
                             }
                             Button(action: {
                                 // 메뉴 버튼 눌렀을 때의 액션
                                 self.show.toggle()
                             }) {
                                 Image(systemName: "line.horizontal.3")
+                                    .font(.system(size: 17.0))
                             }
                         } else {
                             XMarkButton {
