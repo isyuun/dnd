@@ -10,7 +10,6 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         Title("프로필")
-            .font(.largeTitle)
     }
 }
 

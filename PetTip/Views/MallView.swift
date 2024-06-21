@@ -10,7 +10,6 @@ import SwiftUI
 struct MallView: View {
     var body: some View {
         Title("팁몰")
-            .font(.largeTitle)
     }
 }
 

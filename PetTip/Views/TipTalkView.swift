@@ -10,7 +10,6 @@ import SwiftUI
 struct TipTalkView: View {
     var body: some View {
         Title("팁톡")
-            .font(.largeTitle)
     }
 }
 

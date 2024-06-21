@@ -79,7 +79,7 @@ struct SideMenuViewContents: View {
                         self.nickName = "\(nckNm)"
                     }
                     HStack {
-                        NavigationLink(destination: ProfileView()) {
+                        NavigationLink(destination: PreviewView()) {
                             VStack(spacing: 10) {
                                 Image(systemName: "bell")
                                     .font(.title)
@@ -87,7 +87,7 @@ struct SideMenuViewContents: View {
                             }
                             .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
-                        NavigationLink(destination: ProfileView()) {
+                        NavigationLink(destination: PreviewView()) {
                             VStack(spacing: 10) {
                                 Image(systemName: "bookmark")
                                     .font(.title)
@@ -95,7 +95,7 @@ struct SideMenuViewContents: View {
                             }
                             .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
-                        NavigationLink(destination: ProfileView()) {
+                        NavigationLink(destination: PreviewView()) {
                             VStack(spacing: 10) {
                                 Image(systemName: "p.circle")
                                     .font(.title)
@@ -125,20 +125,20 @@ struct SideMenuViewContents: View {
             .padding()
             .background(back)
             List {
-                NavigationLink(destination: ProfileView()) { Text("펫등록관리") }
-                NavigationLink(destination: ProfileView()) { Text("초대관리") }
-                NavigationLink(destination: ProfileView()) { Text("구매관리") }
-                NavigationLink(destination: ProfileView()) { Text("판매관리") }
-                NavigationLink(destination: ProfileView()) { Text("우리동네맞춤지도") }
-                NavigationLink(destination: ProfileView()) { Text("채팅") }
-                NavigationLink(destination: ProfileView()) { Text("후기/댓글") }
-                NavigationLink(destination: ProfileView()) { Text("알림내역") }
-                NavigationLink(destination: ProfileView()) { Text("1:1문의") }
-                NavigationLink(destination: ProfileView()) { Text("공지사항") }
-                NavigationLink(destination: ProfileView()) { Text("FAQ") }
-                NavigationLink(destination: ProfileView()) { Text("이벤트") }
-                NavigationLink(destination: ProfileView()) { Text("설정") }
-                NavigationLink(destination: ProfileView()) { Text("제휴상담문의") }
+                NavigationLink(destination: PreviewView()) { Text("펫등록관리") }
+                NavigationLink(destination: PreviewView()) { Text("초대관리") }
+                NavigationLink(destination: PreviewView()) { Text("구매관리") }
+                NavigationLink(destination: PreviewView()) { Text("판매관리") }
+                NavigationLink(destination: PreviewView()) { Text("우리동네맞춤지도") }
+                NavigationLink(destination: PreviewView()) { Text("채팅") }
+                NavigationLink(destination: PreviewView()) { Text("후기/댓글") }
+                NavigationLink(destination: PreviewView()) { Text("알림내역") }
+                NavigationLink(destination: PreviewView()) { Text("1:1문의") }
+                NavigationLink(destination: PreviewView()) { Text("공지사항") }
+                NavigationLink(destination: PreviewView()) { Text("FAQ") }
+                NavigationLink(destination: PreviewView()) { Text("이벤트") }
+                NavigationLink(destination: PreviewView()) { Text("설정") }
+                NavigationLink(destination: PreviewView()) { Text("제휴상담문의") }
             }
             .listStyle(PlainListStyle())
             // .padding(0)

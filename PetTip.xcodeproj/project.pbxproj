@@ -22,6 +22,7 @@
 		7B0DA7972C241F1B004CAFD4 /* AppDelegate4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */; };
 		7B0DA7982C241F1B004CAFD4 /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */; };
 		7B0DA7992C241F1B004CAFD4 /* SceneDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */; };
+		7B0DA79B2C25049C004CAFD4 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA79A2C25049C004CAFD4 /* PreviewView.swift */; };
 		7B0F21202C06C4010056EDC9 /* LoginAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */; };
 		7B0F21232C071CD80056EDC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */; };
 		7B0F21252C07EFE00056EDC9 /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */; };
@@ -469,6 +470,7 @@
 		7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate4.swift; sourceTree = "<group>"; };
 		7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate3.swift; sourceTree = "<group>"; };
 		7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate3.swift; sourceTree = "<group>"; };
+		7B0DA79A2C25049C004CAFD4 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuth.swift; sourceTree = "<group>"; };
 		7B0F21212C070A0E0056EDC9 /* PetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetTip.entitlements; sourceTree = "<group>"; };
 		7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1644,6 +1646,7 @@
 				7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */,
 				7B357CA72C1FCA5F001B8798 /* WebView.swift */,
 				7B357CA92C1FFB7F001B8798 /* HometownView.swift */,
+				7B0DA79A2C25049C004CAFD4 /* PreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2213,6 +2216,7 @@
 				7B7C2B202C09852600301AE1 /* APIEventLogger.swift in Sources */,
 				7B7C2C122C09CED200301AE1 /* StoryListView.swift in Sources */,
 				7B7C2B142C09852600301AE1 /* MyPetTarget.swift in Sources */,
+				7B0DA79B2C25049C004CAFD4 /* PreviewView.swift in Sources */,
 				7B7C2BEF2C09852600301AE1 /* PetWeightView.swift in Sources */,
 				7B7C2BE52C09852600301AE1 /* ViewController.swift in Sources */,
 				7B7C2BCB2C09852600301AE1 /* IntroViewController.swift in Sources */,

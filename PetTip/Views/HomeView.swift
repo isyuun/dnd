@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         Title("홈")
-            .font(.largeTitle)
     }
 }
 
