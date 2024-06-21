@@ -1,13 +1,13 @@
 //
-//  AppDelegate2.swift
+//  AppDelegate5.swift
 //  PetTip
 //
-//  Created by isyuun on 2024/5/30.
+//  Created by isyuun on 2024/6/21.
 //
 
 import UIKit
 
-class AppDelegate2: AppDelegate {
+class AppDelegate5: AppDelegate4 {
     override func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // let ret = super.application(application, configurationForConnecting: connectingSceneSession, options: options)
         let sceneConfig = UISceneConfiguration(name: nil, sessionRole: connectingSceneSession.role)

@@ -20,13 +20,14 @@
 		7B0DA78A2C24193B004CAFD4 /* WalkingController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7842C24193B004CAFD4 /* WalkingController2.swift */; };
 		7B0DA78B2C24193B004CAFD4 /* NMapViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7852C24193B004CAFD4 /* NMapViewController5.swift */; };
 		7B0DA7972C241F1B004CAFD4 /* AppDelegate4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */; };
-		7B0DA7982C241F1B004CAFD4 /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */; };
-		7B0DA7992C241F1B004CAFD4 /* SceneDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */; };
 		7B0DA79B2C25049C004CAFD4 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA79A2C25049C004CAFD4 /* PreviewView.swift */; };
+		7B0DA79F2C2534FE004CAFD4 /* SceneDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA79C2C2534FE004CAFD4 /* SceneDelegate3.swift */; };
+		7B0DA7A02C2534FE004CAFD4 /* SceneDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA79D2C2534FE004CAFD4 /* SceneDelegate2.swift */; };
+		7B0DA7A12C2534FE004CAFD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA79E2C2534FE004CAFD4 /* SceneDelegate.swift */; };
+		7B0DA7AD2C253709004CAFD4 /* AppDelegate5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7AC2C253709004CAFD4 /* AppDelegate5.swift */; };
+		7B0DA7AF2C253824004CAFD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7B0DA7AE2C253824004CAFD4 /* README.md */; };
 		7B0F21202C06C4010056EDC9 /* LoginAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */; };
 		7B0F21232C071CD80056EDC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */; };
-		7B0F21252C07EFE00056EDC9 /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */; };
-		7B0F21272C07F39C0056EDC9 /* SceneDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F21262C07F39C0056EDC9 /* SceneDelegate2.swift */; };
 		7B0F212A2C086A180056EDC9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F21292C086A180056EDC9 /* MapView.swift */; };
 		7B0F212C2C0876170056EDC9 /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F212B2C0876170056EDC9 /* NaverMapView.swift */; };
 		7B0F212E2C08763F0056EDC9 /* PinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F212D2C08763F0056EDC9 /* PinItem.swift */; };
@@ -424,8 +425,9 @@
 		7B7C2C102C09CAED00301AE1 /* WalkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C0F2C09CAED00301AE1 /* WalkListView.swift */; };
 		7B7C2C122C09CED200301AE1 /* StoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C112C09CED200301AE1 /* StoryListView.swift */; };
 		7B7C2C142C09D09900301AE1 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C132C09D09900301AE1 /* MyPageView.swift */; };
-		7BD0CFD52C05833F002D2531 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */; };
-		7BD0CFD62C05833F002D2531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD42C05833F002D2531 /* AppDelegate.swift */; };
+		7B9D623F2C253A3200A0B5AF /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */; };
+		7B9D62402C253A3200A0B5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */; };
+		7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */; };
 		7BD0CFD82C05A774002D2531 /* LonginView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD72C05A774002D2531 /* LonginView2.swift */; };
 		7BD0CFDE2C05B08D002D2531 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */; };
 		7BD7FB5E2C0418E5001D24CE /* PetTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7FB5D2C0418E5001D24CE /* PetTipApp.swift */; };
@@ -468,14 +470,15 @@
 		7B0DA7842C24193B004CAFD4 /* WalkingController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingController2.swift; sourceTree = "<group>"; };
 		7B0DA7852C24193B004CAFD4 /* NMapViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMapViewController5.swift; sourceTree = "<group>"; };
 		7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate4.swift; sourceTree = "<group>"; };
-		7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate3.swift; sourceTree = "<group>"; };
-		7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate3.swift; sourceTree = "<group>"; };
 		7B0DA79A2C25049C004CAFD4 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		7B0DA79C2C2534FE004CAFD4 /* SceneDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate3.swift; path = ../../../bnd/PetTip/SceneDelegate3.swift; sourceTree = "<group>"; };
+		7B0DA79D2C2534FE004CAFD4 /* SceneDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate2.swift; path = ../../../bnd/PetTip/SceneDelegate2.swift; sourceTree = "<group>"; };
+		7B0DA79E2C2534FE004CAFD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../bnd/PetTip/SceneDelegate.swift; sourceTree = "<group>"; };
+		7B0DA7AC2C253709004CAFD4 /* AppDelegate5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate5.swift; sourceTree = "<group>"; };
+		7B0DA7AE2C253824004CAFD4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuth.swift; sourceTree = "<group>"; };
 		7B0F21212C070A0E0056EDC9 /* PetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetTip.entitlements; sourceTree = "<group>"; };
 		7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate2.swift; sourceTree = "<group>"; };
-		7B0F21262C07F39C0056EDC9 /* SceneDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate2.swift; sourceTree = "<group>"; };
 		7B0F21292C086A180056EDC9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		7B0F212B2C0876170056EDC9 /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
 		7B0F212D2C08763F0056EDC9 /* PinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinItem.swift; sourceTree = "<group>"; };
@@ -874,8 +877,9 @@
 		7B7C2C0F2C09CAED00301AE1 /* WalkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkListView.swift; sourceTree = "<group>"; };
 		7B7C2C112C09CED200301AE1 /* StoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListView.swift; sourceTree = "<group>"; };
 		7B7C2C132C09D09900301AE1 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
-		7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BD0CFD42C05833F002D2531 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate3.swift; path = ../../../bnd/PetTip/AppDelegate3.swift; sourceTree = "<group>"; };
+		7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../bnd/PetTip/AppDelegate.swift; sourceTree = "<group>"; };
+		7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate2.swift; path = ../../../bnd/PetTip/AppDelegate2.swift; sourceTree = "<group>"; };
 		7BD0CFD72C05A774002D2531 /* LonginView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonginView2.swift; sourceTree = "<group>"; };
 		7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		7BD0CFDF2C05B710002D2531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -948,6 +952,12 @@
 		7B7C257A2C097C9200301AE1 /* 1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */,
+				7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */,
+				7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */,
+				7B0DA79E2C2534FE004CAFD4 /* SceneDelegate.swift */,
+				7B0DA79D2C2534FE004CAFD4 /* SceneDelegate2.swift */,
+				7B0DA79C2C2534FE004CAFD4 /* SceneDelegate3.swift */,
 				7B7C28E92C09852500301AE1 /* Assets.xcassets */,
 				7B7C29072C09852500301AE1 /* Base.lproj */,
 				7B7C2A6A2C09852500301AE1 /* Global.swift */,
@@ -966,6 +976,7 @@
 				7B7C2A682C09852500301AE1 /* UTCTime */,
 				7B7C29CE2C09852500301AE1 /* Util */,
 				7B7C2A6B2C09852500301AE1 /* ViewController.swift */,
+				7B0DA7AE2C253824004CAFD4 /* README.md */,
 			);
 			path = 1.0;
 			sourceTree = "<group>";
@@ -1691,13 +1702,8 @@
 		7BD7FB5C2C0418E5001D24CE /* PetTip */ = {
 			isa = PBXGroup;
 			children = (
-				7BD0CFD42C05833F002D2531 /* AppDelegate.swift */,
-				7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */,
-				7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */,
 				7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */,
-				7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */,
-				7B0F21262C07F39C0056EDC9 /* SceneDelegate2.swift */,
-				7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */,
+				7B0DA7AC2C253709004CAFD4 /* AppDelegate5.swift */,
 				7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */,
 				7B0F21212C070A0E0056EDC9 /* PetTip.entitlements */,
 				7BD0CFDF2C05B710002D2531 /* Info.plist */,
@@ -1865,6 +1871,7 @@
 				7B7C2BC32C09852600301AE1 /* WalkHistoryItemView.xib in Resources */,
 				7B7C2B7E2C09852600301AE1 /* _CompPetListView.xib in Resources */,
 				7B7C2AA12C09852500301AE1 /* Main.storyboard in Resources */,
+				7B0DA7AF2C253824004CAFD4 /* README.md in Resources */,
 				7B7C2BB22C09852600301AE1 /* PetProfileMemberItemView.xib in Resources */,
 				7B7C2B922C09852600301AE1 /* Member.storyboard in Resources */,
 				7B7C2BA32C09852600301AE1 /* MyPageCompPetListIEmptytemView.xib in Resources */,
@@ -1984,7 +1991,9 @@
 				7B7C2ADA2C09852600301AE1 /* LifeUploadResponse.swift in Sources */,
 				7B7C2BAF2C09852600301AE1 /* PetModViewController.swift in Sources */,
 				7B7C2BA42C09852600301AE1 /* MyPageCompPetListItemView.swift in Sources */,
+				7B0DA79F2C2534FE004CAFD4 /* SceneDelegate3.swift in Sources */,
 				7B7C2AC52C09852500301AE1 /* SggListResponse.swift in Sources */,
+				7B0DA7A02C2534FE004CAFD4 /* SceneDelegate2.swift in Sources */,
 				7B7C2AC92C09852600301AE1 /* CommonTarget.swift in Sources */,
 				7B7C2B342C09852600301AE1 /* RlsUpdate.swift in Sources */,
 				7B7C2B8C2C09852600301AE1 /* FindIDPWContainerViewController.swift in Sources */,
@@ -2041,6 +2050,7 @@
 				7B7C2B282C09852600301AE1 /* CodeList.swift in Sources */,
 				7B7C2B682C09852600301AE1 /* DailyLifeGubunItemView2.swift in Sources */,
 				7B0DA7972C241F1B004CAFD4 /* AppDelegate4.swift in Sources */,
+				7B9D623F2C253A3200A0B5AF /* AppDelegate3.swift in Sources */,
 				7B7C2BC02C09852600301AE1 /* UserInfoViewController2.swift in Sources */,
 				7B0DA78B2C24193B004CAFD4 /* NMapViewController5.swift in Sources */,
 				7B7C2BCE2C09852600301AE1 /* LoginViewController3.swift in Sources */,
@@ -2052,11 +2062,14 @@
 				7B7C2AFA2C09852600301AE1 /* MemberTarget.swift in Sources */,
 				7B0F21202C06C4010056EDC9 /* LoginAuth.swift in Sources */,
 				7B7C2B742C09852600301AE1 /* StoryListViewController.swift in Sources */,
+				7B9D62402C253A3200A0B5AF /* AppDelegate.swift in Sources */,
+				7B0DA7AD2C253709004CAFD4 /* AppDelegate5.swift in Sources */,
 				7B7C2BB62C09852600301AE1 /* QnAAddAttachFileItemView.swift in Sources */,
 				7B7C2AA82C09852500301AE1 /* FaqListRequest.swift in Sources */,
 				7B7C2AA32C09852500301AE1 /* SegueSubViewController.swift in Sources */,
 				7B7C2B512C09852600301AE1 /* UIViewController.swift in Sources */,
 				7B7C2AB42C09852500301AE1 /* QnADtlListRequest.swift in Sources */,
+				7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */,
 				7B0F212C2C0876170056EDC9 /* NaverMapView.swift in Sources */,
 				7B7C2B322C09852600301AE1 /* RealTimeList.swift in Sources */,
 				7B7C2B5C2C09852600301AE1 /* CommonListViewController.swift in Sources */,
@@ -2064,6 +2077,7 @@
 				7B7C2BBC2C09852600301AE1 /* QnAModifyAttachFileItemView.swift in Sources */,
 				7B7C2BCC2C09852600301AE1 /* LoginViewController.swift in Sources */,
 				7B7C2B102C09852600301AE1 /* MyPetWeightListResponse.swift in Sources */,
+				7B0DA7A12C2534FE004CAFD4 /* SceneDelegate.swift in Sources */,
 				7B357CB42C2136A8001B8798 /* SideMenuView.swift in Sources */,
 				7B7C2AD22C09852600301AE1 /* DclrCreateCmntResponse.swift in Sources */,
 				7B7C2BD62C09852600301AE1 /* KeychainAccessible.swift in Sources */,
@@ -2143,7 +2157,6 @@
 				7B7C2B452C09852600301AE1 /* UICollectionViewDataSource.swift in Sources */,
 				7B7C2B012C09852600301AE1 /* MyPetInvttCreateRequest.swift in Sources */,
 				7B7C2B002C09852600301AE1 /* MyPetDetailResponse.swift in Sources */,
-				7B0F21252C07EFE00056EDC9 /* AppDelegate2.swift in Sources */,
 				7B7C2ADC2C09852600301AE1 /* LifeViewResponse.swift in Sources */,
 				7B7C2B162C09852600301AE1 /* RealTimeListResponse.swift in Sources */,
 				7B7C2AA92C09852500301AE1 /* FaqListResponse.swift in Sources */,
@@ -2177,12 +2190,10 @@
 				7B7C2B482C09852600301AE1 /* UIScrollView.swift in Sources */,
 				7B7C2B592C09852600301AE1 /* CommonDetailImageItemView.swift in Sources */,
 				7B7C2AD72C09852600301AE1 /* LifeUpdateRequest.swift in Sources */,
-				7B0F21272C07F39C0056EDC9 /* SceneDelegate2.swift in Sources */,
 				7B7C2ADF2C09852600301AE1 /* MonthRecordRequest.swift in Sources */,
 				7B7C2AEF2C09852600301AE1 /* LoginResponse.swift in Sources */,
 				7B7C2B862C09852600301AE1 /* PetProfItemView.swift in Sources */,
 				7B7C2AE72C09852600301AE1 /* WeekRecordRequest.swift in Sources */,
-				7B0DA7982C241F1B004CAFD4 /* AppDelegate3.swift in Sources */,
 				7B7C2AA22C09852500301AE1 /* SegueRootViewController.swift in Sources */,
 				7B7C2B3F2C09852600301AE1 /* Date.swift in Sources */,
 				7B7C2BAD2C09852600301AE1 /* PetAddViewController.swift in Sources */,
@@ -2196,7 +2207,6 @@
 				7B7C2BC92C09852600301AE1 /* WalkHistoryWeekListItemView.swift in Sources */,
 				7B7C2B2E2C09852600301AE1 /* Login.swift in Sources */,
 				7B7C2AB92C09852500301AE1 /* QnAUpdateResponse.swift in Sources */,
-				7BD0CFD52C05833F002D2531 /* SceneDelegate.swift in Sources */,
 				7B7C2B762C09852600301AE1 /* StoryModViewController.swift in Sources */,
 				7B7C2B732C09852600301AE1 /* StoryItemView2.swift in Sources */,
 				7B357CB62C225CDA001B8798 /* ButtonStyle2.swift in Sources */,
@@ -2253,7 +2263,6 @@
 				7B7C2AA72C09852500301AE1 /* EventListResponse.swift in Sources */,
 				7B7C2B2B2C09852600301AE1 /* EventList.swift in Sources */,
 				7B7C2BD52C09852600301AE1 /* Crypto.swift in Sources */,
-				7BD0CFD62C05833F002D2531 /* AppDelegate.swift in Sources */,
 				7B16B9FB2C1972B50080828F /* TextFieldWithIconButton.swift in Sources */,
 				7B7C2BF92C09852600301AE1 /* SelectWalkMarkPetItemView.swift in Sources */,
 				7B7C2BF12C09852600301AE1 /* PetWeightView2.swift in Sources */,
@@ -2332,7 +2341,6 @@
 				7B7C2A8B2C09852500301AE1 /* LocationViewController.swift in Sources */,
 				7B7C2B262C09852600301AE1 /* CmntRcmdtn.swift in Sources */,
 				7B7C2B362C09852600301AE1 /* StoryList.swift in Sources */,
-				7B0DA7992C241F1B004CAFD4 /* SceneDelegate3.swift in Sources */,
 				7B7C2AE12C09852600301AE1 /* PetListRequest.swift in Sources */,
 				7B7C2BEC2C09852600301AE1 /* CommonPopupView3.swift in Sources */,
 				7B357CAC2C1FFC9A001B8798 /* ButtonToggleStyle.swift in Sources */,

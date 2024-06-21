@@ -9,17 +9,10 @@ import SwiftUI
 
 @main
 struct PetTipApp: App {
-    // @UIApplicationDelegateAdaptor var appDelegate: AppDelegate4
-    @UIApplicationDelegateAdaptor(AppDelegate4.self) var appDelegate
+    @UIApplicationDelegateAdaptor(AppDelegate5.self) var delegate
 
     @State private var isLogin = false
     @State private var isWelcomeViewActive = true
-
-    // init() {
-    //     NSLog("[LOG][I][(\(#fileID):\(#line))::\(#function)][\(String(describing: UIApplication.shared.delegate as? AppDelegate4))]")
-    //     UIApplication.shared.delegate = appDelegate
-    //     NSLog("[LOG][I][(\(#fileID):\(#line))::\(#function)][\(String(describing: UIApplication.shared.delegate as? AppDelegate4))]")
-    // }
 
     var body: some Scene {
         WindowGroup {
