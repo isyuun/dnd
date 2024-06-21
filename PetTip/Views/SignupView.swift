@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+#Preview {
+    SignupView()
+}
+
 struct SignupView: View {
     @State var error: String = " "
     @State var nick: String = ""
     @State var dong: String = ""
 
-    @State private var isCheckedNick: Bool = true
+    @State private var isCheckedNick: Bool = false
 
     @State private var showingHometownSheet: Bool = false
 
@@ -44,6 +48,11 @@ struct SignupView: View {
     @State private var showingAgreementsSheet: Bool = false
     @State private var selectedTab = 0
 
+    var signupAuth: SignupAuth = .init()
+
+    @State var showAlert = false
+    @State var alertMessage = ""
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -55,7 +64,36 @@ struct SignupView: View {
                     button: "중복",
                     maxLength: 20)
                 {
-                    //
+                    if nick.isEmpty {
+                        isCheckedNick = false
+                        showAlert = true
+                        alertMessage = "닉네임을 입력해주세요."
+                        return
+                    }
+
+                    if signupAuth.containsSpecialCharacter(input: nick) {
+                        isCheckedNick = false
+                        showAlert = true
+                        alertMessage = "닉네임은 특수문자를 사용 할 수 없습니다."
+                        return
+                    }
+
+                    signupAuth.checkNickName(nicknm: nick) { data, error in
+                        if let statusCode = data?.statusCode {
+                            if statusCode == 200 {
+                                isCheckedNick = true
+                                showAlert = true
+                                alertMessage = "사용하실 수 있는 닉네임입니다."
+                            } else if statusCode == 406 {
+                                isCheckedNick = false
+                                showAlert = true
+                                alertMessage = "이미 사용중인 닉네임입니다."
+                            }
+                        }
+                    }
+                }
+                .onChange(of: nick) { newValue in
+                    isCheckedNick = false
                 }
 
                 Text(error)
@@ -148,9 +186,16 @@ struct SignupView: View {
                 isCheckedMarketting: $isCheckedMarketting)
         }
         .sheet(isPresented: $showingHometownSheet, onDismiss: {
-            // updateAllCheckedStatus()
+            //
         }) {
             HometownView()
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("회원가입"),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("확인"))
+            )
         }
 
         Spacer()
@@ -168,8 +213,4 @@ struct SignupView: View {
         .padding()
         .disabled(!(isCheckedService && isCheckedPrivacy))
     }
-}
-
-#Preview {
-    SignupView()
 }

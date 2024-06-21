@@ -19,10 +19,8 @@ struct SideMenuView: View {
                     .ignoresSafeArea()
 
                 SideMenuViewContents(show: self.$show, isLogin: self.$isLogin)
+                    .background(Color(UIColor.systemBackground))
                     .transition(.move(edge: .trailing))
-                    .background(
-                        Color.white
-                    )
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -55,12 +53,6 @@ struct SideMenuViewContents: View {
                 .background(Color.gray.opacity(0.1)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                 )
-            // HStack {
-            //     Spacer()
-            //     XMarkButton {
-            //         self.show.toggle()
-            //     }
-            // }
             VStack {
                 if isLogin {
                     HStack {
@@ -75,11 +67,13 @@ struct SideMenuViewContents: View {
                         )
                         .buttonStyle(.primarySmallButton)
                         .font(.caption2)
+                        // .font(.system(size: 12, weight: .regular))
                         Button("로그아웃") {
                             loginAuth.logout()
                         }
                         .buttonStyle(.primarySmallButton)
-                        .font(.caption2)
+                        // .font(.caption2)
+                        .font(.system(size: 12, weight: .regular))
                     }.onAppear {
                         guard let nckNm = UserDefaults.standard.string(forKey: "nckNm") else { return }
                         self.nickName = "\(nckNm)"
@@ -130,40 +124,24 @@ struct SideMenuViewContents: View {
             }
             .padding()
             .background(back)
-            ScrollView {
-                VStack {
-                    // Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("펫등록관리") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("초대관리") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("구매관리") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("판매관리") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("우리동네맞춤지도") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("채팅") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("후기/댓글") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("알림내역") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("1:1문의") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("공지사항") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("FAQ") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("이벤트") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("설정") }.foregroundColor(.primary)
-                    Divider()
-                    NavigationLink(destination: ProfileView()) { MenuTitle("제휴상담문의") }.foregroundColor(.primary)
-                    Divider()
-                }
+            List {
+                NavigationLink(destination: ProfileView()) { Text("펫등록관리") }
+                NavigationLink(destination: ProfileView()) { Text("초대관리") }
+                NavigationLink(destination: ProfileView()) { Text("구매관리") }
+                NavigationLink(destination: ProfileView()) { Text("판매관리") }
+                NavigationLink(destination: ProfileView()) { Text("우리동네맞춤지도") }
+                NavigationLink(destination: ProfileView()) { Text("채팅") }
+                NavigationLink(destination: ProfileView()) { Text("후기/댓글") }
+                NavigationLink(destination: ProfileView()) { Text("알림내역") }
+                NavigationLink(destination: ProfileView()) { Text("1:1문의") }
+                NavigationLink(destination: ProfileView()) { Text("공지사항") }
+                NavigationLink(destination: ProfileView()) { Text("FAQ") }
+                NavigationLink(destination: ProfileView()) { Text("이벤트") }
+                NavigationLink(destination: ProfileView()) { Text("설정") }
+                NavigationLink(destination: ProfileView()) { Text("제휴상담문의") }
             }
-            // .padding()
+            .listStyle(PlainListStyle())
+            // .padding(0)
             // .background(back)
             Spacer()
         }

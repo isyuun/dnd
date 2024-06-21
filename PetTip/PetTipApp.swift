@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct PetTipApp: App {
-    @UIApplicationDelegateAdaptor var delegate: AppDelegate2
+    @UIApplicationDelegateAdaptor var delegate: AppDelegate4
 
     @State private var isLogin = false
     @State private var isWelcomeViewActive = true

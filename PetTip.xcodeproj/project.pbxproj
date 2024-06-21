@@ -13,6 +13,15 @@
 		7B0DA7772C23B528004CAFD4 /* TipTalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7762C23B528004CAFD4 /* TipTalkView.swift */; };
 		7B0DA7792C23B53E004CAFD4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7782C23B53E004CAFD4 /* ProfileView.swift */; };
 		7B0DA77B2C23B558004CAFD4 /* MallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA77A2C23B558004CAFD4 /* MallView.swift */; };
+		7B0DA77F2C23E6B2004CAFD4 /* SignupAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA77E2C23E6B2004CAFD4 /* SignupAuth.swift */; };
+		7B0DA7862C24193B004CAFD4 /* WalkPostViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7802C24193A004CAFD4 /* WalkPostViewController3.swift */; };
+		7B0DA7872C24193B004CAFD4 /* WalkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7812C24193B004CAFD4 /* WalkingController.swift */; };
+		7B0DA7892C24193B004CAFD4 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7832C24193B004CAFD4 /* LocationController.swift */; };
+		7B0DA78A2C24193B004CAFD4 /* WalkingController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7842C24193B004CAFD4 /* WalkingController2.swift */; };
+		7B0DA78B2C24193B004CAFD4 /* NMapViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7852C24193B004CAFD4 /* NMapViewController5.swift */; };
+		7B0DA7972C241F1B004CAFD4 /* AppDelegate4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */; };
+		7B0DA7982C241F1B004CAFD4 /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */; };
+		7B0DA7992C241F1B004CAFD4 /* SceneDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */; };
 		7B0F21202C06C4010056EDC9 /* LoginAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */; };
 		7B0F21232C071CD80056EDC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */; };
 		7B0F21252C07EFE00056EDC9 /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */; };
@@ -26,7 +35,6 @@
 		7B16BA012C1A6DD60080828F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16BA002C1A6DD60080828F /* WelcomeView.swift */; };
 		7B1F5B232C0D4ED000336F9A /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B222C0D4ED000336F9A /* PermissionView.swift */; };
 		7B1F5B252C0E9C1D00336F9A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B242C0E9C1D00336F9A /* LoginView.swift */; };
-		7B1F5B272C0EC4ED00336F9A /* WalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B262C0EC4ED00336F9A /* WalkView.swift */; };
 		7B1F5B292C0ECC5500336F9A /* PermissionAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */; };
 		7B1F5B2B2C0ED2F800336F9A /* NavigateTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */; };
 		7B1F5B2F2C0F09BC00336F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */; };
@@ -452,6 +460,15 @@
 		7B0DA7762C23B528004CAFD4 /* TipTalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTalkView.swift; sourceTree = "<group>"; };
 		7B0DA7782C23B53E004CAFD4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7B0DA77A2C23B558004CAFD4 /* MallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallView.swift; sourceTree = "<group>"; };
+		7B0DA77E2C23E6B2004CAFD4 /* SignupAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAuth.swift; sourceTree = "<group>"; };
+		7B0DA7802C24193A004CAFD4 /* WalkPostViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkPostViewController3.swift; sourceTree = "<group>"; };
+		7B0DA7812C24193B004CAFD4 /* WalkingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingController.swift; sourceTree = "<group>"; };
+		7B0DA7832C24193B004CAFD4 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		7B0DA7842C24193B004CAFD4 /* WalkingController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingController2.swift; sourceTree = "<group>"; };
+		7B0DA7852C24193B004CAFD4 /* NMapViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMapViewController5.swift; sourceTree = "<group>"; };
+		7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate4.swift; sourceTree = "<group>"; };
+		7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate3.swift; sourceTree = "<group>"; };
+		7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate3.swift; sourceTree = "<group>"; };
 		7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuth.swift; sourceTree = "<group>"; };
 		7B0F21212C070A0E0056EDC9 /* PetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetTip.entitlements; sourceTree = "<group>"; };
 		7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -466,7 +483,6 @@
 		7B16BA002C1A6DD60080828F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7B1F5B222C0D4ED000336F9A /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		7B1F5B242C0E9C1D00336F9A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		7B1F5B262C0EC4ED00336F9A /* WalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkView.swift; sourceTree = "<group>"; };
 		7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAuth.swift; sourceTree = "<group>"; };
 		7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateTabView.swift; sourceTree = "<group>"; };
 		7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -921,6 +937,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */,
+				7B0DA77E2C23E6B2004CAFD4 /* SignupAuth.swift */,
 				7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */,
 			);
 			path = ViewModel;
@@ -954,6 +971,11 @@
 		7B7C28FD2C09852500301AE1 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				7B0DA7832C24193B004CAFD4 /* LocationController.swift */,
+				7B0DA7852C24193B004CAFD4 /* NMapViewController5.swift */,
+				7B0DA7812C24193B004CAFD4 /* WalkingController.swift */,
+				7B0DA7842C24193B004CAFD4 /* WalkingController2.swift */,
+				7B0DA7802C24193A004CAFD4 /* WalkPostViewController3.swift */,
 				7B7C28EC2C09852500301AE1 /* LocationViewController.swift */,
 				7B7C28ED2C09852500301AE1 /* LocationViewController2.swift */,
 				7B7C28EE2C09852500301AE1 /* Map.storyboard */,
@@ -1615,7 +1637,6 @@
 				7B7C25782C095E1B00301AE1 /* Coordinator.swift */,
 				7B7C2C092C0994D500301AE1 /* WalkMapView.swift */,
 				7B7C2C0F2C09CAED00301AE1 /* WalkListView.swift */,
-				7B1F5B262C0EC4ED00336F9A /* WalkView.swift */,
 				7B7C2C112C09CED200301AE1 /* StoryListView.swift */,
 				7B7C2C0D2C09C51B00301AE1 /* MainView.swift */,
 				7B7C2C132C09D09900301AE1 /* MyPageView.swift */,
@@ -1667,6 +1688,13 @@
 		7BD7FB5C2C0418E5001D24CE /* PetTip */ = {
 			isa = PBXGroup;
 			children = (
+				7BD0CFD42C05833F002D2531 /* AppDelegate.swift */,
+				7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */,
+				7B0DA7952C241F1B004CAFD4 /* AppDelegate3.swift */,
+				7B0DA7942C241F1B004CAFD4 /* AppDelegate4.swift */,
+				7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */,
+				7B0F21262C07F39C0056EDC9 /* SceneDelegate2.swift */,
+				7B0DA7962C241F1B004CAFD4 /* SceneDelegate3.swift */,
 				7B0F21222C071CD80056EDC9 /* GoogleService-Info.plist */,
 				7B0F21212C070A0E0056EDC9 /* PetTip.entitlements */,
 				7BD0CFDF2C05B710002D2531 /* Info.plist */,
@@ -1676,10 +1704,6 @@
 				7B0F211E2C06C3970056EDC9 /* Model */,
 				7BD0CFD12C057F94002D2531 /* Views */,
 				7BD7FB5D2C0418E5001D24CE /* PetTipApp.swift */,
-				7BD0CFD42C05833F002D2531 /* AppDelegate.swift */,
-				7B0F21242C07EFE00056EDC9 /* AppDelegate2.swift */,
-				7BD0CFD32C05833F002D2531 /* SceneDelegate.swift */,
-				7B0F21262C07F39C0056EDC9 /* SceneDelegate2.swift */,
 				7BD7FB612C0418E6001D24CE /* Assets.xcassets */,
 				7BD7FB632C0418E6001D24CE /* Preview Content */,
 			);
@@ -1992,6 +2016,7 @@
 				7B7C2B942C09852600301AE1 /* SNSJoinViewController2.swift in Sources */,
 				7B7C2BA82C09852600301AE1 /* NoticeDetailViewController.swift in Sources */,
 				7B7C2AD82C09852600301AE1 /* LifeUpdateResponse.swift in Sources */,
+				7B0DA7892C24193B004CAFD4 /* LocationController.swift in Sources */,
 				7B7C2B392C09852600301AE1 /* MyAuthenticationCredential.swift in Sources */,
 				7B7C2AAE2C09852500301AE1 /* QnAAtchUploadRequest.swift in Sources */,
 				7B7C2B9B2C09852600301AE1 /* FaqViewController.swift in Sources */,
@@ -2012,7 +2037,9 @@
 				7B7C2ABB2C09852500301AE1 /* WinnerDtlListResponse.swift in Sources */,
 				7B7C2B282C09852600301AE1 /* CodeList.swift in Sources */,
 				7B7C2B682C09852600301AE1 /* DailyLifeGubunItemView2.swift in Sources */,
+				7B0DA7972C241F1B004CAFD4 /* AppDelegate4.swift in Sources */,
 				7B7C2BC02C09852600301AE1 /* UserInfoViewController2.swift in Sources */,
+				7B0DA78B2C24193B004CAFD4 /* NMapViewController5.swift in Sources */,
 				7B7C2BCE2C09852600301AE1 /* LoginViewController3.swift in Sources */,
 				7B7C2AB32C09852500301AE1 /* QnADeleteResponse.swift in Sources */,
 				7B7C2B372C09852600301AE1 /* Weather.swift in Sources */,
@@ -2072,6 +2099,7 @@
 				7B7C2BBF2C09852600301AE1 /* UserInfoViewController.swift in Sources */,
 				7B7C2A992C09852500301AE1 /* WalkPostViewController.swift in Sources */,
 				7B7C2ABF2C09852500301AE1 /* BBSTarget.swift in Sources */,
+				7B0DA7862C24193B004CAFD4 /* WalkPostViewController3.swift in Sources */,
 				7B7C2B302C09852600301AE1 /* MyPetList.swift in Sources */,
 				7B7C2B052C09852600301AE1 /* MyPetListRequest.swift in Sources */,
 				7B7C2A9F2C09852500301AE1 /* Global2.swift in Sources */,
@@ -2100,6 +2128,8 @@
 				7B7C2B902C09852600301AE1 /* JoinViewController.swift in Sources */,
 				7B7C2B0D2C09852600301AE1 /* MyPetWeightDeleteRequest.swift in Sources */,
 				7B7C2B522C09852600301AE1 /* Util.swift in Sources */,
+				7B0DA78A2C24193B004CAFD4 /* WalkingController2.swift in Sources */,
+				7B0DA7872C24193B004CAFD4 /* WalkingController.swift in Sources */,
 				7B7C2BE02C09852600301AE1 /* UTCTimeViewControllerRx.swift in Sources */,
 				7B7C2BAE2C09852600301AE1 /* PetAddViewController2.swift in Sources */,
 				7B7C2ADD2C09852600301AE1 /* LocationFileRequest.swift in Sources */,
@@ -2149,12 +2179,14 @@
 				7B7C2AEF2C09852600301AE1 /* LoginResponse.swift in Sources */,
 				7B7C2B862C09852600301AE1 /* PetProfItemView.swift in Sources */,
 				7B7C2AE72C09852600301AE1 /* WeekRecordRequest.swift in Sources */,
+				7B0DA7982C241F1B004CAFD4 /* AppDelegate3.swift in Sources */,
 				7B7C2AA22C09852500301AE1 /* SegueRootViewController.swift in Sources */,
 				7B7C2B3F2C09852600301AE1 /* Date.swift in Sources */,
 				7B7C2BAD2C09852600301AE1 /* PetAddViewController.swift in Sources */,
 				7B7C2A952C09852500301AE1 /* NMapViewController2.swift in Sources */,
 				7B7C2AAC2C09852500301AE1 /* NoticeListRequest.swift in Sources */,
 				7B7C2BA72C09852600301AE1 /* MyPageViewController2.swift in Sources */,
+				7B0DA77F2C23E6B2004CAFD4 /* SignupAuth.swift in Sources */,
 				7B7C2B122C09852600301AE1 /* MyPetWeightUpdateResponse.swift in Sources */,
 				7B7C2BD22C09852600301AE1 /* MainViewController3.swift in Sources */,
 				7B7C2B7B2C09852600301AE1 /* WinnerListViewItem.swift in Sources */,
@@ -2183,7 +2215,6 @@
 				7B7C2B142C09852600301AE1 /* MyPetTarget.swift in Sources */,
 				7B7C2BEF2C09852600301AE1 /* PetWeightView.swift in Sources */,
 				7B7C2BE52C09852600301AE1 /* ViewController.swift in Sources */,
-				7B1F5B272C0EC4ED00336F9A /* WalkView.swift in Sources */,
 				7B7C2BCB2C09852600301AE1 /* IntroViewController.swift in Sources */,
 				7B7C2AB02C09852500301AE1 /* QnACreateRequest.swift in Sources */,
 				7B7C2ABA2C09852500301AE1 /* WinnerDtlListRequest.swift in Sources */,
@@ -2297,6 +2328,7 @@
 				7B7C2A8B2C09852500301AE1 /* LocationViewController.swift in Sources */,
 				7B7C2B262C09852600301AE1 /* CmntRcmdtn.swift in Sources */,
 				7B7C2B362C09852600301AE1 /* StoryList.swift in Sources */,
+				7B0DA7992C241F1B004CAFD4 /* SceneDelegate3.swift in Sources */,
 				7B7C2AE12C09852600301AE1 /* PetListRequest.swift in Sources */,
 				7B7C2BEC2C09852600301AE1 /* CommonPopupView3.swift in Sources */,
 				7B357CAC2C1FFC9A001B8798 /* ButtonToggleStyle.swift in Sources */,

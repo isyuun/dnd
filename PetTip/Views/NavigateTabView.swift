@@ -25,7 +25,7 @@ struct NavigateTabView: View {
             })
         ZStack {
             TabView(selection: selectable) {
-                WalkView()
+                MainView()
                     .tabItem {
                         Image(systemName: "pawprint")
                         Text("산책")
@@ -51,14 +51,14 @@ struct NavigateTabView: View {
                         Image(systemName: "cart")
                         Text("팁몰")
                     }
-                    .tag(4)
+                    .tag(3)
 
                 MyPageView2()
                     .tabItem {
                         Image(systemName: "person")
                         Text("My")
                     }
-                    .tag(3)
+                    .tag(4)
             }
             .onChange(of: selection) { newValue in
                 show = false
@@ -71,7 +71,7 @@ struct NavigateTabView: View {
                             Button(action: {
                                 // 알림 버튼 눌렀을 때의 액션
                             }) {
-                                Image(systemName: "bell.fill")
+                                Image(systemName: "bell")
                             }
                             Button(action: {
                                 // 메뉴 버튼 눌렀을 때의 액션

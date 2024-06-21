@@ -28,8 +28,7 @@ extension UINavigationController: UINavigationControllerDelegate {
         //     // navigationBar.topItem?.title = navigationBar.topItem?.title
         //     // navigationBar.topItem?.titleView?.isHidden = true
         // }
-        guard let vc = topViewController else { return }
-        guard let v = vc.view else { return }
+        guard let v = topViewController?.view else { return }
         if let p = v.parent(viewType: BackTitleBarView.self) {
             p.Hide()
         }

@@ -18,11 +18,11 @@ struct WalkMapView: View {
 }
 
 struct WalkMapViewCtrl: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> NMapViewController4 {
-        return UIStoryboard(name: "Map", bundle: nil).instantiateViewController(identifier: "NMapViewController") as! NMapViewController4
+    func makeUIViewController(context: Context) -> NMapViewController5 {
+        return UIStoryboard(name: "Map", bundle: nil).instantiateViewController(identifier: "NMapViewController") as! NMapViewController5
     }
 
-    func updateUIViewController(_ uiViewController: NMapViewController4, context: Context) {}
+    func updateUIViewController(_ uiViewController: NMapViewController5, context: Context) {}
 }
 
 #Preview {

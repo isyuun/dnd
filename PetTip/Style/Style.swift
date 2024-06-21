@@ -11,9 +11,8 @@ func divider(text: Text) -> some View {
     return HStack {
         Color.gray
             .frame(height: 0.5, alignment: .center)
-        // Text("또는")
-        //     .font(.system(size: 12, weight: .regular))
         text
+            // .font(.system(size: 12, weight: .regular))
         Color.gray
             .frame(height: 0.5, alignment: .center)
     }
@@ -36,12 +35,12 @@ struct XMarkButton: View {
 }
 
 func Title(_ title: String) -> some View {
-    return Text(title)
+    return Text(title).navigationTitle(title)
 }
 
-func MenuTitle(_ title: String) -> some View {
+func MenuText(_ text: String) -> some View {
     return HStack {
-        Text(title)
+        Text(text)
         Spacer()
         Image(systemName: "chevron.forward")
             .padding(.horizontal, 10)
