@@ -24,9 +24,14 @@ struct PreviewView: View {
             Button("보기") {}
                 .buttonStyle(.secondary)
             Button("보기") {}
+                .buttonStyle(.tertiary)
+            Button("보기") {}
                 .buttonStyle(.primarySmall)
             Button("보기") {}
                 .buttonStyle(.secondarySmall)
+            Button("보기") {}
+                .buttonStyle(.tertiarySmall)
+            NavigationLink(destination: WalkMapView()) { Text("산책시작") }
             Spacer()
             FooterView()
         }

@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomerView: View {
     var body: some View {
         CustomerViewCtrl()
+            .navigationTitle("고객센터")
     }
 }
 
