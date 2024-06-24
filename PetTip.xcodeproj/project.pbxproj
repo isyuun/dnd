@@ -40,7 +40,7 @@
 		7B1F5B292C0ECC5500336F9A /* PermissionAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */; };
 		7B1F5B2B2C0ED2F800336F9A /* NavigateTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */; };
 		7B1F5B2F2C0F09BC00336F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */; };
-		7B1F5B332C0FF8F200336F9A /* NavigateBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */; };
+		7B1F5B332C0FF8F200336F9A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B322C0FF8F200336F9A /* UINavigationController.swift */; };
 		7B357CA22C1C01D4001B8798 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */; };
 		7B357CA42C1C1B5C001B8798 /* CheckBoxTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */; };
 		7B357CA62C1FC9A3001B8798 /* AgreementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */; };
@@ -426,6 +426,7 @@
 		7B7C2C122C09CED200301AE1 /* StoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C112C09CED200301AE1 /* StoryListView.swift */; };
 		7B7C2C142C09D09900301AE1 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C132C09D09900301AE1 /* MyPageView.swift */; };
 		7B8845562C28EF8E009DF415 /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845552C28EF8E009DF415 /* CustomerView.swift */; };
+		7B8845582C29006C009DF415 /* BottomSheetViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845572C29006C009DF415 /* BottomSheetViewController2.swift */; };
 		7B9D623F2C253A3200A0B5AF /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */; };
 		7B9D62402C253A3200A0B5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */; };
 		7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */; };
@@ -493,7 +494,7 @@
 		7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAuth.swift; sourceTree = "<group>"; };
 		7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateTabView.swift; sourceTree = "<group>"; };
 		7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateBarView.swift; sourceTree = "<group>"; };
+		7B1F5B322C0FF8F200336F9A /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTextButton.swift; sourceTree = "<group>"; };
 		7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementsView.swift; sourceTree = "<group>"; };
@@ -880,6 +881,7 @@
 		7B7C2C112C09CED200301AE1 /* StoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListView.swift; sourceTree = "<group>"; };
 		7B7C2C132C09D09900301AE1 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7B8845552C28EF8E009DF415 /* CustomerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
+		7B8845572C29006C009DF415 /* BottomSheetViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController2.swift; sourceTree = "<group>"; };
 		7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate3.swift; path = ../../../bnd/PetTip/AppDelegate3.swift; sourceTree = "<group>"; };
 		7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../bnd/PetTip/AppDelegate.swift; sourceTree = "<group>"; };
 		7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate2.swift; path = ../../../bnd/PetTip/AppDelegate2.swift; sourceTree = "<group>"; };
@@ -949,6 +951,7 @@
 				7B0F211F2C06C4010056EDC9 /* LoginAuth.swift */,
 				7B0DA77E2C23E6B2004CAFD4 /* SignupAuth.swift */,
 				7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */,
+				7B1F5B322C0FF8F200336F9A /* UINavigationController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1359,6 +1362,7 @@
 			children = (
 				7B7C29B62C09852500301AE1 /* BalloonMarker.swift */,
 				7B7C29B72C09852500301AE1 /* BottomSheetViewController.swift */,
+				7B8845572C29006C009DF415 /* BottomSheetViewController2.swift */,
 				7B7C29B82C09852500301AE1 /* CALayer.swift */,
 				7B7C29B92C09852500301AE1 /* CustomTabBar.swift */,
 				7B7C29BA2C09852500301AE1 /* Date.swift */,
@@ -1637,7 +1641,6 @@
 				7B1F5B2E2C0F09BC00336F9A /* LaunchScreen.storyboard */,
 				7B0DA79A2C25049C004CAFD4 /* PreviewView.swift */,
 				7B9D62422C254D1600A0B5AF /* FooterView.swift */,
-				7B1F5B322C0FF8F200336F9A /* NavigateBarView.swift */,
 				7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */,
 				7B357CB32C2136A8001B8798 /* SideMenuView.swift */,
 				7B357CAD2C211CEE001B8798 /* MyPageView2.swift */,
@@ -2137,7 +2140,7 @@
 				7B7C2ACF2C09852600301AE1 /* CmntRcmdtnResponse.swift in Sources */,
 				7B7C2B332C09852600301AE1 /* RefreshToken.swift in Sources */,
 				7BD7FB602C0418E5001D24CE /* ContentView.swift in Sources */,
-				7B1F5B332C0FF8F200336F9A /* NavigateBarView.swift in Sources */,
+				7B1F5B332C0FF8F200336F9A /* UINavigationController.swift in Sources */,
 				7B7C2BE82C09852600301AE1 /* CommonConfirmView.swift in Sources */,
 				7B7C2B212C09852600301AE1 /* HTTPHeaderField.swift in Sources */,
 				7B7C2AB82C09852500301AE1 /* QnAUpdateRequest.swift in Sources */,
@@ -2180,6 +2183,7 @@
 				7B7C2B792C09852600301AE1 /* WinnerListViewController.swift in Sources */,
 				7B7C2C0E2C09C51B00301AE1 /* MainView.swift in Sources */,
 				7B7C2B3A2C09852600301AE1 /* MyAuthenticator.swift in Sources */,
+				7B8845582C29006C009DF415 /* BottomSheetViewController2.swift in Sources */,
 				7B7C2BB02C09852600301AE1 /* PetModViewController2.swift in Sources */,
 				7B7C2B6E2C09852600301AE1 /* StoryAddViewController.swift in Sources */,
 				7B7C2B602C09852600301AE1 /* ImageViewController.swift in Sources */,
