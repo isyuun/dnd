@@ -425,6 +425,7 @@
 		7B7C2C102C09CAED00301AE1 /* WalkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C0F2C09CAED00301AE1 /* WalkListView.swift */; };
 		7B7C2C122C09CED200301AE1 /* StoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C112C09CED200301AE1 /* StoryListView.swift */; };
 		7B7C2C142C09D09900301AE1 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C132C09D09900301AE1 /* MyPageView.swift */; };
+		7B8845562C28EF8E009DF415 /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845552C28EF8E009DF415 /* CustomerView.swift */; };
 		7B9D623F2C253A3200A0B5AF /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */; };
 		7B9D62402C253A3200A0B5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */; };
 		7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */; };
@@ -878,6 +879,7 @@
 		7B7C2C0F2C09CAED00301AE1 /* WalkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkListView.swift; sourceTree = "<group>"; };
 		7B7C2C112C09CED200301AE1 /* StoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListView.swift; sourceTree = "<group>"; };
 		7B7C2C132C09D09900301AE1 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		7B8845552C28EF8E009DF415 /* CustomerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
 		7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate3.swift; path = ../../../bnd/PetTip/AppDelegate3.swift; sourceTree = "<group>"; };
 		7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../bnd/PetTip/AppDelegate.swift; sourceTree = "<group>"; };
 		7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate2.swift; path = ../../../bnd/PetTip/AppDelegate2.swift; sourceTree = "<group>"; };
@@ -1656,6 +1658,7 @@
 				7B7C2C0F2C09CAED00301AE1 /* WalkListView.swift */,
 				7B7C2C112C09CED200301AE1 /* StoryListView.swift */,
 				7B7C2C0D2C09C51B00301AE1 /* MainView.swift */,
+				7B8845552C28EF8E009DF415 /* CustomerView.swift */,
 				7B7C2C132C09D09900301AE1 /* MyPageView.swift */,
 				7B1F5B222C0D4ED000336F9A /* PermissionView.swift */,
 				7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */,
@@ -2241,6 +2244,7 @@
 				7B7C2AF82C09852600301AE1 /* WithdrawRequest.swift in Sources */,
 				7B7C2AEE2C09852600301AE1 /* LoginRequest.swift in Sources */,
 				7B7C2BAB2C09852600301AE1 /* NoticeViewController.swift in Sources */,
+				7B8845562C28EF8E009DF415 /* CustomerView.swift in Sources */,
 				7B7C2AE62C09852600301AE1 /* RlsUpdateResponse.swift in Sources */,
 				7B16B9F72C193B660080828F /* SignupView.swift in Sources */,
 				7B7C2ACA2C09852600301AE1 /* CmntCreateRequest.swift in Sources */,

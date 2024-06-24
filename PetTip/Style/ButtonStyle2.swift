@@ -23,7 +23,7 @@ public struct PrimaryButtonStyle: ButtonStyle {
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 Color.accentColor
@@ -52,7 +52,7 @@ public struct SecondaryButtonStyle: ButtonStyle {
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 Color.secondary
@@ -81,7 +81,7 @@ public struct TertiaryButtonStyle: ButtonStyle {
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 Color.secondary
@@ -110,7 +110,7 @@ public struct PrimarySmallButtonStyle: ButtonStyle {
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 Color.accentColor
@@ -139,7 +139,7 @@ public struct SecondarySmallButtonStyle: ButtonStyle {
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 Color.secondary
@@ -168,7 +168,7 @@ public struct TertiarySmallButtonStyle: ButtonStyle {
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 Color.secondary

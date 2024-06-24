@@ -142,9 +142,9 @@ struct SideMenuViewContents: View {
                 NavigationLink(destination: PreviewView()) { Text("채팅") }
                 NavigationLink(destination: PreviewView()) { Text("후기/댓글") }
                 NavigationLink(destination: PreviewView()) { Text("알림내역") }
-                NavigationLink(destination: PreviewView()) { Text("1:1문의") }
-                NavigationLink(destination: PreviewView()) { Text("공지사항") }
-                NavigationLink(destination: PreviewView()) { Text("FAQ") }
+                NavigationLink(destination: CustomerView()) { Text("1:1문의") }
+                NavigationLink(destination: CustomerView()) { Text("공지사항") }
+                NavigationLink(destination: CustomerView()) { Text("FAQ") }
                 NavigationLink(destination: PreviewView()) { Text("이벤트") }
                 NavigationLink(destination: PreviewView()) { Text("설정") }
                 NavigationLink(destination: PreviewView()) { Text("제휴상담문의") }

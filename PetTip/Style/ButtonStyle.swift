@@ -30,7 +30,7 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
             .frame(height: 48)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 backColor
@@ -56,7 +56,7 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
             .frame(height: 48)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 1.5)
+                    .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
                 backColor
@@ -163,7 +163,7 @@ public struct SignButtonStyle: ButtonStyle {
                         switch signType {
                         case .google:
                             RoundedRectangle(cornerRadius: 10)
-                                .strokeBorder(Color.gray, lineWidth: 1.5)
+                                .strokeBorder(Color.gray, lineWidth: 0.5)
                                 .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
                         case .apple:
                             RoundedRectangle(cornerRadius: 10)
