@@ -259,7 +259,6 @@
 		7B7C2B5B2C09852600301AE1 /* CommonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29D72C09852500301AE1 /* CommonDetailViewController.swift */; };
 		7B7C2B5C2C09852600301AE1 /* CommonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29D82C09852500301AE1 /* CommonListViewController.swift */; };
 		7B7C2B5D2C09852600301AE1 /* CommonPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29D92C09852500301AE1 /* CommonPostViewController.swift */; };
-		7B7C2B5E2C09852600301AE1 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29DA2C09852500301AE1 /* CommonViewController.swift */; };
 		7B7C2B5F2C09852600301AE1 /* CommonViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29DB2C09852500301AE1 /* CommonViewController2.swift */; };
 		7B7C2B602C09852600301AE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29DC2C09852500301AE1 /* ImageViewController.swift */; };
 		7B7C2B612C09852600301AE1 /* LogoTitleBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C29DD2C09852500301AE1 /* LogoTitleBarView.xib */; };
@@ -427,6 +426,11 @@
 		7B7C2C142C09D09900301AE1 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C2C132C09D09900301AE1 /* MyPageView.swift */; };
 		7B8845562C28EF8E009DF415 /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845552C28EF8E009DF415 /* CustomerView.swift */; };
 		7B8845582C29006C009DF415 /* BottomSheetViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845572C29006C009DF415 /* BottomSheetViewController2.swift */; };
+		7B88455E2C294475009DF415 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88455D2C294475009DF415 /* NoticeView.swift */; };
+		7B8845602C294513009DF415 /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88455F2C294513009DF415 /* FaqView.swift */; };
+		7B8845622C29458A009DF415 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845612C29458A009DF415 /* QnAView.swift */; };
+		7B8845642C294715009DF415 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845632C294715009DF415 /* EventView.swift */; };
+		7B8845692C294CB5009DF415 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845682C294CB5009DF415 /* CommonViewController.swift */; };
 		7B9D623F2C253A3200A0B5AF /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */; };
 		7B9D62402C253A3200A0B5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */; };
 		7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */; };
@@ -713,7 +717,6 @@
 		7B7C29D72C09852500301AE1 /* CommonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonDetailViewController.swift; sourceTree = "<group>"; };
 		7B7C29D82C09852500301AE1 /* CommonListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonListViewController.swift; sourceTree = "<group>"; };
 		7B7C29D92C09852500301AE1 /* CommonPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonPostViewController.swift; sourceTree = "<group>"; };
-		7B7C29DA2C09852500301AE1 /* CommonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		7B7C29DB2C09852500301AE1 /* CommonViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController2.swift; sourceTree = "<group>"; };
 		7B7C29DC2C09852500301AE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		7B7C29DD2C09852500301AE1 /* LogoTitleBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoTitleBarView.xib; sourceTree = "<group>"; };
@@ -882,6 +885,11 @@
 		7B7C2C132C09D09900301AE1 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7B8845552C28EF8E009DF415 /* CustomerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
 		7B8845572C29006C009DF415 /* BottomSheetViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController2.swift; sourceTree = "<group>"; };
+		7B88455D2C294475009DF415 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		7B88455F2C294513009DF415 /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
+		7B8845612C29458A009DF415 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
+		7B8845632C294715009DF415 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		7B8845682C294CB5009DF415 /* CommonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate3.swift; path = ../../../bnd/PetTip/AppDelegate3.swift; sourceTree = "<group>"; };
 		7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../bnd/PetTip/AppDelegate.swift; sourceTree = "<group>"; };
 		7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate2.swift; path = ../../../bnd/PetTip/AppDelegate2.swift; sourceTree = "<group>"; };
@@ -1401,7 +1409,6 @@
 				7B7C29D72C09852500301AE1 /* CommonDetailViewController.swift */,
 				7B7C29D82C09852500301AE1 /* CommonListViewController.swift */,
 				7B7C29D92C09852500301AE1 /* CommonPostViewController.swift */,
-				7B7C29DA2C09852500301AE1 /* CommonViewController.swift */,
 				7B7C29DB2C09852500301AE1 /* CommonViewController2.swift */,
 				7B7C29DC2C09852500301AE1 /* ImageViewController.swift */,
 				7B7C29DD2C09852500301AE1 /* LogoTitleBarView.xib */,
@@ -1635,6 +1642,30 @@
 			path = ../../../bnd/PetTip/Popup;
 			sourceTree = "<group>";
 		};
+		7B8845652C294C04009DF415 /* 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7B8845662C294C4B009DF415 /* Page */,
+			);
+			path = 2.0;
+			sourceTree = "<group>";
+		};
+		7B8845662C294C4B009DF415 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				7B8845672C294C73009DF415 /* Common */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		7B8845672C294C73009DF415 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7B8845682C294CB5009DF415 /* CommonViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		7BD0CFD12C057F94002D2531 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1662,6 +1693,10 @@
 				7B7C2C112C09CED200301AE1 /* StoryListView.swift */,
 				7B7C2C0D2C09C51B00301AE1 /* MainView.swift */,
 				7B8845552C28EF8E009DF415 /* CustomerView.swift */,
+				7B88455D2C294475009DF415 /* NoticeView.swift */,
+				7B88455F2C294513009DF415 /* FaqView.swift */,
+				7B8845612C29458A009DF415 /* QnAView.swift */,
+				7B8845632C294715009DF415 /* EventView.swift */,
 				7B7C2C132C09D09900301AE1 /* MyPageView.swift */,
 				7B1F5B222C0D4ED000336F9A /* PermissionView.swift */,
 				7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */,
@@ -1717,6 +1752,7 @@
 				7B0F21212C070A0E0056EDC9 /* PetTip.entitlements */,
 				7BD0CFDF2C05B710002D2531 /* Info.plist */,
 				7B7C257A2C097C9200301AE1 /* 1.0 */,
+				7B8845652C294C04009DF415 /* 2.0 */,
 				7BD0CFD92C05AFCD002D2531 /* Style */,
 				7B0F21282C07FAC00056EDC9 /* ViewModel */,
 				7B0F211E2C06C3970056EDC9 /* Model */,
@@ -1991,6 +2027,7 @@
 				7B7C2B2C2C09852600301AE1 /* LifeUpdate.swift in Sources */,
 				7B7C2BFD2C09852600301AE1 /* SelectWalkPetItemView.swift in Sources */,
 				7B7C2BB52C09852600301AE1 /* PetTypeSelectViewController.swift in Sources */,
+				7B8845622C29458A009DF415 /* QnAView.swift in Sources */,
 				7B7C2AA62C09852500301AE1 /* EventListRequest.swift in Sources */,
 				7B0F212A2C086A180056EDC9 /* MapView.swift in Sources */,
 				7B7C2AEB2C09852600301AE1 /* ChkNcknmRequest.swift in Sources */,
@@ -2003,6 +2040,7 @@
 				7B0DA79F2C2534FE004CAFD4 /* SceneDelegate3.swift in Sources */,
 				7B7C2AC52C09852500301AE1 /* SggListResponse.swift in Sources */,
 				7B0DA7A02C2534FE004CAFD4 /* SceneDelegate2.swift in Sources */,
+				7B8845692C294CB5009DF415 /* CommonViewController.swift in Sources */,
 				7B7C2AC92C09852600301AE1 /* CommonTarget.swift in Sources */,
 				7B7C2B342C09852600301AE1 /* RlsUpdate.swift in Sources */,
 				7B7C2B8C2C09852600301AE1 /* FindIDPWContainerViewController.swift in Sources */,
@@ -2080,10 +2118,12 @@
 				7B7C2AB42C09852500301AE1 /* QnADtlListRequest.swift in Sources */,
 				7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */,
 				7B0F212C2C0876170056EDC9 /* NaverMapView.swift in Sources */,
+				7B8845602C294513009DF415 /* FaqView.swift in Sources */,
 				7B7C2B322C09852600301AE1 /* RealTimeList.swift in Sources */,
 				7B7C2B5C2C09852600301AE1 /* CommonListViewController.swift in Sources */,
 				7B7C2B272C09852600301AE1 /* CmntUpdate.swift in Sources */,
 				7B7C2BBC2C09852600301AE1 /* QnAModifyAttachFileItemView.swift in Sources */,
+				7B8845642C294715009DF415 /* EventView.swift in Sources */,
 				7B7C2BCC2C09852600301AE1 /* LoginViewController.swift in Sources */,
 				7B7C2B102C09852600301AE1 /* MyPetWeightListResponse.swift in Sources */,
 				7B0DA7A12C2534FE004CAFD4 /* SceneDelegate.swift in Sources */,
@@ -2260,6 +2300,7 @@
 				7B7C2BE62C09852600301AE1 /* CommentModifyView.swift in Sources */,
 				7B1F5B252C0E9C1D00336F9A /* LoginView.swift in Sources */,
 				7B7C2BB42C09852600301AE1 /* PetProfileViewController2.swift in Sources */,
+				7B88455E2C294475009DF415 /* NoticeView.swift in Sources */,
 				7B7C2BE22C09852600301AE1 /* UTCTimeViewModelRx.swift in Sources */,
 				7B7C2B2D2C09852600301AE1 /* LifeView.swift in Sources */,
 				7B7C2B7F2C09852600301AE1 /* CompPetListItemView.swift in Sources */,
@@ -2335,7 +2376,6 @@
 				7B7C2AD62C09852600301AE1 /* LifeCreateResponse.swift in Sources */,
 				7B7C2B992C09852600301AE1 /* FaqListItemView.swift in Sources */,
 				7B7C2AC42C09852500301AE1 /* SggListRequest.swift in Sources */,
-				7B7C2B5E2C09852600301AE1 /* CommonViewController.swift in Sources */,
 				7B7C2B492C09852600301AE1 /* UITableViewCell.swift in Sources */,
 				7B0DA7732C23B4D5004CAFD4 /* HomeView.swift in Sources */,
 				7B7C2B1F2C09852600301AE1 /* API.swift in Sources */,

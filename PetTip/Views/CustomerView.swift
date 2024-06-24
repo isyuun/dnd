@@ -19,10 +19,7 @@ struct CustomerViewCtrl: UIViewControllerRepresentable {
         return UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(identifier: "CustomerCenterViewController") as! CustomerCenterViewController
     }
 
-    func updateUIViewController(_ uiViewController: CustomerCenterViewController, context: Context) {
-        // guard let titleBarView = uiViewController.titleBarView else { return }
-        // titleBarView.Hide()
-    }
+    func updateUIViewController(_ uiViewController: CustomerCenterViewController, context: Context) {}
 }
 
 #Preview {

@@ -25,7 +25,7 @@ struct NavigateTabView: View {
             })
         ZStack {
             TabView(selection: selectable) {
-                MainView()
+                MainView(isLogin: $isLogin)
                     .tabItem {
                         Image(systemName: "pawprint")
                         Text("산책")

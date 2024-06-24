@@ -39,7 +39,7 @@ func Text(text: String) -> some View {
 
 func Title(_ text: String) -> some View {
     return Text(text)
-        .font(.system(size: 28.0, weight: .bold))
+        .font(.system(size: 24.0, weight: .bold))
         .navigationTitle(text)
 }
 
