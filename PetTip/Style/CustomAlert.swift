@@ -33,7 +33,7 @@ struct CustomAlert: View {
     var body: some View {
         ZStack {
             dimView
-        
+
             alertView
                 .scaleEffect(scale)
                 .opacity(opacity)
@@ -43,6 +43,7 @@ struct CustomAlert: View {
         .task {
             animate(isShown: true)
         }
+        .background(.clear)
     }
 
     // MARK: Private
@@ -55,7 +56,7 @@ struct CustomAlert: View {
         }
         .padding(24)
         .frame(width: 320)
-        .background(.white)
+        .background(Color(UIColor.systemBackground))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.4), radius: 16, x: 0, y: 12)
     }
@@ -65,7 +66,7 @@ struct CustomAlert: View {
         if !title.isEmpty {
             Text(title)
                 .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.black)
+                // .foregroundColor(.black)
                 .lineSpacing(24 - UIFont.systemFont(ofSize: 18, weight: .bold).lineHeight)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -145,7 +146,7 @@ struct CustomAlert: View {
 
     private var dimView: some View {
         Color.gray
-            .opacity(0.88)
+            .opacity(0.2)
             .opacity(backgroundOpacity)
     }
 
@@ -180,31 +181,27 @@ struct CustomAlert: View {
     }
 }
 
-#if DEBUG
-struct CustomAlert_Previews: PreviewProvider {
-    static var previews: some View {
-        let dismissButton = DismissButton(title: "OK")
-        let primaryButton = PrimaryButton(title: "OK")
-        let secondaryButton = SecondaryButton(title: "Cancel")
-
-        let title = "This is your life. Do what you want and do it often."
-        let message = """
-        If you don't like something, change it.
-        If you don't like your job, quit.
-        If you don't have enough time, stop watching TV.
-        """
-
-        return VStack {
-            CustomAlert(title: title, message: message, dismissButton: nil, primaryButton: nil, secondaryButton: nil)
-            CustomAlert(title: title, message: message, dismissButton: dismissButton, primaryButton: nil, secondaryButton: nil)
-            CustomAlert(title: title, message: message, dismissButton: nil, primaryButton: primaryButton, secondaryButton: secondaryButton)
-        }
-        // .previewDevice("iPhone 13 Pro Max")
-        // .preferredColorScheme(.light)
-    }
-}
-#endif
-
-// #Preview {
-//     CustomAlert()
+// #if DEBUG
+// struct CustomAlert_Previews: PreviewProvider {
+//     static var previews: some View {
+//         let dismissButton = DismissButton(title: "OK")
+//         let primaryButton = PrimaryButton(title: "OK")
+//         let secondaryButton = SecondaryButton(title: "Cancel")
+// 
+//         let title = "This is your life. Do what you want and do it often."
+//         let message = """
+//         If you don't like something, change it.
+//         If you don't like your job, quit.
+//         If you don't have enough time, stop watching TV.
+//         """
+// 
+//         return VStack {
+//             CustomAlert(title: title, message: message, dismissButton: nil, primaryButton: nil, secondaryButton: nil)
+//             CustomAlert(title: title, message: message, dismissButton: dismissButton, primaryButton: nil, secondaryButton: nil)
+//             CustomAlert(title: title, message: message, dismissButton: nil, primaryButton: primaryButton, secondaryButton: secondaryButton)
+//         }
+//         // .previewDevice("iPhone 13 Pro Max")
+//         // .preferredColorScheme(.light)
+//     }
 // }
+// #endif

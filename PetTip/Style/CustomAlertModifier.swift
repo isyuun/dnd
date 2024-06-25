@@ -28,8 +28,22 @@ extension CustomAlertModifier: ViewModifier {
         content
             .fullScreenCover(isPresented: $isPresented) {
                 CustomAlert(title: title, message: message, dismissButton: dismissButton, primaryButton: primaryButton, secondaryButton: secondaryButton)
+                    .background(BackgroundBlurView())
+                    .environment(\.font, .system(size: 12))
             }
     }
+}
+
+struct BackgroundBlurView: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
+        DispatchQueue.main.async {
+            view.superview?.superview?.backgroundColor = .clear
+        }
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
 extension CustomAlertModifier {

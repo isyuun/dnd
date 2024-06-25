@@ -21,9 +21,11 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
 
     public func makeBody(configuration: Configuration) -> some View {
-        let colorScheme = Environment(\.colorScheme).wrappedValue
-        let textColor = colorScheme == .dark ? Color.secondary : Color.primary
-        let backColor = colorScheme == .dark ? Color.primary : Color.secondary
+        // let colorScheme = Environment(\.colorScheme).wrappedValue
+        // let textColor = colorScheme == .dark ? Color.secondary : Color.primary
+        // let backColor = colorScheme == .dark ? Color.primary : Color.secondary
+        let textColor = Color.primary
+        let backColor = Color(UIColor.systemBackground)
 
         configuration.label
             .modifier(RectButtonModifier(textColor: textColor))
@@ -47,9 +49,11 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
 
     public func makeBody(configuration: Configuration) -> some View {
-        let colorScheme = Environment(\.colorScheme).wrappedValue
-        let textColor = colorScheme == .dark ? Color.primary : Color.secondary
-        let backColor = colorScheme == .dark ? Color.secondary : Color.primary
+        // let colorScheme = Environment(\.colorScheme).wrappedValue
+        // let textColor = colorScheme == .dark ? Color.primary : Color.secondary
+        // let backColor = colorScheme == .dark ? Color.secondary : Color.primary
+        let textColor = Color.secondary
+        let backColor = Color(UIColor.secondarySystemBackground)
 
         configuration.label
             .modifier(RectButtonModifier(textColor: textColor))

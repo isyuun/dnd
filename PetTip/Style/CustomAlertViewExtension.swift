@@ -25,7 +25,7 @@ extension View {
     }
 }
 
-struct DemoView: View {
+struct CustomAlertDemoView: View {
     // MARK: - Value
 
     // MARK: Private
@@ -44,14 +44,16 @@ struct DemoView: View {
             } label: {
                 Text("Alert test")
             }
+            .frame(maxWidth: .infinity)
             Spacer()
         }
-        .alert(
-            title: "타이틀",
-            message: "메시지",
-            primaryButton: PrimaryButton(title: "네", action: {}),
-            secondaryButton: SecondaryButton(title: "아니요", action: {}),
-            isPresented: $isAlertPresented)
+        .background(.red)
+        // .alert(
+        //     title: "타이틀",
+        //     message: "메시지",
+        //     primaryButton: PrimaryButton(title: "네", action: {}),
+        //     secondaryButton: SecondaryButton(title: "아니요", action: {}),
+        //     isPresented: $isAlertPresented)
         .alert(
             title: "타이틀",
             message: "메시지",
@@ -61,5 +63,5 @@ struct DemoView: View {
 }
 
 #Preview {
-    DemoView()
+    CustomAlertDemoView()
 }

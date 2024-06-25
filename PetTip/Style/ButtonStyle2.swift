@@ -180,3 +180,33 @@ public struct TertiarySmallButtonStyle: ButtonStyle {
 public extension ButtonStyle where Self == TertiarySmallButtonStyle {
     static var tertiarySmall: Self { return .init() }
 }
+
+struct ButtonStyleDemoView: View {
+    var body: some View {
+        Button("Button") {}
+            .frame(maxWidth: .infinity)
+        Button("rectPrimary") {}
+            .buttonStyle(.rectPrimary)
+        Button("rectSecondary") {}
+            .buttonStyle(.rectSecondary)
+        Button("primary") {}
+            .buttonStyle(.primary)
+        Button("secondary") {}
+            .buttonStyle(.secondary)
+        Button("tertiary") {}
+            .buttonStyle(.tertiary)
+        Button("primarySmall") {}
+            .buttonStyle(.primarySmall)
+            .padding(.horizontal)
+        Button("secondarySmall") {}
+            .buttonStyle(.secondarySmall)
+            .padding(.horizontal)
+        Button("tertiarySmall") {}
+            .buttonStyle(.tertiarySmall)
+            .padding(.horizontal)
+    }
+}
+
+#Preview {
+    ButtonStyleDemoView()
+}

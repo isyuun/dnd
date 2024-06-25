@@ -127,6 +127,19 @@ struct DismissButton: View {
             Text(title)
                 .padding(.horizontal, 10)
         }
-        .buttonStyle(.tertiarySmall)
+        .buttonStyle(.primarySmall)
     }
+}
+
+struct CustomAlertButtonDemoView: View {
+    var body: some View {
+        PrimaryButton(title: "PrimaryButton")
+        SecondaryButton(title: "SecondaryButton")
+        TertiaryButton(title: "TertiaryButton")
+        DismissButton(title: "DismissButton")
+    }
+}
+
+#Preview {
+    CustomAlertButtonDemoView()
 }
