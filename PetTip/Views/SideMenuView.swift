@@ -136,7 +136,6 @@ struct SideMenuViewContents: View {
             .padding()
             .background(back)
             List {
-                NavigationLink(destination: WalkMapView()) { Text("산책시작") }
                 NavigationLink(destination: PreviewView()) { Text("펫등록관리") }
                 NavigationLink(destination: PreviewView()) { Text("초대관리") }
                 NavigationLink(destination: PreviewView()) { Text("구매관리") }
