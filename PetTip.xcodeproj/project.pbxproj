@@ -448,6 +448,10 @@
 		7BF13A972C2A80D700320527 /* WalkTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13A952C2A80D600320527 /* WalkTrack.swift */; };
 		7BF13A982C2A80D700320527 /* WalkingController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13A962C2A80D600320527 /* WalkingController3.swift */; };
 		7BF13A9A2C2A838600320527 /* MainViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13A992C2A838600320527 /* MainViewController5.swift */; };
+		7BF13AA02C2A8C9D00320527 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13A9F2C2A8C9D00320527 /* CustomAlert.swift */; };
+		7BF13AA22C2A8D2600320527 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13AA12C2A8D2600320527 /* CustomAlertButton.swift */; };
+		7BF13AA42C2A8D8400320527 /* CustomAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13AA32C2A8D8400320527 /* CustomAlertModifier.swift */; };
+		7BF13AA62C2A8DD300320527 /* CustomAlertViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13AA52C2A8DD300320527 /* CustomAlertViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -915,6 +919,10 @@
 		7BF13A952C2A80D600320527 /* WalkTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTrack.swift; sourceTree = "<group>"; };
 		7BF13A962C2A80D600320527 /* WalkingController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingController3.swift; sourceTree = "<group>"; };
 		7BF13A992C2A838600320527 /* MainViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController5.swift; sourceTree = "<group>"; };
+		7BF13A9F2C2A8C9D00320527 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		7BF13AA12C2A8D2600320527 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
+		7BF13AA32C2A8D8400320527 /* CustomAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertModifier.swift; sourceTree = "<group>"; };
+		7BF13AA52C2A8DD300320527 /* CustomAlertViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewExtension.swift; sourceTree = "<group>"; };
 		CFC6128037C666AFAAF10FA8 /* Pods_PetTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B4572026929C4781063A0C /* Pods-PetTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetTip.debug.xcconfig"; path = "Target Support Files/Pods-PetTip/Pods-PetTip.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1729,6 +1737,10 @@
 				7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */,
 				7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */,
 				7B357CAB2C1FFC9A001B8798 /* ButtonToggleStyle.swift */,
+				7BF13A9F2C2A8C9D00320527 /* CustomAlert.swift */,
+				7BF13AA12C2A8D2600320527 /* CustomAlertButton.swift */,
+				7BF13AA32C2A8D8400320527 /* CustomAlertModifier.swift */,
+				7BF13AA52C2A8DD300320527 /* CustomAlertViewExtension.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -2151,6 +2163,7 @@
 				7B7C2AE22C09852600301AE1 /* PetListResponse.swift in Sources */,
 				7B7C2B0A2C09852600301AE1 /* MyPetUpdateResponse.swift in Sources */,
 				7B7C2B642C09852600301AE1 /* CommunityCommentView.swift in Sources */,
+				7BF13AA62C2A8DD300320527 /* CustomAlertViewExtension.swift in Sources */,
 				7B357CA62C1FC9A3001B8798 /* AgreementsView.swift in Sources */,
 				7B7C2AF42C09852600301AE1 /* ResetNcknmRequest.swift in Sources */,
 				7B7C2B982C09852600301AE1 /* CustomerCenterViewController.swift in Sources */,
@@ -2236,6 +2249,7 @@
 				7B7C2B792C09852600301AE1 /* WinnerListViewController.swift in Sources */,
 				7B7C2C0E2C09C51B00301AE1 /* MainView.swift in Sources */,
 				7B7C2B3A2C09852600301AE1 /* MyAuthenticator.swift in Sources */,
+				7BF13AA22C2A8D2600320527 /* CustomAlertButton.swift in Sources */,
 				7B8845582C29006C009DF415 /* BottomSheetViewController2.swift in Sources */,
 				7B7C2BB02C09852600301AE1 /* PetModViewController2.swift in Sources */,
 				7B7C2B6E2C09852600301AE1 /* StoryAddViewController.swift in Sources */,
@@ -2244,11 +2258,13 @@
 				7B7C2BB72C09852600301AE1 /* QnAAddViewController.swift in Sources */,
 				7B357CA42C1C1B5C001B8798 /* CheckBoxTextButton.swift in Sources */,
 				7B7C2ADB2C09852600301AE1 /* LifeViewRequest.swift in Sources */,
+				7BF13AA02C2A8C9D00320527 /* CustomAlert.swift in Sources */,
 				7B7C2B702C09852600301AE1 /* StoryDetailViewController.swift in Sources */,
 				7B7C2B1B2C09852600301AE1 /* WeatherRequest.swift in Sources */,
 				7B1F5B292C0ECC5500336F9A /* PermissionAuth.swift in Sources */,
 				7B7C2B032C09852600301AE1 /* MyPetInvttSetKeyRequest.swift in Sources */,
 				7B7C2AE42C09852600301AE1 /* RcmdtnResponse.swift in Sources */,
+				7BF13AA42C2A8D8400320527 /* CustomAlertModifier.swift in Sources */,
 				7B7C2BBE2C09852600301AE1 /* QnAViewController.swift in Sources */,
 				7B7C2B482C09852600301AE1 /* UIScrollView.swift in Sources */,
 				7B7C2B592C09852600301AE1 /* CommonDetailImageItemView.swift in Sources */,

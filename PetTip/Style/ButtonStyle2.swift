@@ -48,7 +48,7 @@ public struct SecondaryButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .padding()
             .frame(maxWidth: .infinity)
-            .background(Color.red)
+            .background(Color.secondary)
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
@@ -77,14 +77,14 @@ public struct TertiaryButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .padding()
             .frame(maxWidth: .infinity)
-            .background(Color.secondary)
+            .background(Color.red)
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
-                Color.secondary
+                Color.red
                     .opacity(configuration.isPressed ? 0.5 : 0)
             )
     }
@@ -135,7 +135,7 @@ public struct SecondarySmallButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .padding(5)
             // .frame(maxWidth: .infinity)
-            .background(Color.red)
+            .background(Color.secondary)
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
@@ -164,14 +164,14 @@ public struct TertiarySmallButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .padding(5)
             // .frame(maxWidth: .infinity)
-            .background(Color.secondary)
+            .background(Color.red)
             .cornerRadius(5)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
-                Color.secondary
+                Color.red
                     .opacity(configuration.isPressed ? 0.5 : 0)
             )
     }

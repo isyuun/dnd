@@ -190,13 +190,18 @@ struct SignupView: View {
         }) {
             HometownView()
         }
-        .alert(isPresented: $showAlert) {
-            Alert(
-                title: Text("회원가입"),
-                message: Text(alertMessage),
-                dismissButton: .default(Text("확인"))
-            )
-        }
+        // .alert(isPresented: $showAlert) {
+        //     Alert(
+        //         title: Text("회원가입"),
+        //         message: Text(alertMessage),
+        //         dismissButton: .default(Text("확인"))
+        //     )
+        // }
+        .alert(
+            title: "회원가입",
+            message: alertMessage,
+            dismissButton: DismissButton(title: "확인", action: {}),
+            isPresented: $showAlert)
 
         Spacer()
 
