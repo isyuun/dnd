@@ -27,21 +27,24 @@ struct NavigateTabView: View {
             TabView(selection: selectable) {
                 MainView(isLogin: $isLogin)
                     .tabItem {
-                        Image(systemName: "pawprint")
+                        // Image(systemName: "pawprint")
+                        Image(uiImage: UIImage(named: selection == 1 ? "walk_active" : "walk")!)
                         Text("산책")
                     }
                     .tag(1)
 
                 StoryListView()
                     .tabItem {
-                        Image(systemName: "message")
+                        // Image(systemName: "message")
+                        Image(uiImage: UIImage(named: selection == 2 ? "community_active" : "community")!)
                         Text("팁톡")
                     }
                     .tag(2)
 
                 HomeView()
                     .tabItem {
-                        Image(systemName: "house")
+                        // Image(systemName: "house")
+                        Image(uiImage: UIImage(named: selection == 0 ? "home_active" : "home")!)
                         Text("홈")
                     }
                     .tag(0)
@@ -53,9 +56,10 @@ struct NavigateTabView: View {
                     }
                     .tag(3)
 
-                MyPageView2()
+                MyPageView2(isLogin: $isLogin)
                     .tabItem {
-                        Image(systemName: "person")
+                        // Image(systemName: "person")
+                        Image(uiImage: UIImage(named: selection == 4 ? "mypage_active" : "mypage")!)
                         Text("My")
                     }
                     .tag(4)

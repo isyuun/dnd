@@ -112,9 +112,11 @@ struct SideMenuViewContents: View {
                             }
                             .frame(maxWidth: .infinity) // 버튼의 최대 너비를 확장
                         }
-                    }.padding(.top)
+                    }
+                    .padding(.top)
                 } else {
-                    Text("다양한 펫팁 서비스는\n") + Text("로그인 후 사용가능해요").bold()
+                    (Text("다양한 펫팁 서비스는\n") + Text("로그인 후 사용가능해요").bold())
+                        .padding(.top)
                     HStack {
                         Spacer()
                         Button("로그인") {
@@ -151,12 +153,10 @@ struct SideMenuViewContents: View {
                 NavigationLink(destination: PreviewView()) { Text("제휴상담문의") }
             }
             .listStyle(PlainListStyle())
-            // .padding(0)
-            // .background(back)
             Spacer()
         }
         .environment(\.font, .system(size: 15))
-        .padding()
+        .padding(.horizontal)
     }
 }
 

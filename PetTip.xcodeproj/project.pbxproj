@@ -431,6 +431,7 @@
 		7B8845622C29458A009DF415 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845612C29458A009DF415 /* QnAView.swift */; };
 		7B8845642C294715009DF415 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845632C294715009DF415 /* EventView.swift */; };
 		7B8845692C294CB5009DF415 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8845682C294CB5009DF415 /* CommonViewController.swift */; };
+		7B88456D2C2A3527009DF415 /* WalkPostViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88456C2C2A3527009DF415 /* WalkPostViewController4.swift */; };
 		7B9D623F2C253A3200A0B5AF /* AppDelegate3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */; };
 		7B9D62402C253A3200A0B5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */; };
 		7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */; };
@@ -890,6 +891,7 @@
 		7B8845612C29458A009DF415 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
 		7B8845632C294715009DF415 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		7B8845682C294CB5009DF415 /* CommonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		7B88456C2C2A3527009DF415 /* WalkPostViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkPostViewController4.swift; sourceTree = "<group>"; };
 		7B9D623C2C253A3200A0B5AF /* AppDelegate3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate3.swift; path = ../../../bnd/PetTip/AppDelegate3.swift; sourceTree = "<group>"; };
 		7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../bnd/PetTip/AppDelegate.swift; sourceTree = "<group>"; };
 		7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate2.swift; path = ../../../bnd/PetTip/AppDelegate2.swift; sourceTree = "<group>"; };
@@ -1003,7 +1005,6 @@
 				7B0DA7852C24193B004CAFD4 /* NMapViewController5.swift */,
 				7B0DA7812C24193B004CAFD4 /* WalkingController.swift */,
 				7B0DA7842C24193B004CAFD4 /* WalkingController2.swift */,
-				7B0DA7802C24193A004CAFD4 /* WalkPostViewController3.swift */,
 				7B7C28EC2C09852500301AE1 /* LocationViewController.swift */,
 				7B7C28ED2C09852500301AE1 /* LocationViewController2.swift */,
 				7B7C28EE2C09852500301AE1 /* Map.storyboard */,
@@ -1020,6 +1021,8 @@
 				7B7C28F92C09852500301AE1 /* Track.swift */,
 				7B7C28FA2C09852500301AE1 /* WalkPostViewController.swift */,
 				7B7C28FB2C09852500301AE1 /* WalkPostViewController2.swift */,
+				7B0DA7802C24193A004CAFD4 /* WalkPostViewController3.swift */,
+				7B88456C2C2A3527009DF415 /* WalkPostViewController4.swift */,
 			);
 			name = Map;
 			path = ../../../bnd/PetTip/Map;
@@ -1674,7 +1677,6 @@
 				7B9D62422C254D1600A0B5AF /* FooterView.swift */,
 				7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */,
 				7B357CB32C2136A8001B8798 /* SideMenuView.swift */,
-				7B357CAD2C211CEE001B8798 /* MyPageView2.swift */,
 				7B0DA77A2C23B558004CAFD4 /* MallView.swift */,
 				7B0DA7782C23B53E004CAFD4 /* ProfileView.swift */,
 				7B0DA7762C23B528004CAFD4 /* TipTalkView.swift */,
@@ -1698,6 +1700,7 @@
 				7B8845612C29458A009DF415 /* QnAView.swift */,
 				7B8845632C294715009DF415 /* EventView.swift */,
 				7B7C2C132C09D09900301AE1 /* MyPageView.swift */,
+				7B357CAD2C211CEE001B8798 /* MyPageView2.swift */,
 				7B1F5B222C0D4ED000336F9A /* PermissionView.swift */,
 				7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */,
 				7B357CA72C1FCA5F001B8798 /* WebView.swift */,
@@ -1754,8 +1757,8 @@
 				7B7C257A2C097C9200301AE1 /* 1.0 */,
 				7B8845652C294C04009DF415 /* 2.0 */,
 				7BD0CFD92C05AFCD002D2531 /* Style */,
-				7B0F21282C07FAC00056EDC9 /* ViewModel */,
 				7B0F211E2C06C3970056EDC9 /* Model */,
+				7B0F21282C07FAC00056EDC9 /* ViewModel */,
 				7BD0CFD12C057F94002D2531 /* Views */,
 				7BD7FB5D2C0418E5001D24CE /* PetTipApp.swift */,
 				7BD7FB612C0418E6001D24CE /* Assets.xcassets */,
@@ -2200,6 +2203,7 @@
 				7B7C2BAE2C09852600301AE1 /* PetAddViewController2.swift in Sources */,
 				7B7C2ADD2C09852600301AE1 /* LocationFileRequest.swift in Sources */,
 				7B7C2BBD2C09852600301AE1 /* QnAModifyViewController.swift in Sources */,
+				7B88456D2C2A3527009DF415 /* WalkPostViewController4.swift in Sources */,
 				7B7C2B232C09852600301AE1 /* TargetType.swift in Sources */,
 				7B7C2BCF2C09852600301AE1 /* LogoTitleBarView.swift in Sources */,
 				7B7C2AB12C09852500301AE1 /* QnACreateResponse.swift in Sources */,

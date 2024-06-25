@@ -8,22 +8,29 @@
 import SwiftUI
 
 struct MyPageView: View {
+    @Binding var isLogin: Bool
+
     var body: some View {
-        MyPageViewCtrl()
+        MyPageViewCtrl(isLogin: $isLogin)
     }
 }
 
 struct MyPageViewCtrl: UIViewControllerRepresentable {
+    @Binding var isLogin: Bool
+
     func makeUIViewController(context: Context) -> MyPageViewController2 {
-        return UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(identifier: "MyPageViewController") as! MyPageViewController2
+        let viewController = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(identifier: "MyPageViewController") as! MyPageViewController2
+        viewController.onMoveLoginPage = {
+            self.isLogin = false
+        }
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: MyPageViewController2, context: Context) {
-        // guard let titleBarView = uiViewController.titleBarView else { return }
-        // titleBarView.Hide()
+        uiViewController.lb_title?.superview?.Hide()
     }
 }
 
 #Preview {
-    MyPageView()
+    MyPageView(isLogin: .constant(true))
 }
