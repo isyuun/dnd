@@ -447,6 +447,7 @@
 		7BD7FB7B2C0418E6001D24CE /* PetTipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7FB7A2C0418E6001D24CE /* PetTipUITestsLaunchTests.swift */; };
 		7BF13A972C2A80D700320527 /* WalkTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13A952C2A80D600320527 /* WalkTrack.swift */; };
 		7BF13A982C2A80D700320527 /* WalkingController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13A962C2A80D600320527 /* WalkingController3.swift */; };
+		7BF13A9A2C2A838600320527 /* MainViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13A992C2A838600320527 /* MainViewController5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -913,6 +914,7 @@
 		7BD7FB7A2C0418E6001D24CE /* PetTipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTipUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7BF13A952C2A80D600320527 /* WalkTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTrack.swift; sourceTree = "<group>"; };
 		7BF13A962C2A80D600320527 /* WalkingController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingController3.swift; sourceTree = "<group>"; };
+		7BF13A992C2A838600320527 /* MainViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController5.swift; sourceTree = "<group>"; };
 		CFC6128037C666AFAAF10FA8 /* Pods_PetTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B4572026929C4781063A0C /* Pods-PetTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetTip.debug.xcconfig"; path = "Target Support Files/Pods-PetTip/Pods-PetTip.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1583,6 +1585,7 @@
 				7B7C2A532C09852500301AE1 /* MainViewController2.swift */,
 				7B7C2A542C09852500301AE1 /* MainViewController3.swift */,
 				7B7C2A552C09852500301AE1 /* MainViewController4.swift */,
+				7BF13A992C2A838600320527 /* MainViewController5.swift */,
 				7B7C2A562C09852500301AE1 /* PermissionInfoViewController.swift */,
 			);
 			name = Page;
@@ -2269,6 +2272,7 @@
 				7B7C2AB92C09852500301AE1 /* QnAUpdateResponse.swift in Sources */,
 				7B7C2B762C09852600301AE1 /* StoryModViewController.swift in Sources */,
 				7B7C2B732C09852600301AE1 /* StoryItemView2.swift in Sources */,
+				7BF13A9A2C2A838600320527 /* MainViewController5.swift in Sources */,
 				7B357CB62C225CDA001B8798 /* ButtonStyle2.swift in Sources */,
 				7B7C2B662C09852600301AE1 /* CommunityViewController.swift in Sources */,
 				7B7C2B1E2C09852600301AE1 /* WeatherTarget.swift in Sources */,
