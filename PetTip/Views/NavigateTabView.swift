@@ -68,6 +68,7 @@ struct NavigateTabView: View {
                 show = false
             }
             .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
