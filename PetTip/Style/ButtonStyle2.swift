@@ -20,9 +20,9 @@ public struct PrimaryButtonStyle: ButtonStyle {
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.accentColor)
-            .cornerRadius(5)
+            .cornerRadius(8)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
@@ -49,9 +49,9 @@ public struct SecondaryButtonStyle: ButtonStyle {
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.secondary)
-            .cornerRadius(5)
+            .cornerRadius(8)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
@@ -78,9 +78,9 @@ public struct TertiaryButtonStyle: ButtonStyle {
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.red)
-            .cornerRadius(5)
+            .cornerRadius(8)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
@@ -107,9 +107,9 @@ public struct PrimarySmallButtonStyle: ButtonStyle {
             .padding(5)
             // .frame(maxWidth: .infinity)
             .background(Color.accentColor)
-            .cornerRadius(5)
+            .cornerRadius(8)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
@@ -136,9 +136,9 @@ public struct SecondarySmallButtonStyle: ButtonStyle {
             .padding(5)
             // .frame(maxWidth: .infinity)
             .background(Color.secondary)
-            .cornerRadius(5)
+            .cornerRadius(8)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
@@ -165,9 +165,9 @@ public struct TertiarySmallButtonStyle: ButtonStyle {
             .padding(5)
             // .frame(maxWidth: .infinity)
             .background(Color.red)
-            .cornerRadius(5)
+            .cornerRadius(8)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(

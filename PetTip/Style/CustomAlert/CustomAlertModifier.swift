@@ -16,11 +16,11 @@ struct CustomAlertModifier {
 
     // MARK: Private
 
-    private let title: String
-    private let message: String
-    private let dismissButton: DismissButton?
-    private let primaryButton: PrimaryButton?
-    private let secondaryButton: SecondaryButton?
+    private let title: Text
+    private let message: Text
+    private let dismissButton: AlertButton?
+    private let primaryButton: AlertButton?
+    private let secondaryButton: AlertButton?
 }
 
 extension CustomAlertModifier: ViewModifier {
@@ -29,7 +29,6 @@ extension CustomAlertModifier: ViewModifier {
             .fullScreenCover(isPresented: $isPresented) {
                 CustomAlert(title: title, message: message, dismissButton: dismissButton, primaryButton: primaryButton, secondaryButton: secondaryButton)
                     .background(BackgroundBlurView())
-                    .environment(\.font, .system(size: 12))
             }
     }
 }
@@ -47,7 +46,18 @@ struct BackgroundBlurView: UIViewRepresentable {
 }
 
 extension CustomAlertModifier {
-    init(title: String = "", message: String = "", dismissButton: DismissButton, isPresented: Binding<Bool>) {
+    init(title: Text = Text(""), message: Text = Text(""), dismissButton: AlertButton?, primaryButton: AlertButton?, secondaryButton: AlertButton?, isPresented: Binding<Bool>) {
+        self.title = title
+        self.message = message
+
+        self.dismissButton = dismissButton
+        self.primaryButton = primaryButton
+        self.secondaryButton = secondaryButton
+
+        _isPresented = isPresented
+    }
+
+    init(title: Text = Text(""), message: Text = Text(""), dismissButton: AlertButton, isPresented: Binding<Bool>) {
         self.title = title
         self.message = message
         self.dismissButton = dismissButton
@@ -58,7 +68,7 @@ extension CustomAlertModifier {
         _isPresented = isPresented
     }
 
-    init(title: String = "", message: String = "", primaryButton: PrimaryButton, secondaryButton: SecondaryButton, isPresented: Binding<Bool>) {
+    init(title: Text = Text(""), message: Text = Text(""), primaryButton: AlertButton, secondaryButton: AlertButton, isPresented: Binding<Bool>) {
         self.title = title
         self.message = message
         self.primaryButton = primaryButton

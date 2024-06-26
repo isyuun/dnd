@@ -75,30 +75,19 @@ struct PermissionView: View {
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        // .alert(isPresented: $showAlert) {
-        //     Alert(
-        //         title: Text("권한 필요"),
-        //         message: Text(alertMessage),
-        //         primaryButton: .default(Text("설정으로 이동")) {
-        //             if let url = URL(string: UIApplication.openSettingsURLString) {
-        //                 UIApplication.shared.open(url)
-        //             }
-        //         },
-        //         secondaryButton: .cancel(Text("취소"))
-        //     )
-        // }
-        .alert(
-            title: "권한 필요",
-            message: alertMessage,
-            primaryButton: PrimaryButton(title: "설정으로 이동", action: {
-                if let url = URL(string: UIApplication.openSettingsURLString) {
-                    UIApplication.shared.open(url)
-                }
-            }),
-            secondaryButton: SecondaryButton(title: "취소", action: {
-                //
-            }),
-            isPresented: $showAlert)
+        .alert(isPresented: $showAlert) {
+            NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)]")
+            return CustomAlert(
+                title: Text("권한 필요"),
+                message: Text(alertMessage),
+                primaryButton: .default("설정으로 이동") {
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
+                },
+                secondaryButton: .cancel("취소")
+            )
+        }
         .onAppear {
             showPermissionView = !(isLocationPermission && isPhotoLibraryPermission)
         }

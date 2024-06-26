@@ -97,7 +97,6 @@ struct SignupView: View {
                 }
 
                 Text(error)
-                    .font(.footnote)
                     .padding(.bottom)
                     .foregroundColor(.orange)
                     .frame(minHeight: 32)
@@ -173,9 +172,10 @@ struct SignupView: View {
                 updateAllCheckedStatus()
             }
         }
+        .environment(\.font, .system(size: 14))
         .padding(.top)
-        .navigationBarTitleDisplayMode(.large)
         .navigationTitle("회원가입")
+        .navigationBarTitleDisplayMode(.large)
         .sheet(isPresented: $showingAgreementsSheet, onDismiss: {
             updateAllCheckedStatus()
         }) {
@@ -190,18 +190,13 @@ struct SignupView: View {
         }) {
             HometownView()
         }
-        // .alert(isPresented: $showAlert) {
-        //     Alert(
-        //         title: Text("회원가입"),
-        //         message: Text(alertMessage),
-        //         dismissButton: .default(Text("확인"))
-        //     )
-        // }
-        .alert(
-            title: "회원가입",
-            message: alertMessage,
-            dismissButton: DismissButton(title: "확인", action: {}),
-            isPresented: $showAlert)
+        .alert(isPresented: $showAlert) {
+            NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)]")
+            return CustomAlert(
+                title: Text("회원가입"),
+                message: Text(alertMessage),
+                dismissButton: .default("확인"))
+        }
 
         Spacer()
 

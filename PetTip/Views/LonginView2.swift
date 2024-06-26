@@ -79,29 +79,20 @@ struct LonginView2: View {
                 }
             }
         }
+        .environment(\.font, .system(size: 17))
         .padding(20)
-        // .alert(isPresented: self.$showAlert) {
-        //     NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][\(String(describing: self.error?.resCode))][\(String(describing: self.error?.description))]")
-        //     return Alert(
-        //         title: Text("알림"),
-        //         message: Text("[\(String(describing: self.error?.resCode))]\n로그인 오류입니다."),
-        //         dismissButton: .default(Text("확인")) {
-        //             if self.login == nil {
-        //                 self.isSigninViewActive = true
-        //             }
-        //         }
-        //     )
-        // }
-        .alert(
-            title: "알림",
-            message: "[\(String(describing: self.error?.resCode))]\n로그인 오류입니다.",
-            dismissButton: DismissButton(title: "확인", action: {
-                if self.login == nil {
-                    self.isSigninViewActive = true
+        .alert(isPresented: self.$showAlert) {
+            NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)]")
+            return CustomAlert(
+                title: Text("알림"),
+                message: Text("[\(String(describing: self.error?.resCode))]\n로그인 오류입니다."),
+                dismissButton: .default("확인") {
+                    if self.login == nil {
+                        self.isSigninViewActive = true
+                    }
                 }
-            }),
-            isPresented: self.$showAlert
-        )
+            )
+        }
         .overlay(
             NavigationLink(destination: SignupView().navigationTitle("회원가입"), isActive: self.$isSigninViewActive) {
                 EmptyView()

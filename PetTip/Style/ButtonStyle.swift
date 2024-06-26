@@ -1,8 +1,19 @@
 import SwiftUI
 
-// #Preview {
-//     LonginView2(isLogin: .constant(false))
-// }
+// Custom AnyButtonStyle wrapper
+struct AnyButtonStyle: ButtonStyle {
+    let makeBody: (ButtonStyle.Configuration) -> AnyView
+
+    init<S: ButtonStyle>(_ style: S) {
+        makeBody = { configuration in
+            AnyView(style.makeBody(configuration: configuration))
+        }
+    }
+
+    func makeBody(configuration: Configuration) -> some View {
+        makeBody(configuration)
+    }
+}
 
 struct RectButtonModifier: ViewModifier {
     var textColor: Color
@@ -31,7 +42,7 @@ public struct RectPrimaryButtonStyle: ButtonStyle {
             .modifier(RectButtonModifier(textColor: textColor))
             .frame(height: 48)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
@@ -59,7 +70,7 @@ public struct RectSecondaryButtonStyle: ButtonStyle {
             .modifier(RectButtonModifier(textColor: textColor))
             .frame(height: 48)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(Color.gray, lineWidth: 0.5)
             )
             .overlay(
@@ -166,13 +177,13 @@ public struct SignButtonStyle: ButtonStyle {
                     Group {
                         switch signType {
                         case .google:
-                            RoundedRectangle(cornerRadius: 10)
-                                .strokeBorder(Color.gray, lineWidth: 0.5)
-                                .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
+                            RoundedRectangle(cornerRadius: 8)
+                                .strokeBorder(Color.gray, lineWidth: 1.5)
+                                .background(RoundedRectangle(cornerRadius: 8).fill(signType.backGroundColor))
                         case .apple:
-                            RoundedRectangle(cornerRadius: 10)
+                            RoundedRectangle(cornerRadius: 8)
                                 .strokeBorder(Color.white, lineWidth: 1.5)
-                                .background(RoundedRectangle(cornerRadius: 10).fill(signType.backGroundColor))
+                                .background(RoundedRectangle(cornerRadius: 8).fill(signType.backGroundColor))
                         default:
                             signType.backGroundColor
                         }

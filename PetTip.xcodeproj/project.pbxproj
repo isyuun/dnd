@@ -1729,6 +1729,7 @@
 		7BD0CFD92C05AFCD002D2531 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				7BF13AA72C2BB2ED00320527 /* CustomAlert */,
 				7B7C2C0B2C09A47300301AE1 /* Style.swift */,
 				7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */,
 				7B357CB52C225CDA001B8798 /* ButtonStyle2.swift */,
@@ -1737,10 +1738,6 @@
 				7B357CA12C1C01D4001B8798 /* CheckboxToggleStyle.swift */,
 				7B357CA32C1C1B5C001B8798 /* CheckBoxTextButton.swift */,
 				7B357CAB2C1FFC9A001B8798 /* ButtonToggleStyle.swift */,
-				7BF13A9F2C2A8C9D00320527 /* CustomAlert.swift */,
-				7BF13AA12C2A8D2600320527 /* CustomAlertButton.swift */,
-				7BF13AA32C2A8D8400320527 /* CustomAlertModifier.swift */,
-				7BF13AA52C2A8DD300320527 /* CustomAlertViewExtension.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -1811,6 +1808,17 @@
 				7BD7FB7A2C0418E6001D24CE /* PetTipUITestsLaunchTests.swift */,
 			);
 			path = PetTipUITests;
+			sourceTree = "<group>";
+		};
+		7BF13AA72C2BB2ED00320527 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				7BF13A9F2C2A8C9D00320527 /* CustomAlert.swift */,
+				7BF13AA12C2A8D2600320527 /* CustomAlertButton.swift */,
+				7BF13AA32C2A8D8400320527 /* CustomAlertModifier.swift */,
+				7BF13AA52C2A8DD300320527 /* CustomAlertViewExtension.swift */,
+			);
+			path = CustomAlert;
 			sourceTree = "<group>";
 		};
 		B7CF7B3A70125022C09D39EE /* Pods */ = {
