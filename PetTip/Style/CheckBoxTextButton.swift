@@ -9,14 +9,14 @@ import SwiftUI
 
 struct CheckBoxTextButton: View {
     @Binding var isChecked: Bool
-    var text: String
+    var text: Text
     var onToggle: ((Bool) -> Void)
     var action: () -> Void
 
     var body: some View {
         HStack {
             Toggle(isOn: $isChecked) {
-                Text(text)
+                text
             }
             .toggleStyle(CheckboxToggleStyle { isChecked in
                 self.isChecked = isChecked

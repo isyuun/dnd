@@ -8,12 +8,15 @@
 import SwiftUI
 
 #Preview {
-    SignupView()
+    SignupView(nick: .constant(""), email: .constant(""))
 }
 
 struct SignupView: View {
     @State var error: String = " "
-    @State var nick: String = ""
+
+    @Binding var nick: String
+    @Binding var email: String
+
     @State var dong: String = ""
 
     @State private var isCheckedNick: Bool = false
@@ -57,6 +60,7 @@ struct SignupView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("닉네임 중복을 확인해 주세요 *")
+                    .bold()
 
                 TextFieldWithTextButton(
                     title: "닉네임을 입력 해 주세요",
@@ -111,13 +115,14 @@ struct SignupView: View {
                 }
 
                 Text("펫팁 회원가입을 위해\n약관에 동의해 주세요")
+                    .bold()
                     .padding(.top, 36)
                     .padding(.bottom, 24)
 
                 Group {
                     HStack {
                         Toggle(isOn: $isCheckedAll) {
-                            Text("약관 전체동의")
+                            Text("약관 전체동의").bold()
                         }
                         .toggleStyle(CheckboxToggleStyle { isChecked in
                             handleToggleAll(isChecked)
@@ -127,7 +132,7 @@ struct SignupView: View {
 
                     CheckBoxTextButton(
                         isChecked: $isCheckedService,
-                        text: "[필수]서비스이용약관 동의",
+                        text: Text("[필수]서비스이용약관 동의"),
                         onToggle: { isChecked in
                             // 토글 상태 변경 처리
                             self.isCheckedService = isChecked
@@ -139,7 +144,7 @@ struct SignupView: View {
 
                     CheckBoxTextButton(
                         isChecked: $isCheckedPrivacy,
-                        text: "[필수]개인정보 수집·이용 동의",
+                        text: Text("[필수]개인정보 수집·이용 동의"),
                         onToggle: { isChecked in
                             // 토글 상태 변경 처리
                             self.isCheckedPrivacy = isChecked
@@ -152,7 +157,7 @@ struct SignupView: View {
 
                     CheckBoxTextButton(
                         isChecked: $isCheckedMarketting,
-                        text: "[선택]마케팅 활용 동의",
+                        text: Text("[선택]마케팅 활용 동의"),
                         onToggle: { isChecked in
                             // 토글 상태 변경 처리
                             self.isCheckedMarketting = isChecked

@@ -30,7 +30,7 @@ struct ContentView: View {
             AnyView(PermissionView(showPermissionView: $isPermissionViewShow))
         } else {
             if isNeedLogin {
-                AnyView(LonginView2(isLogin: $isLogin))
+                AnyView(LoginView2(isLogin: $isLogin))
             } else {
                 AnyView(NavigateTabView(isLogin: $isLogin))
             }

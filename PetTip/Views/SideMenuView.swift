@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SideMenuView: View {
     @Binding var show: Bool
+
     @Binding var isLogin: Bool
 
     var body: some View {
@@ -70,7 +71,7 @@ struct SideMenuViewContents: View {
                         Button("로그아웃") {
                             loginAuth.logout()
                         }
-                        .buttonStyle(.secondarySmall)
+                        .buttonStyle(.tertiarySmall)
                         .font(.caption2)
                         NavigationLink(
                             destination: ProfileView(),
@@ -78,7 +79,7 @@ struct SideMenuViewContents: View {
                                 Image(systemName: "gearshape")
                             }
                         )
-                        .buttonStyle(.tertiarySmall)
+                        .buttonStyle(.secondarySmall)
                         .font(.caption2)
                     }.onAppear {
                         guard let nckNm = UserDefaults.standard.string(forKey: "nckNm") else { return }
@@ -119,16 +120,22 @@ struct SideMenuViewContents: View {
                         .padding(.top)
                     HStack {
                         Spacer()
-                        Button("로그인") {
-                            //
-                        }
+                        NavigationLink(
+                            destination: LoginView2(isLogin: self.$isLogin),
+                            label: {
+                                Text("로그인")
+                            }
+                        )
                         .buttonStyle(.primarySmall)
-                        .font(.footnote)
-                        Button("회원가입") {
-                            //
-                        }
-                        .buttonStyle(.tertiarySmall)
-                        .font(.footnote)
+                        .font(.caption2)
+                        NavigationLink(
+                            destination: LoginView2(isLogin: self.$isLogin),
+                            label: {
+                                Text("회원가입")
+                            }
+                        )
+                        .buttonStyle(.primarySmall)
+                        .font(.caption2)
                         Spacer()
                     }.padding()
                 }

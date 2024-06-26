@@ -436,7 +436,7 @@
 		7B9D62402C253A3200A0B5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */; };
 		7B9D62412C253A3200A0B5AF /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */; };
 		7B9D62432C254D1600A0B5AF /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D62422C254D1600A0B5AF /* FooterView.swift */; };
-		7BD0CFD82C05A774002D2531 /* LonginView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD72C05A774002D2531 /* LonginView2.swift */; };
+		7BD0CFD82C05A774002D2531 /* LoninView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFD72C05A774002D2531 /* LoninView2.swift */; };
 		7BD0CFDE2C05B08D002D2531 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */; };
 		7BD7FB5E2C0418E5001D24CE /* PetTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7FB5D2C0418E5001D24CE /* PetTipApp.swift */; };
 		7BD7FB602C0418E5001D24CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7FB5F2C0418E5001D24CE /* ContentView.swift */; };
@@ -452,6 +452,7 @@
 		7BF13AA22C2A8D2600320527 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13AA12C2A8D2600320527 /* CustomAlertButton.swift */; };
 		7BF13AA42C2A8D8400320527 /* CustomAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13AA32C2A8D8400320527 /* CustomAlertModifier.swift */; };
 		7BF13AA62C2A8DD300320527 /* CustomAlertViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13AA52C2A8DD300320527 /* CustomAlertViewExtension.swift */; };
+		7BF13AA92C2BFC4500320527 /* FindUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF13AA82C2BFC4500320527 /* FindUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -903,7 +904,7 @@
 		7B9D623D2C253A3200A0B5AF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../bnd/PetTip/AppDelegate.swift; sourceTree = "<group>"; };
 		7B9D623E2C253A3200A0B5AF /* AppDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate2.swift; path = ../../../bnd/PetTip/AppDelegate2.swift; sourceTree = "<group>"; };
 		7B9D62422C254D1600A0B5AF /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
-		7BD0CFD72C05A774002D2531 /* LonginView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonginView2.swift; sourceTree = "<group>"; };
+		7BD0CFD72C05A774002D2531 /* LoninView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoninView2.swift; sourceTree = "<group>"; };
 		7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		7BD0CFDF2C05B710002D2531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7BD7FB5A2C0418E5001D24CE /* PetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -923,6 +924,7 @@
 		7BF13AA12C2A8D2600320527 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
 		7BF13AA32C2A8D8400320527 /* CustomAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertModifier.swift; sourceTree = "<group>"; };
 		7BF13AA52C2A8DD300320527 /* CustomAlertViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewExtension.swift; sourceTree = "<group>"; };
+		7BF13AA82C2BFC4500320527 /* FindUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUserView.swift; sourceTree = "<group>"; };
 		CFC6128037C666AFAAF10FA8 /* Pods_PetTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B4572026929C4781063A0C /* Pods-PetTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetTip.debug.xcconfig"; path = "Target Support Files/Pods-PetTip/Pods-PetTip.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1702,8 +1704,9 @@
 				7BD7FB5F2C0418E5001D24CE /* ContentView.swift */,
 				7B16BA002C1A6DD60080828F /* WelcomeView.swift */,
 				7B1F5B242C0E9C1D00336F9A /* LoginView.swift */,
-				7BD0CFD72C05A774002D2531 /* LonginView2.swift */,
+				7BD0CFD72C05A774002D2531 /* LoninView2.swift */,
 				7B16B9F62C193B660080828F /* SignupView.swift */,
+				7BF13AA82C2BFC4500320527 /* FindUserView.swift */,
 				7B0F21292C086A180056EDC9 /* MapView.swift */,
 				7B0F212B2C0876170056EDC9 /* NaverMapView.swift */,
 				7B7C25782C095E1B00301AE1 /* Coordinator.swift */,
@@ -2121,6 +2124,7 @@
 				7B7C2B042C09852600301AE1 /* MyPetInvttSetKeyResponse.swift in Sources */,
 				7B357CAA2C1FFB7F001B8798 /* HometownView.swift in Sources */,
 				7B7C2BD32C09852600301AE1 /* MainViewController4.swift in Sources */,
+				7BF13AA92C2BFC4500320527 /* FindUserView.swift in Sources */,
 				7B7C2B0C2C09852600301AE1 /* MyPetWeightCreateResponse.swift in Sources */,
 				7B7C2C102C09CAED00301AE1 /* WalkListView.swift in Sources */,
 				7B7C2B2F2C09852600301AE1 /* MonthRecord.swift in Sources */,
@@ -2175,7 +2179,7 @@
 				7B357CA62C1FC9A3001B8798 /* AgreementsView.swift in Sources */,
 				7B7C2AF42C09852600301AE1 /* ResetNcknmRequest.swift in Sources */,
 				7B7C2B982C09852600301AE1 /* CustomerCenterViewController.swift in Sources */,
-				7BD0CFD82C05A774002D2531 /* LonginView2.swift in Sources */,
+				7BD0CFD82C05A774002D2531 /* LoninView2.swift in Sources */,
 				7B7C2ABC2C09852500301AE1 /* WinnerListRequest.swift in Sources */,
 				7B7C2AE02C09852600301AE1 /* MonthRecordResponse.swift in Sources */,
 				7B7C2B3E2C09852600301AE1 /* CustomTabBar.swift in Sources */,

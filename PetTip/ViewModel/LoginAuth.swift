@@ -17,13 +17,19 @@ private var completionHandlerKey: UInt8 = 0
 
 class LoginAuth: NSObject, ObservableObject {
     @Binding var isLogin: Bool
+    @Published var nick: String
+    @Published var email: String
 
-    init(isLogin: Binding<Bool>) {
-        _isLogin = isLogin
+    init(isLogin: Binding<Bool>, nick: String = "", email: String = "") {
+        self._isLogin = isLogin
+        self.nick = nick
+        self.email = email
     }
-
+    
     private func snsLogin(userId: String, userPw: String, userNick: String = "", loginMethod: String, completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
         let request = LoginRequest(appTypNm: Util.getModel(), userID: userId, userPW: userPw)
+        self.nick = userNick
+        self.email = userId
         MemberAPI.login(request: request) { login, error in
             NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)][\(String(describing: login))][\(String(describing: error))]")
             self.isLogin = false
@@ -75,8 +81,8 @@ extension LoginAuth {
     func getKakaoUserInfo(_ accessToken: String?, completion: @escaping (_ succeed: Login?, _ failed: MyError?) -> Void) {
         UserApi.shared.me { user, error in
             if let email = user?.kakaoAccount?.email, let id = user?.id {
-                // let nick = user?.kakaoAccount?.profile?.nickname
-                self.snsLogin(userId: email, userPw: String(describing: id), loginMethod: "KAKAO") { login, error in
+                let nick = user?.kakaoAccount?.profile?.nickname
+                self.snsLogin(userId: email, userPw: String(describing: id), userNick: nick ?? "", loginMethod: "KAKAO") { login, error in
                     completion(login, error)
                 }
             }
@@ -165,10 +171,10 @@ extension LoginAuth: NaverThirdPartyLoginConnectionDelegate {
                     if let response = json?.value(forKey: "response") as? NSDictionary {
                         let email = response.value(forKey: "email") as? String
                         let _id = response.value(forKey: "id") as? String
-                        // let nick = response.value(forKey: "nickname") as? String
+                        let nick = response.value(forKey: "nickname") as? String
 
                         if let email = email, let _id = _id {
-                            self.snsLogin(userId: email, userPw: String(describing: _id), loginMethod: "NAVER") { login, error in
+                            self.snsLogin(userId: email, userPw: String(describing: _id), userNick: nick ?? "", loginMethod: "NAVER") { login, error in
                                 completion(login, error)
                             }
                         } else {
@@ -232,9 +238,9 @@ extension LoginAuth: ASAuthorizationControllerDelegate, ASAuthorizationControlle
         // print("userIdentifier : \(credential.user)")
         let user = credential.user
 
-        // let nick = credential.fullName
+        let nick = credential.fullName?.nickname
 
-        self.snsLogin(userId: _email, userPw: user, loginMethod: "APPLE") { login, error in
+        self.snsLogin(userId: _email, userPw: user, userNick: nick ?? "", loginMethod: "APPLE") { login, error in
             controller.completion?(login, error)
         }
     }
@@ -271,8 +277,9 @@ extension LoginAuth {
 
             let email = profile.email
             guard let id = user.userID else { return }
+            let nick = user.profile?.name
 
-            self.snsLogin(userId: email, userPw: id, loginMethod: "GOOGLE") { login, error in
+            self.snsLogin(userId: email, userPw: id, userNick: nick ?? "", loginMethod: "GOOGLE") { login, error in
                 completion(login, error)
             }
         }
@@ -280,7 +287,6 @@ extension LoginAuth {
 }
 
 extension LoginAuth {
-
     func logout() {
         let request = LogoutRequest()
         MemberAPI.logout(request: request) { response, error in

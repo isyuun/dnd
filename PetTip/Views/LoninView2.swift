@@ -1,5 +1,5 @@
 //
-//  LonginView2.swift
+//  LoginView2.swift
 //  PetTip
 //
 //  Created by isyuun on 2024/5/28.
@@ -9,15 +9,16 @@ import SwiftUI
 import AuthenticationServices
 
 #Preview {
-    LonginView2(isLogin: .constant(false))
+    LoginView2(isLogin: .constant(false))
 }
 
-struct LonginView2: View {
+struct LoginView2: View {
     @State var showAlert = false
     @State var isSigninViewActive = false
 
-    var loginAuth: LoginAuth
+    @ObservedObject var loginAuth: LoginAuth
     @Binding var isLogin: Bool
+
     @State var login: Login? = nil
     @State var error: MyError? = nil
 
@@ -27,7 +28,7 @@ struct LonginView2: View {
     }
 
     private func handleLoginResponse(login: Login?, error: MyError?) {
-        self.isSigninViewActive = !self.isLogin
+        isSigninViewActive = !isLogin
         self.login = login
         self.error = error
     }
@@ -35,7 +36,7 @@ struct LonginView2: View {
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
             Text("간편인증을 해 주세요")
-                .font(.title2)
+                .font(.system(size: 18, weight: .bold))
                 .padding(.bottom, 24)
 
             Button("카카오톡으로 로그인") {
@@ -72,8 +73,9 @@ struct LonginView2: View {
 
             HStack {
                 Spacer()
-                NavigationLink(destination: SignupView()) {
+                NavigationLink(destination: FindUserView(nick: self.$loginAuth.nick, email: self.$loginAuth.email)) {
                     Text("어디로 가입한지 잊었어요!")
+                        .font(.system(size: 12))
                         .foregroundColor(.primary)
                         .underline()
                 }
@@ -81,7 +83,7 @@ struct LonginView2: View {
         }
         .environment(\.font, .system(size: 17))
         .padding(20)
-        .alert(isPresented: self.$showAlert) {
+        .alert(isPresented: $showAlert) {
             NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)]")
             return CustomAlert(
                 title: Text("알림"),
@@ -94,7 +96,7 @@ struct LonginView2: View {
             )
         }
         .overlay(
-            NavigationLink(destination: SignupView().navigationTitle("회원가입"), isActive: self.$isSigninViewActive) {
+            NavigationLink(destination: SignupView(nick: $loginAuth.nick, email: $loginAuth.email).navigationTitle("회원가입"), isActive: $isSigninViewActive) {
                 EmptyView()
             }
         )
