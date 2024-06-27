@@ -234,7 +234,6 @@
 		7B7C2B402C09852600301AE1 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29BB2C09852500301AE1 /* LoadingIndicatorViewController.swift */; };
 		7B7C2B412C09852600301AE1 /* NoPasteUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29BC2C09852500301AE1 /* NoPasteUITextField.swift */; };
 		7B7C2B422C09852600301AE1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29BD2C09852500301AE1 /* String.swift */; };
-		7B7C2B432C09852600301AE1 /* String2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29BE2C09852500301AE1 /* String2.swift */; };
 		7B7C2B442C09852600301AE1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29BF2C09852500301AE1 /* UIButton.swift */; };
 		7B7C2B452C09852600301AE1 /* UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C02C09852500301AE1 /* UICollectionViewDataSource.swift */; };
 		7B7C2B462C09852600301AE1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C29C12C09852500301AE1 /* UIColor.swift */; };
@@ -701,7 +700,6 @@
 		7B7C29BB2C09852500301AE1 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		7B7C29BC2C09852500301AE1 /* NoPasteUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoPasteUITextField.swift; sourceTree = "<group>"; };
 		7B7C29BD2C09852500301AE1 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		7B7C29BE2C09852500301AE1 /* String2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String2.swift; sourceTree = "<group>"; };
 		7B7C29BF2C09852500301AE1 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		7B7C29C02C09852500301AE1 /* UICollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewDataSource.swift; sourceTree = "<group>"; };
 		7B7C29C12C09852500301AE1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -1398,7 +1396,6 @@
 				7B7C29BB2C09852500301AE1 /* LoadingIndicatorViewController.swift */,
 				7B7C29BC2C09852500301AE1 /* NoPasteUITextField.swift */,
 				7B7C29BD2C09852500301AE1 /* String.swift */,
-				7B7C29BE2C09852500301AE1 /* String2.swift */,
 				7B7C29BF2C09852500301AE1 /* UIButton.swift */,
 				7B7C29C02C09852500301AE1 /* UICollectionViewDataSource.swift */,
 				7B7C29C12C09852500301AE1 /* UIColor.swift */,
@@ -2422,7 +2419,6 @@
 				7B7C2B492C09852600301AE1 /* UITableViewCell.swift in Sources */,
 				7B0DA7732C23B4D5004CAFD4 /* HomeView.swift in Sources */,
 				7B7C2B1F2C09852600301AE1 /* API.swift in Sources */,
-				7B7C2B432C09852600301AE1 /* String2.swift in Sources */,
 				7B7C2B7D2C09852600301AE1 /* _CompPetListView.swift in Sources */,
 				7B7C2BD72C09852600301AE1 /* KeychainService.swift in Sources */,
 				7B7C2B0E2C09852600301AE1 /* MyPetWeightDeleteResponse.swift in Sources */,
