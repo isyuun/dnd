@@ -36,7 +36,8 @@ struct LoginView2: View {
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
             Text("간편인증을 해 주세요")
-                .font(.system(size: 18, weight: .bold))
+                .bold()
+                .font(.system(size: .title3))
                 .padding(.bottom, 24)
 
             Button("카카오톡으로 로그인") {
@@ -75,13 +76,13 @@ struct LoginView2: View {
                 Spacer()
                 NavigationLink(destination: FindUserView(nick: self.$loginAuth.nick, email: self.$loginAuth.email)) {
                     Text("어디로 가입한지 잊었어요!")
-                        .font(.system(size: 12))
+                        .font(.system(size: .caption))
                         .foregroundColor(.primary)
                         .underline()
                 }
             }
         }
-        .environment(\.font, .system(size: 17))
+        .environment(\.font, .system(size: .body))
         .padding(20)
         .alert(isPresented: $showAlert) {
             NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)]")

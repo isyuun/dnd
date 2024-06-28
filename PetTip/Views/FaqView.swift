@@ -16,7 +16,8 @@ struct FaqView: View {
 
 struct FaqViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> FaqViewController {
-        return UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(withIdentifier: "FaqViewController") as! FaqViewController
+        let viewController = UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(withIdentifier: "FaqViewController") as! FaqViewController
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: FaqViewController, context: Context) {}

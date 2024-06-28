@@ -21,7 +21,6 @@ struct RectButtonModifier: ViewModifier {
         HStack {
             Spacer()
             content
-                // .font(.system(size: 14, weight: .medium))
                 .foregroundColor(textColor)
             Spacer()
         }

@@ -14,11 +14,11 @@ struct CustomAlert: View {
 
     let title: Text
     let message: Text
-    let dismissButton: AlertButton?
-    let primaryButton: AlertButton?
-    let secondaryButton: AlertButton?
+    let dismissButton: CustomAlertButton?
+    let primaryButton: CustomAlertButton?
+    let secondaryButton: CustomAlertButton?
 
-    init(title: Text, message: Text, dismissButton: AlertButton? = nil, primaryButton: AlertButton? = nil, secondaryButton: AlertButton? = nil) {
+    init(title: Text, message: Text, dismissButton: CustomAlertButton? = nil, primaryButton: CustomAlertButton? = nil, secondaryButton: CustomAlertButton? = nil) {
         self.title = title
         self.message = message
 
@@ -32,7 +32,7 @@ struct CustomAlert: View {
     ///   - title: The title of the alert.
     ///   - message: The message to display in the body of the alert.
     ///   - dismissButton: The button that dismisses the alert.
-    init(title: Text, message: Text, dismissButton: AlertButton? = nil) {
+    init(title: Text, message: Text, dismissButton: CustomAlertButton? = nil) {
         self.title = title
         self.message = message
 
@@ -49,7 +49,7 @@ struct CustomAlert: View {
     ///   - message: The message to display in the body of the alert.
     ///   - primaryButton: The first button to show in the alert.
     ///   - secondaryButton: The second button to show in the alert.
-    init(title: Text, message: Text, primaryButton: AlertButton, secondaryButton: AlertButton) {
+    init(title: Text, message: Text, primaryButton: CustomAlertButton, secondaryButton: CustomAlertButton) {
         self.title = title
         self.message = message
 
@@ -109,17 +109,8 @@ struct CustomAlert: View {
 
     @ViewBuilder
     private var titleView: some View {
-        // if !title.isEmpty 
-        // {
-        //     Text(title)
-        //         .font(.system(size: 16, weight: .bold))
-        //         // .foregroundColor(.black)
-        //         .lineSpacing(24 - UIFont.systemFont(ofSize: 18, weight: .bold).lineHeight)
-        //         .multilineTextAlignment(.leading)
-        //         .frame(maxWidth: .infinity, alignment: .leading)
-        // }
         title
-            .font(.system(size: 16, weight: .bold))
+            .font(.system(size: .callout, weight: .bold))
             // .foregroundColor(.black)
             .lineSpacing(24 - UIFont.systemFont(ofSize: 18, weight: .bold).lineHeight)
             .multilineTextAlignment(.leading)
@@ -128,16 +119,8 @@ struct CustomAlert: View {
 
     @ViewBuilder
     private var messageView: some View {
-        // if !message.isEmpty {
-        //     Text(message)
-        //         .font(.system(size: title.isEmpty ? 16 : 14))
-        //         .foregroundColor(title.isEmpty ? .black : .gray)
-        //         .lineSpacing(24 - UIFont.systemFont(ofSize: title.isEmpty ? 18 : 16).lineHeight)
-        //         .multilineTextAlignment(.leading)
-        //         .frame(maxWidth: .infinity, alignment: .leading)
-        // }
         message
-            .font(.system(size: 14))
+            .font(.system(size: .default))
             .foregroundColor(.gray)
             .lineSpacing(24 - UIFont.systemFont(ofSize: 16).lineHeight)
             .multilineTextAlignment(.leading)
@@ -161,7 +144,7 @@ struct CustomAlert: View {
     @ViewBuilder
     private var primaryButtonView: some View {
         if let button = primaryButton {
-            AlertButton(button: button.button, title: button.title) {
+            CustomAlertButton(button: button.button, title: button.title) {
                 animate(isShown: false) {
                     dismiss()
                 }
@@ -176,7 +159,7 @@ struct CustomAlert: View {
     @ViewBuilder
     private var secondaryButtonView: some View {
         if let button = secondaryButton {
-            AlertButton(button: button.button, title: button.title) {
+            CustomAlertButton(button: button.button, title: button.title) {
                 animate(isShown: false) {
                     dismiss()
                 }
@@ -191,7 +174,7 @@ struct CustomAlert: View {
     @ViewBuilder
     private var dismissButtonView: some View {
         if let button = dismissButton {
-            AlertButton(button: button.button, title: button.title) {
+            CustomAlertButton(button: button.button, title: button.title) {
                 animate(isShown: false) {
                     dismiss()
                 }
@@ -248,9 +231,9 @@ struct CustomAlert: View {
 #if DEBUG
 struct CustomAlert_Previews: PreviewProvider {
     static var previews: some View {
-        let dismissButton = AlertButton.destructive("OK")
-        let primaryButton = AlertButton.default("OK")
-        let secondaryButton = AlertButton.cancel("Cancel")
+        let dismissButton = CustomAlertButton.destructive("OK")
+        let primaryButton = CustomAlertButton.default("OK")
+        let secondaryButton = CustomAlertButton.cancel("Cancel")
 
         let title = "This is your life. Do what you want and do it often."
         let message = """

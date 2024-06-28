@@ -27,7 +27,7 @@ struct ContentView: View {
     var body: some View {
         let isNeedLogin = !isLogin
         let v = if isPermissionViewShow {
-            AnyView(PermissionView(showPermissionView: $isPermissionViewShow))
+            AnyView(PermissionView2(showPermissionView: $isPermissionViewShow))
         } else {
             if isNeedLogin {
                 AnyView(LoginView2(isLogin: $isLogin))

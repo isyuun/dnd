@@ -16,7 +16,8 @@ struct NoticeView: View {
 
 struct NoticeViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> NoticeViewController {
-        return UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(withIdentifier: "NoticeViewController") as! NoticeViewController
+        let viewController = UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(withIdentifier: "NoticeViewController") as! NoticeViewController
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: NoticeViewController, context: Context) {}

@@ -15,7 +15,8 @@ struct StoryListView: View {
 
 struct StoryListViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> StoryListViewController2 {
-        return UIStoryboard(name: "Community", bundle: nil).instantiateViewController(identifier: "StoryListViewController") as! StoryListViewController2
+        let viewController = UIStoryboard(name: "Community", bundle: nil).instantiateViewController(identifier: "StoryListViewController") as! StoryListViewController2
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: StoryListViewController2, context: Context) {}

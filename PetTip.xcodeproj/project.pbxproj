@@ -35,7 +35,7 @@
 		7B16B9F92C195F3E0080828F /* TextFieldWithTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9F82C195F3E0080828F /* TextFieldWithTextButton.swift */; };
 		7B16B9FB2C1972B50080828F /* TextFieldWithIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16B9FA2C1972B50080828F /* TextFieldWithIconButton.swift */; };
 		7B16BA012C1A6DD60080828F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16BA002C1A6DD60080828F /* WelcomeView.swift */; };
-		7B1F5B232C0D4ED000336F9A /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B222C0D4ED000336F9A /* PermissionView.swift */; };
+		7B1F5B232C0D4ED000336F9A /* PermissionView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B222C0D4ED000336F9A /* PermissionView2.swift */; };
 		7B1F5B252C0E9C1D00336F9A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B242C0E9C1D00336F9A /* LoginView.swift */; };
 		7B1F5B292C0ECC5500336F9A /* PermissionAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */; };
 		7B1F5B2B2C0ED2F800336F9A /* NavigateTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */; };
@@ -50,6 +50,9 @@
 		7B357CAE2C211CEE001B8798 /* MyPageView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CAD2C211CEE001B8798 /* MyPageView2.swift */; };
 		7B357CB42C2136A8001B8798 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CB32C2136A8001B8798 /* SideMenuView.swift */; };
 		7B357CB62C225CDA001B8798 /* ButtonStyle2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B357CB52C225CDA001B8798 /* ButtonStyle2.swift */; };
+		7B59654A2C2CF875001563D3 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5965492C2CF875001563D3 /* PermissionView.swift */; };
+		7B59654C2C2E2DF9001563D3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59654B2C2E2DF9001563D3 /* Font.swift */; };
+		7B59654E2C2E44C3001563D3 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59654D2C2E44C3001563D3 /* Text.swift */; };
 		7B7C25792C095E1B00301AE1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C25782C095E1B00301AE1 /* Coordinator.swift */; };
 		7B7C2A882C09852500301AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C28E92C09852500301AE1 /* Assets.xcassets */; };
 		7B7C2A8B2C09852500301AE1 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C28EC2C09852500301AE1 /* LocationViewController.swift */; };
@@ -501,7 +504,7 @@
 		7B16B9F82C195F3E0080828F /* TextFieldWithTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTextButton.swift; sourceTree = "<group>"; };
 		7B16B9FA2C1972B50080828F /* TextFieldWithIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithIconButton.swift; sourceTree = "<group>"; };
 		7B16BA002C1A6DD60080828F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		7B1F5B222C0D4ED000336F9A /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
+		7B1F5B222C0D4ED000336F9A /* PermissionView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView2.swift; sourceTree = "<group>"; };
 		7B1F5B242C0E9C1D00336F9A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7B1F5B282C0ECC5500336F9A /* PermissionAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAuth.swift; sourceTree = "<group>"; };
 		7B1F5B2A2C0ED2F800336F9A /* NavigateTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateTabView.swift; sourceTree = "<group>"; };
@@ -516,6 +519,9 @@
 		7B357CAD2C211CEE001B8798 /* MyPageView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView2.swift; sourceTree = "<group>"; };
 		7B357CB32C2136A8001B8798 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		7B357CB52C225CDA001B8798 /* ButtonStyle2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle2.swift; sourceTree = "<group>"; };
+		7B5965492C2CF875001563D3 /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
+		7B59654B2C2E2DF9001563D3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		7B59654D2C2E44C3001563D3 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		7B7C25782C095E1B00301AE1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7B7C28E92C09852500301AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../bnd/PetTip/Assets.xcassets; sourceTree = "<group>"; };
 		7B7C28EC2C09852500301AE1 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -1718,7 +1724,8 @@
 				7B8845632C294715009DF415 /* EventView.swift */,
 				7B7C2C132C09D09900301AE1 /* MyPageView.swift */,
 				7B357CAD2C211CEE001B8798 /* MyPageView2.swift */,
-				7B1F5B222C0D4ED000336F9A /* PermissionView.swift */,
+				7B5965492C2CF875001563D3 /* PermissionView.swift */,
+				7B1F5B222C0D4ED000336F9A /* PermissionView2.swift */,
 				7B357CA52C1FC9A3001B8798 /* AgreementsView.swift */,
 				7B357CA72C1FCA5F001B8798 /* WebView.swift */,
 				7B357CA92C1FFB7F001B8798 /* HometownView.swift */,
@@ -1731,6 +1738,8 @@
 			children = (
 				7BF13AA72C2BB2ED00320527 /* CustomAlert */,
 				7B7C2C0B2C09A47300301AE1 /* Style.swift */,
+				7B59654B2C2E2DF9001563D3 /* Font.swift */,
+				7B59654D2C2E44C3001563D3 /* Text.swift */,
 				7BD0CFDD2C05B08D002D2531 /* ButtonStyle.swift */,
 				7B357CB52C225CDA001B8798 /* ButtonStyle2.swift */,
 				7B16B9F82C195F3E0080828F /* TextFieldWithTextButton.swift */,
@@ -2260,6 +2269,7 @@
 				7B7C2B3A2C09852600301AE1 /* MyAuthenticator.swift in Sources */,
 				7BF13AA22C2A8D2600320527 /* CustomAlertButton.swift in Sources */,
 				7B8845582C29006C009DF415 /* BottomSheetViewController2.swift in Sources */,
+				7B59654C2C2E2DF9001563D3 /* Font.swift in Sources */,
 				7B7C2BB02C09852600301AE1 /* PetModViewController2.swift in Sources */,
 				7B7C2B6E2C09852600301AE1 /* StoryAddViewController.swift in Sources */,
 				7B7C2B602C09852600301AE1 /* ImageViewController.swift in Sources */,
@@ -2320,6 +2330,7 @@
 				7B7C2BEF2C09852600301AE1 /* PetWeightView.swift in Sources */,
 				7B7C2BE52C09852600301AE1 /* ViewController.swift in Sources */,
 				7B7C2BCB2C09852600301AE1 /* IntroViewController.swift in Sources */,
+				7B59654E2C2E44C3001563D3 /* Text.swift in Sources */,
 				7B7C2AB02C09852500301AE1 /* QnACreateRequest.swift in Sources */,
 				7B7C2ABA2C09852500301AE1 /* WinnerDtlListRequest.swift in Sources */,
 				7B7C2AE92C09852600301AE1 /* DailyLifeAPI.swift in Sources */,
@@ -2420,6 +2431,7 @@
 				7B0DA7732C23B4D5004CAFD4 /* HomeView.swift in Sources */,
 				7B7C2B1F2C09852600301AE1 /* API.swift in Sources */,
 				7B7C2B7D2C09852600301AE1 /* _CompPetListView.swift in Sources */,
+				7B59654A2C2CF875001563D3 /* PermissionView.swift in Sources */,
 				7B7C2BD72C09852600301AE1 /* KeychainService.swift in Sources */,
 				7B7C2B0E2C09852600301AE1 /* MyPetWeightDeleteResponse.swift in Sources */,
 				7B7C2B5B2C09852600301AE1 /* CommonDetailViewController.swift in Sources */,
@@ -2438,7 +2450,7 @@
 				7B357CAC2C1FFC9A001B8798 /* ButtonToggleStyle.swift in Sources */,
 				7B7C2AF72C09852600301AE1 /* TrmnlMngResponse.swift in Sources */,
 				7B7C2B1D2C09852600301AE1 /* WeatherAPI.swift in Sources */,
-				7B1F5B232C0D4ED000336F9A /* PermissionView.swift in Sources */,
+				7B1F5B232C0D4ED000336F9A /* PermissionView2.swift in Sources */,
 				7B7C2B882C09852600301AE1 /* SelectPetItemView.swift in Sources */,
 				7B7C2B312C09852600301AE1 /* PetList.swift in Sources */,
 				7B7C2BA22C09852600301AE1 /* MyPageCompPetListIEmptytemView.swift in Sources */,

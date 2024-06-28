@@ -21,7 +21,8 @@ struct LoginView: View {
 
 struct LoginViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> LoginViewController3 {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginViewController") as! LoginViewController3
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginViewController") as! LoginViewController3
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: LoginViewController3, context: Context) {}

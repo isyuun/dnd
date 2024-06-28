@@ -15,7 +15,8 @@ struct WalkListView: View {
 
 struct WalkListViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> WalkHistoryViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "WalkHistoryViewController") as! WalkHistoryViewController
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "WalkHistoryViewController") as! WalkHistoryViewController
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: WalkHistoryViewController, context: Context) {}

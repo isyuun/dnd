@@ -48,5 +48,5 @@ struct WebView: UIViewRepresentable {
 }
 
 #Preview {
-    WebView(url: URL(string: "https://pettip.net/terms")!)
+    WebView(url: URL(string: "https://pettip.net")!)
 }

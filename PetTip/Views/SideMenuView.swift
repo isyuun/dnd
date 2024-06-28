@@ -15,9 +15,9 @@ struct SideMenuView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if self.show {
-                Color.black
-                    .opacity(0.3)
-                    .ignoresSafeArea()
+                // Color.black
+                //     .opacity(0.3)
+                //     .ignoresSafeArea()
 
                 SideMenuViewContents(show: self.$show, isLogin: self.$isLogin)
                     .background(Color(UIColor.systemBackground))
@@ -147,7 +147,7 @@ struct SideMenuViewContents: View {
                 NavigationLink(destination: PreviewView()) { Text("초대관리") }
                 NavigationLink(destination: PreviewView()) { Text("구매관리") }
                 NavigationLink(destination: PreviewView()) { Text("판매관리") }
-                NavigationLink(destination: PreviewView()) { Text("우리동네맞춤지도") }
+                NavigationLink(destination: HometownView(popup: false)) { Text("우리동네맞춤지도") }
                 NavigationLink(destination: PreviewView()) { Text("채팅") }
                 NavigationLink(destination: PreviewView()) { Text("후기/댓글") }
                 NavigationLink(destination: PreviewView()) { Text("알림내역") }
@@ -161,12 +161,12 @@ struct SideMenuViewContents: View {
             .listStyle(PlainListStyle())
             Spacer()
         }
-        .environment(\.font, .system(size: 15))
+        .environment(\.font, .system(size: .body2))
         .padding(.horizontal)
     }
 }
 
 #Preview {
     SideMenuView(show: .constant(true), isLogin: .constant(true))
-        .environment(\.font, .system(size: 14))
+        .environment(\.font, .system(size: .default))
 }

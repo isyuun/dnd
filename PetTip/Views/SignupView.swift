@@ -56,6 +56,8 @@ struct SignupView: View {
     @State var showAlert = false
     @State var alertMessage = ""
 
+    @FocusState private var isEdit: Bool
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -99,6 +101,7 @@ struct SignupView: View {
                 .onChange(of: nick) { newValue in
                     isCheckedNick = false
                 }
+                .focused($isEdit)
 
                 Text(error)
                     .padding(.bottom)
@@ -113,6 +116,7 @@ struct SignupView: View {
                     //
                     showingHometownSheet = true
                 }
+                .focused($isEdit)
 
                 Text("펫팁 회원가입을 위해\n약관에 동의해 주세요")
                     .bold()
@@ -177,10 +181,20 @@ struct SignupView: View {
                 updateAllCheckedStatus()
             }
         }
-        .environment(\.font, .system(size: 14))
+        .environment(\.font, .system(size: .default))
         .padding(.top)
         .navigationTitle("회원가입")
         .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            if isEdit {
+                Button(action: {
+                    isEdit = false
+                }) {
+                    Text("완료")
+                        .font(.system(size: .body))
+                }
+            }
+        }
         .sheet(isPresented: $showingAgreementsSheet, onDismiss: {
             updateAllCheckedStatus()
         }) {
@@ -193,7 +207,9 @@ struct SignupView: View {
         .sheet(isPresented: $showingHometownSheet, onDismiss: {
             //
         }) {
-            HometownView()
+            NavigationView {
+                HometownView()
+            }
         }
         .alert(isPresented: $showAlert) {
             NSLog("[LOG][W][(\(#fileID):\(#line))::\(#function)]")

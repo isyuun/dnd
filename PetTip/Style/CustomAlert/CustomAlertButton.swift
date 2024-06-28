@@ -7,40 +7,11 @@
 
 import SwiftUI
 
-// struct CustomAlertButton: View {
-//     // MARK: - Value
-// 
-//     // MARK: Public
-// 
-//     let title: LocalizedStringKey
-//     var action: (() -> Void)? = nil
-// 
-//     // MARK: - View
-// 
-//     // MARK: Public
-// 
-//     var body: some View {
-//         Button {
-//             action?()
-// 
-//         } label: {
-//             Text(title)
-//                 // .font(.system(size: 14, weight: .medium))
-//                 .foregroundColor(.white)
-//                 .padding(.horizontal, 8)
-//                 .padding(.vertical, 6)
-//         }
-//         .frame(height: 30)
-//         .background(Color.purple)
-//         .cornerRadius(15)
-//     }
-// }
-
 struct CustomAlertButtonDemoView: View {
     var body: some View {
-        AlertButton.default("AlertButton.default")
-        AlertButton.cancel("AlertButton.cancel")
-        AlertButton.destructive("AlertButton.destructive")
+        CustomAlertButton.default("AlertButton.default")
+        CustomAlertButton.cancel("AlertButton.cancel")
+        CustomAlertButton.destructive("AlertButton.destructive")
     }
 }
 
@@ -48,7 +19,7 @@ struct CustomAlertButtonDemoView: View {
     CustomAlertButtonDemoView()
 }
 
-struct AlertButton: View {
+struct CustomAlertButton: View {
     // MARK: - Value
 
     enum ButtonType {
@@ -84,7 +55,7 @@ struct AlertButton: View {
             action?()
         }) {
             Text(title)
-                .font(.system(size: 12))
+                .font(.system(size: .caption))
                 .padding(.horizontal, 8)
                 .padding(.vertical, 6)
         }
@@ -92,20 +63,20 @@ struct AlertButton: View {
     }
 }
 
-extension AlertButton {
-    static func `default`(_ title: LocalizedStringKey, action: (() -> Void)? = nil) -> AlertButton {
-        AlertButton(button: .default, title: title, action: action)
+extension CustomAlertButton {
+    static func `default`(_ title: LocalizedStringKey, action: (() -> Void)? = nil) -> CustomAlertButton {
+        CustomAlertButton(button: .default, title: title, action: action)
     }
 }
 
-extension AlertButton {
-    static func cancel(_ title: LocalizedStringKey, action: (() -> Void)? = nil) -> AlertButton {
-        AlertButton(button: .cancel, title: title, action: action)
+extension CustomAlertButton {
+    static func cancel(_ title: LocalizedStringKey, action: (() -> Void)? = nil) -> CustomAlertButton {
+        CustomAlertButton(button: .cancel, title: title, action: action)
     }
 }
 
-extension AlertButton {
-    static func destructive(_ title: LocalizedStringKey, action: (() -> Void)? = nil) -> AlertButton {
-        AlertButton(button: .destructive, title: title, action: action)
+extension CustomAlertButton {
+    static func destructive(_ title: LocalizedStringKey, action: (() -> Void)? = nil) -> CustomAlertButton {
+        CustomAlertButton(button: .destructive, title: title, action: action)
     }
 }

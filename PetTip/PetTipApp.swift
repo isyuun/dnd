@@ -21,7 +21,7 @@ struct PetTipApp: App {
                     isLogin = UserDefaults.standard.value(forKey: "accessToken") != nil
                     isWelcomeViewActive = !isLogin
                 }
-                .environment(\.font, .system(size: 14))
+                .environment(\.font, .system(size: .default))
         }
     }
 }

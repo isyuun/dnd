@@ -18,9 +18,9 @@ struct CustomAlertModifier {
 
     private let title: Text
     private let message: Text
-    private let dismissButton: AlertButton?
-    private let primaryButton: AlertButton?
-    private let secondaryButton: AlertButton?
+    private let dismissButton: CustomAlertButton?
+    private let primaryButton: CustomAlertButton?
+    private let secondaryButton: CustomAlertButton?
 }
 
 extension CustomAlertModifier: ViewModifier {
@@ -46,7 +46,7 @@ struct BackgroundBlurView: UIViewRepresentable {
 }
 
 extension CustomAlertModifier {
-    init(title: Text = Text(""), message: Text = Text(""), dismissButton: AlertButton?, primaryButton: AlertButton?, secondaryButton: AlertButton?, isPresented: Binding<Bool>) {
+    init(title: Text = Text(""), message: Text = Text(""), dismissButton: CustomAlertButton?, primaryButton: CustomAlertButton?, secondaryButton: CustomAlertButton?, isPresented: Binding<Bool>) {
         self.title = title
         self.message = message
 
@@ -57,7 +57,7 @@ extension CustomAlertModifier {
         _isPresented = isPresented
     }
 
-    init(title: Text = Text(""), message: Text = Text(""), dismissButton: AlertButton, isPresented: Binding<Bool>) {
+    init(title: Text = Text(""), message: Text = Text(""), dismissButton: CustomAlertButton, isPresented: Binding<Bool>) {
         self.title = title
         self.message = message
         self.dismissButton = dismissButton
@@ -68,7 +68,7 @@ extension CustomAlertModifier {
         _isPresented = isPresented
     }
 
-    init(title: Text = Text(""), message: Text = Text(""), primaryButton: AlertButton, secondaryButton: AlertButton, isPresented: Binding<Bool>) {
+    init(title: Text = Text(""), message: Text = Text(""), primaryButton: CustomAlertButton, secondaryButton: CustomAlertButton, isPresented: Binding<Bool>) {
         self.title = title
         self.message = message
         self.primaryButton = primaryButton

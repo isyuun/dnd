@@ -10,14 +10,14 @@ import SwiftUI
 import SwiftUI
 
 extension View {
-    func alert(title: Text = Text(""), message: Text = Text(""), dismissButton: AlertButton = .default("확인"), isPresented: Binding<Bool>) -> some View {
+    func alert(title: Text = Text(""), message: Text = Text(""), dismissButton: CustomAlertButton = .default("확인"), isPresented: Binding<Bool>) -> some View {
         // let title = NSLocalizedString(title, comment: "")
         // let message = NSLocalizedString(message, comment: "")
 
         return modifier(CustomAlertModifier(title: title, message: message, dismissButton: dismissButton, isPresented: isPresented))
     }
 
-    func alert(title: Text = Text(""), message: Text = Text(""), primaryButton: AlertButton, secondaryButton: AlertButton, isPresented: Binding<Bool>) -> some View {
+    func alert(title: Text = Text(""), message: Text = Text(""), primaryButton: CustomAlertButton, secondaryButton: CustomAlertButton, isPresented: Binding<Bool>) -> some View {
         // let title = NSLocalizedString(title, comment: "")
         // let message = NSLocalizedString(message, comment: "")
 
@@ -28,9 +28,9 @@ extension View {
         let customAlert = content()
         let title: Text = customAlert.title
         let message: Text = customAlert.message
-        let dismissButton: AlertButton? = customAlert.dismissButton
-        let primaryButton: AlertButton? = customAlert.primaryButton
-        let secondaryButton: AlertButton? = customAlert.secondaryButton
+        let dismissButton: CustomAlertButton? = customAlert.dismissButton
+        let primaryButton: CustomAlertButton? = customAlert.primaryButton
+        let secondaryButton: CustomAlertButton? = customAlert.secondaryButton
 
         return modifier(CustomAlertModifier(
             title: title,

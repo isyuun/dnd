@@ -12,7 +12,7 @@ struct PreviewView: View {
         VStack {
             Title("보기")
             Text(text: "보기")
-                .font(.system(size: 17.0))
+                .font(.system(size: .body))
             Text("보기")
             Button("보기") {}
             Button("보기") {}
@@ -35,7 +35,7 @@ struct PreviewView: View {
             Spacer()
             FooterView()
         }
-        // .environment(\.font, .system(size: 12))
+        // .environment(\.font, .system(size: .caption))
     }
 }
 

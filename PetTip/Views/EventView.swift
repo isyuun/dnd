@@ -16,7 +16,8 @@ struct EventView: View {
 
 struct EventViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> EventListViewController2 {
-        return UIStoryboard(name: "Community", bundle: nil).instantiateViewController(withIdentifier: "EventListViewController") as! EventListViewController2
+        let viewController = UIStoryboard(name: "Community", bundle: nil).instantiateViewController(withIdentifier: "EventListViewController") as! EventListViewController2
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: EventListViewController2, context: Context) {}

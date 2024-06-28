@@ -16,7 +16,8 @@ struct QnAView: View {
 
 struct QnAViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> QnAViewController {
-        return UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(withIdentifier: "QnAViewController") as! QnAViewController
+        let viewController = UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(withIdentifier: "QnAViewController") as! QnAViewController
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: QnAViewController, context: Context) {}

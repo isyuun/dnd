@@ -16,7 +16,8 @@ struct CustomerView: View {
 
 struct CustomerViewCtrl: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> CustomerCenterViewController {
-        return UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(identifier: "CustomerCenterViewController") as! CustomerCenterViewController
+        let viewController = UIStoryboard(name: "CustomerCenter", bundle: nil).instantiateViewController(identifier: "CustomerCenterViewController") as! CustomerCenterViewController
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: CustomerCenterViewController, context: Context) {}
